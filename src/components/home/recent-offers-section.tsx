@@ -12,7 +12,7 @@ export function RecentOffersSection() {
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-text-primary">
             Ofertas Recentes
           </h2>
-          <p className="text-lg text-text-secondary/90 leading-relaxed">
+          <p className="text-lg text-white/80 leading-relaxed">
             Descubra as últimas novidades da curadoria ClickVendas com seleção premium das lojas que mais movimentam ofertas.
           </p>
         </div>

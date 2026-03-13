@@ -10,10 +10,11 @@
 .bgGradientLayer {
   position: absolute;
   inset: 0;
-  background: radial-gradient(1200px 600px at 20% 0%, #F7C8D8 0%, transparent 40%),
-              radial-gradient(1000px 500px at 80% 100%, #F4AFC4 0%, transparent 40%),
-              radial-gradient(800px 400px at 50% 50%, #FFD6E4 0%, transparent 60%);
-  opacity: 0.15;
+  background:
+    radial-gradient(1200px 600px at 20% 0%, rgba(244, 175, 196, 0.16) 0%, transparent 42%),
+    radial-gradient(1000px 500px at 80% 100%, rgba(247, 200, 216, 0.12) 0%, transparent 44%),
+    radial-gradient(800px 400px at 50% 50%, rgba(244, 175, 196, 0.08) 0%, transparent 65%);
+  opacity: 0.55;
   animation: slowGradientShift 30s ease-in-out infinite;
 }
 
@@ -22,7 +23,7 @@
   position: absolute;
   border-radius: 50%;
   filter: blur(60px);
-  opacity: 0.12;
+  opacity: 0.08;
   animation: float 25s ease-in-out infinite;
   mix-blend-mode: screen;
 }
@@ -30,7 +31,7 @@
 .blob1 {
   width: 400px;
   height: 400px;
-  background: linear-gradient(135deg, #F7C8D8 0%, #FFD6E4 100%);
+  background: linear-gradient(135deg, rgba(247, 200, 216, 0.28) 0%, rgba(244, 175, 196, 0.08) 100%);
   top: -150px;
   right: 10%;
   animation-delay: 0s;
@@ -39,7 +40,7 @@
 .blob2 {
   width: 350px;
   height: 350px;
-  background: linear-gradient(135deg, #F4AFC4 0%, #F7C8D8 100%);
+  background: linear-gradient(135deg, rgba(244, 175, 196, 0.26) 0%, rgba(247, 200, 216, 0.08) 100%);
   bottom: -80px;
   left: 10%;
   animation-delay: 8s;
@@ -48,7 +49,7 @@
 .blob3 {
   width: 300px;
   height: 300px;
-  background: linear-gradient(135deg, #FFD6E4 0%, #F7C8D8 100%);
+  background: linear-gradient(135deg, rgba(247, 200, 216, 0.2) 0%, rgba(244, 175, 196, 0.06) 100%);
   top: 50%;
   right: 5%;
   animation-delay: 16s;
@@ -58,7 +59,7 @@
 .commerceSilhouettes {
   position: absolute;
   inset: 0;
-  opacity: 0.06;
+  opacity: 0.045;
 }
 
 .silhouette {
@@ -105,7 +106,7 @@
   height: 4px;
   background: #FFFFFF;
   border-radius: 50%;
-  opacity: 0.15;
+  opacity: 0.12;
   animation: twinkle 8s ease-in-out infinite;
   box-shadow: 0 0 8px #FFFFFF;
 }
@@ -115,19 +116,19 @@
   position: absolute;
   inset: 0;
   background-image: 
-    radial-gradient(circle at 25% 25%, rgba(247, 200, 216, 0.12) 1px, transparent 1px),
+    radial-gradient(circle at 25% 25%, rgba(247, 200, 216, 0.1) 1px, transparent 1px),
     radial-gradient(circle at 75% 75%, rgba(244, 175, 196, 0.08) 1px, transparent 1px),
-    radial-gradient(circle at 50% 50%, rgba(255, 214, 228, 0.1) 1px, transparent 1px),
-    linear-gradient(45deg, transparent 49%, rgba(247, 200, 216, 0.05) 50%, transparent 51%);
+    radial-gradient(circle at 50% 50%, rgba(247, 200, 216, 0.06) 1px, transparent 1px),
+    linear-gradient(45deg, transparent 49%, rgba(247, 200, 216, 0.03) 50%, transparent 51%);
   background-size: 120px 120px, 160px 160px, 200px 200px, 40px 40px;
-  opacity: 0.15;
+  opacity: 0.12;
 }
 
 /* Premium animated gradients */
 .gradientOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, transparent 40%, rgba(247, 200, 216, 0.05) 50%, transparent 60%);
+  background: linear-gradient(120deg, transparent 40%, rgba(247, 200, 216, 0.04) 50%, transparent 60%);
   animation: gradientFlow 20s ease-in-out infinite;
   pointer-events: none;
 }

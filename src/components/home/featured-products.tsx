@@ -62,21 +62,21 @@ export function FeaturedProducts({ products }: FeaturedProductsProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between mb-12">
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-3 bg-surface-card border border-border-soft rounded-full px-4 py-2">
+            <div className="inline-flex items-center gap-3 rounded-full border border-pink-300/25 bg-white/[0.03] px-4 py-2 shadow-[0_8px_22px_rgba(244,175,196,0.1)]">
               <BadgeOrigin origin="Shopee" />
-              <span className="text-xs text-text-secondary">Latest Products</span>
+              <span className="text-xs text-white/80">Latest Products</span>
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-text-primary">
                 Produtos em Destaque
               </h2>
-              <p className="text-text-secondary text-lg mt-2">
+              <p className="text-white/80 text-lg mt-2">
                 Os produtos mais recentes adicionados à curadoria ClickVendas
               </p>
             </div>
           </div>
           <div className="hidden md:block">
-            <span className="inline-flex items-center gap-2 bg-surface-card border border-border-soft px-4 py-2 rounded-full text-sm text-text-secondary">
+            <span className="inline-flex items-center gap-2 rounded-full border border-pink-300/20 bg-white/[0.02] px-4 py-2 text-sm text-white/70">
               🏆 Mais recentes
             </span>
           </div>

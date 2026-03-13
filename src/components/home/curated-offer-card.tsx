@@ -21,7 +21,7 @@ interface CuratedOfferCardProps {
 
 export function CuratedOfferCard({ offer }: CuratedOfferCardProps) {
   return (
-    <article className="group relative overflow-hidden rounded-2xl border border-pink-300/20 bg-white/[0.03] shadow-[0_12px_30px_rgba(0,0,0,0.25)] transition-all duration-300 hover:-translate-y-1 hover:border-pink-300/40 hover:shadow-[0_14px_36px_rgba(244,175,196,0.16)]">
+    <article className="group relative overflow-hidden rounded-2xl border border-pink-300/20 bg-[#111114] shadow-[0_12px_30px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1 hover:border-pink-300/40 hover:shadow-[0_14px_36px_rgba(244,175,196,0.16)]">
       <div className="relative aspect-[4/5] overflow-hidden">
         <Image
           src={offer.image}
@@ -52,7 +52,7 @@ export function CuratedOfferCard({ offer }: CuratedOfferCardProps) {
           {offer.originalPrice ? (
             <p className="text-sm text-white/45 line-through">{offer.originalPrice}</p>
           ) : null}
-          <p className="text-2xl font-bold tracking-tight text-pink-100">{offer.price}</p>
+          <p className="text-2xl font-bold tracking-tight text-[#F7C8D8]">{offer.price}</p>
         </div>
 
         <a

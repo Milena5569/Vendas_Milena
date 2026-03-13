@@ -84,7 +84,7 @@ export function ProductCard({ product }: ProductCardProps) {
           href={product.links[0]?.url || "#"}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent-primary px-4 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-accent-hover hover:scale-102 hover:shadow-lg hover:shadow-accent-primary/20"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-pink-200/35 bg-gradient-to-r from-[#F7C8D8] via-[#F4AFC4] to-[#EFA9C5] px-4 py-3 text-sm font-semibold text-[#08080A] transition-all duration-300 hover:scale-102 hover:shadow-lg hover:shadow-accent-primary/25"
         >
           Ver Oferta
           <ArrowUpRight size={16} />

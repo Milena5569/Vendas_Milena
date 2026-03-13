@@ -46,7 +46,7 @@ export function CollectionCard({ collection, mode = "default" }: CollectionCardP
       })();
 
   return (
-    <article className="group relative overflow-hidden rounded-3xl border border-pink-300/20 bg-gradient-to-b from-white/[0.06] to-white/[0.02] shadow-[0_16px_40px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1 hover:border-pink-300/40 hover:shadow-[0_20px_46px_rgba(244,175,196,0.16)]">
+    <article className="group relative overflow-hidden rounded-3xl border border-pink-300/20 bg-[#111114] shadow-[0_16px_40px_rgba(0,0,0,0.32)] transition-all duration-300 hover:-translate-y-1 hover:border-pink-300/40 hover:shadow-[0_20px_46px_rgba(244,175,196,0.16)]">
       <div className="relative aspect-[4/3] overflow-hidden">
         {normalized.image ? (
           <Image
@@ -67,7 +67,7 @@ export function CollectionCard({ collection, mode = "default" }: CollectionCardP
             priority={false}
           />
         ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-br from-pink-300/12 to-transparent" />
         )}
 
         {normalized.tag && (
@@ -96,7 +96,7 @@ export function CollectionCard({ collection, mode = "default" }: CollectionCardP
               📦 {normalized.itemCount} itens
             </span>
             {normalized.priceHighlight ? (
-              <span className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-white/75">
+              <span className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/[0.04] px-2.5 py-1 text-white/75">
                 {normalized.priceHighlight}
               </span>
             ) : null}

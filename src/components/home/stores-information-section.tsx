@@ -26,13 +26,13 @@ export function StoresInformationSection() {
   ];
 
   return (
-    <section className="py-20 bg-surface-card">
+    <section className="py-20 bg-gradient-to-b from-[#0D0D10] to-[#111114]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-6 max-w-4xl mx-auto">
           <h2 className="text-3xl lg:text-4xl font-bold text-text-primary">
             Compre nas lojas que mais movimentam ofertas online
           </h2>
-          <p className="text-lg text-text-secondary leading-relaxed">
+          <p className="text-lg text-white/80 leading-relaxed">
             Na ClickVendas, reunimos oportunidades das principais plataformas de compra para facilitar sua busca por produtos desejados, tendências e promoções relevantes.
           </p>
         </div>
@@ -41,7 +41,7 @@ export function StoresInformationSection() {
           {stores.map((store, index) => (
             <div
               key={store.name}
-              className="group bg-background-primary rounded-xl p-8 border border-border-soft transition-all duration-300 ease-out hover:-translate-y-1 hover:border-pink-300/40 hover:shadow-[0_10px_30px_rgba(244,175,196,0.08)]"
+              className="group rounded-xl p-8 border border-pink-300/20 bg-[#111114] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-pink-300/40 hover:shadow-[0_10px_30px_rgba(244,175,196,0.12)]"
             >
               <div className="flex items-center gap-4 mb-4">
                 <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${store.color} flex items-center justify-center text-white text-xl font-bold shadow-lg`}>
@@ -51,11 +51,11 @@ export function StoresInformationSection() {
                   <h3 className="text-xl font-semibold text-text-primary group-hover:text-accent-primary transition-colors">
                     {store.name}
                   </h3>
-                  <p className="text-sm text-text-secondary">Loja parceira</p>
+                  <p className="text-sm text-white/60">Loja parceira</p>
                 </div>
               </div>
               
-              <p className="text-text-secondary leading-relaxed mb-6">
+              <p className="text-white/80 leading-relaxed mb-6">
                 {store.description}
               </p>
               

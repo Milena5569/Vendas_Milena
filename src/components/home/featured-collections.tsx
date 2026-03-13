@@ -23,7 +23,7 @@ export function FeaturedCollections({ collections, isHomepage = false }: Feature
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-text-primary mb-4">
               Coleções em Destaque
             </h2>
-            <p className="text-text-secondary/90 text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed">
               Descubra coleções cuidadosamente curadas com os melhores produtos
             </p>
           </div>
@@ -42,7 +42,7 @@ export function FeaturedCollections({ collections, isHomepage = false }: Feature
                 <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-white">
                   Coleções em breve
                 </h3>
-                <p className="text-text-secondary/90 text-base md:text-lg leading-relaxed max-w-md mx-auto">
+                <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-md mx-auto">
                   Estamos preparando coleções incríveis para você descobrir. 
                   Volte em breve para conferir as novidades!
                 </p>
@@ -86,7 +86,7 @@ export function FeaturedCollections({ collections, isHomepage = false }: Feature
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-text-primary mb-4">
             Coleções em Destaque
           </h2>
-          <p className="text-text-secondary/90 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed">
             Descubra coleções cuidadosamente curadas com os melhores produtos
           </p>
         </div>
