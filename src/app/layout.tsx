@@ -32,6 +32,10 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${fredoka.variable} ${quicksand.variable}`}>
       <head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
       </head>
       <body className="min-h-screen bg-background-primary">
         {children}

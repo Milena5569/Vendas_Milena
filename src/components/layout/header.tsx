@@ -79,7 +79,10 @@ export function StoreHeader() {
   const utilityItemActive = "bg-pink-300/15 border-pink-300/40 text-white";
 
   return (
-    <header className="sticky top-0 z-[60] overflow-visible bg-background-primary/95 backdrop-blur-xl border-b border-border-soft shadow-lg shadow-black/5">
+    <header
+      className="sticky top-0 z-[60] w-full overflow-visible border-b border-border-soft bg-background-primary/95 shadow-lg shadow-black/5 backdrop-blur-xl"
+      style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}
+    >
       <div className="mx-auto max-w-7xl overflow-visible px-4 sm:px-6 lg:px-8">
         <div className="hidden h-20 items-center justify-between overflow-visible md:flex">
           {/* Brand - Left */}
@@ -207,31 +210,31 @@ export function StoreHeader() {
 
         {/* Mobile / Tablet */}
         <div className="flex flex-col gap-3 py-3 md:hidden">
-          <div className="flex items-center justify-between gap-3">
+          <div className="flex flex-wrap items-center justify-between gap-3">
             <Link
               href="/"
-              className="inline-flex min-w-fit items-center gap-2.5"
+              className="inline-flex min-w-0 items-center gap-2.5"
             >
               <BrandAvatar
                 alt="Avatar ClickVendas"
                 className="h-8 w-8"
               />
-              <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-pink-300 to-pink-200 bg-clip-text text-transparent hover:from-pink-400 hover:to-pink-300 transition-all duration-300">
+              <span className="truncate text-lg font-bold tracking-tight text-transparent transition-all duration-300 bg-gradient-to-r from-pink-300 to-pink-200 bg-clip-text hover:from-pink-400 hover:to-pink-300 sm:text-xl">
                 ClickVendas
               </span>
             </Link>
 
-            <div className="flex items-center gap-2">
+            <div className="ml-auto flex items-center gap-2">
               <Link
                 href="/buscar"
-                className={`${utilityItemBase} ${isBuscarActive ? utilityItemActive : utilityItemInactive}`}
+                className={`${utilityItemBase} px-3 py-2 text-xs sm:px-4 sm:text-sm ${isBuscarActive ? utilityItemActive : utilityItemInactive}`}
               >
                 <Search size={16} />
                 Buscar
               </Link>
               <Link
                 href="/favoritos"
-                className={`${utilityItemBase} ${isFavoritosActive ? utilityItemActive : utilityItemInactive}`}
+                className={`${utilityItemBase} px-3 py-2 text-xs sm:px-4 sm:text-sm ${isFavoritosActive ? utilityItemActive : utilityItemInactive}`}
               >
                 <Heart size={16} />
                 Favoritos
@@ -239,7 +242,7 @@ export function StoreHeader() {
             </div>
           </div>
 
-          <nav className="relative z-[65] -mx-1 flex items-center gap-2 overflow-x-auto px-1 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <nav className="relative z-[65] flex items-center gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <Link
               href="/"
               className={`${navItemBase} min-w-fit whitespace-nowrap ${isHomeActive ? navItemActive : navItemInactive}`}

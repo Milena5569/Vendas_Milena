@@ -188,11 +188,11 @@ export function FeminineCommerceHeroSection() {
 
           {/* RIGHT SIDE - Open Atmospheric Space */}
           <div
-            className="relative transition-transform duration-300 ease-out"
+            className="relative max-w-full overflow-hidden transition-transform duration-300 ease-out"
             style={{ transform: `translateY(${-parallaxOffset}px)` }}
           >
             {/* Open atmospheric space with floating commerce elements */}
-            <div className="relative w-full h-96 lg:h-auto">
+            <div className="relative h-96 w-full overflow-hidden lg:h-auto">
               {/* Floating commerce elements */}
               <div className="absolute inset-0">
                 {/* Ambient depth glow */}
@@ -208,16 +208,16 @@ export function FeminineCommerceHeroSection() {
                 </div>
 
                 {/* Realistic social proof comments (fixed non-overlapping positions) */}
-                <div className="absolute top-[10%] right-[8%] max-w-[235px] rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-[11px] md:text-xs text-white/62 backdrop-blur-sm animate-float-gentle">
+                <div className="absolute top-[10%] right-[8%] hidden max-w-[235px] rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-[11px] text-white/62 backdrop-blur-sm animate-float-gentle md:block md:text-xs">
                   Esse produto estava mais barato aqui
                 </div>
-                <div className="absolute top-[36%] right-[10%] max-w-[245px] rounded-full border border-white/10 bg-white/[0.025] px-3 py-1.5 text-[11px] md:text-xs text-white/58 backdrop-blur-sm animate-float-gentle-delay">
+                <div className="absolute top-[36%] right-[10%] hidden max-w-[245px] rounded-full border border-white/10 bg-white/[0.025] px-3 py-1.5 text-[11px] text-white/58 backdrop-blur-sm animate-float-gentle-delay md:block md:text-xs">
                   Os achadinhos daqui realmente compensam
                 </div>
-                <div className="absolute bottom-[14%] right-[8%] max-w-[270px] rounded-full border border-white/10 bg-white/[0.025] px-3 py-1.5 text-[11px] md:text-xs text-white/56 backdrop-blur-sm animate-float-gentle-reverse">
+                <div className="absolute bottom-[14%] right-[8%] hidden max-w-[270px] rounded-full border border-white/10 bg-white/[0.025] px-3 py-1.5 text-[11px] text-white/56 backdrop-blur-sm animate-float-gentle-reverse md:block md:text-xs">
                   Não preciso mais ficar horas procurando promoções
                 </div>
-                <div className="absolute top-[50%] left-[40%] max-w-[220px] -translate-y-1/2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-[11px] md:text-xs text-white/58 backdrop-blur-sm animate-float-gentle">
+                <div className="absolute top-[50%] left-[40%] hidden max-w-[220px] -translate-y-1/2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-[11px] text-white/58 backdrop-blur-sm animate-float-gentle md:block md:text-xs">
                   Vale muito a pena conferir as ofertas daqui
                 </div>
 
