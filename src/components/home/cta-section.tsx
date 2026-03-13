@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { RECENT_OFFERS_HASH, STORES_PAGE_PATH } from "@/constants/navigation";
+import { BrandAvatar } from "@/components/ui/brand-avatar";
 
 export function CTASection() {
   return (
@@ -15,6 +16,18 @@ export function CTASection() {
               <div className="inline-flex items-center gap-3 rounded-full border border-pink-300/25 bg-pink-200/10 px-5 py-2.5 mx-auto shadow-[0_8px_24px_rgba(244,175,196,0.12)] backdrop-blur-sm transition-all duration-300 hover:border-pink-300/35 hover:bg-pink-200/15">
                 <span className="text-xs font-medium tracking-wide text-pink-100/90">Premium Experience</span>
               </div>
+
+              <div className="inline-flex items-center gap-2.5 rounded-full border border-pink-300/25 bg-white/[0.03] px-4 py-2 mx-auto shadow-[0_8px_24px_rgba(244,175,196,0.12)]">
+                <BrandAvatar
+                  size="sm"
+                  alt="Curadoria ClickVendas"
+                  className="h-7 w-7"
+                />
+                <span className="text-xs md:text-sm text-white/80">
+                  Achadinhos selecionados com curadoria
+                </span>
+              </div>
+
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-text-primary leading-tight">
                 Pronto para descobrir ofertas incríveis?
               </h2>

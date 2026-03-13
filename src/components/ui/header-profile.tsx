@@ -35,7 +35,7 @@ export function HeaderProfile() {
 
         <div className="flex flex-col gap-3 sm:flex-row">
           <a
-            href="https://wa.me/5500000000000"
+            href="https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-2xl bg-accent-success px-5 py-3 text-sm font-semibold text-background-primary transition hover:scale-102"
@@ -45,7 +45,7 @@ export function HeaderProfile() {
           </a>
 
           <a
-            href="https://instagram.com/seu_perfil"
+            href="https://www.instagram.com/click_vendasachadinhos?igsh=MTd1enZxdXZsaWxmbA=="
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-2xl border border-border-soft bg-surface-card px-5 py-3 text-sm font-semibold text-text-primary transition hover:scale-102 hover:border-accent-primary/30"

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { StoreFooter } from "@/components/layout/footer";
 import { StoreHeader } from "@/components/layout/header";
+import { BrandAvatar } from "@/components/ui/brand-avatar";
 
 export default function AboutPage() {
   return (
@@ -16,6 +17,18 @@ export default function AboutPage() {
             <span className="inline-flex rounded-full border border-pink-300/35 bg-pink-200/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-pink-100/90">
               Sobre a ClickVendas
             </span>
+
+            <div className="mt-5 inline-flex items-center gap-3 rounded-full border border-pink-300/30 bg-white/[0.03] px-4 py-2 shadow-[0_10px_24px_rgba(244,175,196,0.14)]">
+              <BrandAvatar
+                size="md"
+                alt="Curadoria ClickVendas"
+                className="h-9 w-9"
+              />
+              <div className="text-left leading-tight">
+                <p className="text-sm font-semibold text-pink-100">Curadoria por Milena</p>
+                <p className="text-xs text-white/65">Seleção humana com foco nos melhores achadinhos</p>
+              </div>
+            </div>
 
             <h1 className="mt-6 max-w-4xl text-3xl font-semibold tracking-tight text-white md:text-5xl md:leading-tight">
               Curadoria inteligente para encontrar achadinhos com mais facilidade

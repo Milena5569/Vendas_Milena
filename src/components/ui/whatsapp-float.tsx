@@ -2,35 +2,24 @@
 
 import { MessageCircle } from "lucide-react";
 
-interface WhatsAppFloatProps {
-  phoneNumber: string;
-  message?: string;
-}
+const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
 
-export function WhatsAppFloat({ phoneNumber, message = "Olá! Gostaria de saber mais sobre os produtos." }: WhatsAppFloatProps) {
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
+export function WhatsAppFloat() {
   return (
     <a
-      href={whatsappUrl}
+      href={CLICKVENDAS_WHATSAPP_GROUP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 group"
-      aria-label="Conversar no WhatsApp"
+      className="group fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full border border-[#F2D4DE] bg-[#F7B6CC] px-3 py-3 text-[#1D1D20] shadow-[0_10px_28px_rgba(236,143,177,0.28)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#EC8FB1] hover:shadow-[0_14px_34px_rgba(236,143,177,0.38)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F7B6CC] focus-visible:ring-offset-2 focus-visible:ring-offset-background-primary sm:bottom-6 sm:right-6 sm:px-4"
+      aria-label="Entrar no grupo do WhatsApp ClickVendas"
     >
-      <div className="relative">
-        {/* Floating shadow effect */}
-        <div className="absolute -inset-1 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full blur-xl opacity-30 group-hover:opacity-60 transition-opacity duration-300"></div>
-        
-        {/* Main button */}
-        <div className="relative w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full shadow-xl shadow-green-500/25 flex items-center justify-center group-hover:scale-110 group-hover:shadow-2xl transition-all duration-300 border-2 border-background-primary/20">
-          <MessageCircle size={28} className="text-white drop-shadow-lg" />
-        </div>
-
-        {/* Floating animation dots */}
-        <div className="absolute -top-2 -right-2 w-3 h-3 bg-white/20 rounded-full animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        <div className="absolute -bottom-2 -left-2 w-2 h-2 bg-white/30 rounded-full animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-      </div>
+      <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/25">
+        <MessageCircle size={22} className="text-[#1D1D20]" aria-hidden="true" />
+      </span>
+      <span className="hidden text-sm font-semibold tracking-wide text-white sm:inline">
+        Entrar no grupo
+      </span>
     </a>
   );
 }

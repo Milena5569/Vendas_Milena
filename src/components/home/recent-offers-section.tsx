@@ -10,10 +10,14 @@ export function RecentOffersSection() {
             <span className="text-xs font-medium tracking-[0.12em] text-pink-100/90">NOVAS OPORTUNIDADES</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-text-primary">
-            Ofertas Recentes
+            Achadinhos que valem a pena
           </h2>
           <p className="text-lg text-white/80 leading-relaxed">
-            Descubra as últimas novidades da curadoria ClickVendas com seleção premium das lojas que mais movimentam ofertas.
+            Selecionamos produtos virais, promoções escondidas e ofertas que realmente compensam nas principais lojas online.
+          </p>
+          <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.02] px-4 py-2 text-sm text-white/70">
+            <span className="h-2 w-2 rounded-full bg-[#F4AFC4] animate-pulse" />
+            Novos achadinhos adicionados hoje
           </p>
         </div>
 

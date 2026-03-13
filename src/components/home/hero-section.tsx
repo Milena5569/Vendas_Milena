@@ -1,7 +1,5 @@
-import { StoreHeader } from "@/components/layout/header";
 import { HeaderProfile } from "@/components/layout/header-profile";
 import { BadgeOrigin } from "@/components/ui/badge-origin";
-import { WhatsAppFloat } from "@/components/ui/whatsapp-float";
 import { HeroCommerceVisual } from "./hero-commerce-visual";
 
 export function HeroSection() {
@@ -61,12 +59,6 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-
-      {/* Floating WhatsApp Button */}
-      <WhatsAppFloat 
-        phoneNumber="+5511999999999"
-        message="Olá! Gostaria de saber mais sobre os produtos."
-      />
     </section>
   );
 }

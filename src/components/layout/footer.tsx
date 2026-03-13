@@ -2,6 +2,7 @@
 
 import { Instagram, MessageCircle } from "lucide-react";
 import Link from "next/link";
+import { BrandAvatar } from "@/components/ui/brand-avatar";
 
 export function StoreFooter() {
   return (
@@ -16,9 +17,10 @@ export function StoreFooter() {
           <div className="space-y-5">
             <div className="flex items-center gap-3">
               <Link href="/" className="flex items-center gap-3 group">
-                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-pink-300 to-pink-200 flex items-center justify-center shadow-[0_0_20px_rgba(244,175,196,0.22)]">
-                  <span className="text-sm font-bold text-white">CV</span>
-                </div>
+                <BrandAvatar
+                  alt="Avatar ClickVendas"
+                  className="h-10 w-10"
+                />
                 <div>
                   <h3 className="text-lg font-bold tracking-tight text-text-primary group-hover:text-pink-100 transition-colors duration-200">
                     ClickVendas
@@ -77,7 +79,7 @@ export function StoreFooter() {
             <h4 className="text-sm font-semibold text-white/80 uppercase tracking-[0.12em]">Conecte-se</h4>
             <div className="flex gap-4">
               <a
-                href="https://instagram.com/clickvendas"
+                href="https://www.instagram.com/click_vendasachadinhos?igsh=MTd1enZxdXZsaWxmbA=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-3 rounded-full border border-pink-300/30 bg-white/[0.02] transition-all duration-300 hover:border-pink-300/50 hover:bg-pink-300/10 hover:shadow-[0_0_20px_rgba(244,175,196,0.15)] group"
@@ -87,7 +89,7 @@ export function StoreFooter() {
               </a>
               
               <a
-                href="https://wa.me/5500000000000"
+                href="https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-3 rounded-full border border-pink-300/30 bg-white/[0.02] transition-all duration-300 hover:border-pink-300/50 hover:bg-pink-300/10 hover:shadow-[0_0_20px_rgba(244,175,196,0.15)] group"

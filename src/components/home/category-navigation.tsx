@@ -58,10 +58,10 @@ export function CategoryNavigation() {
           <button
             key={category}
             onClick={() => setActiveCategory(category)}
-            className={`flex-shrink-0 rounded-full px-4 py-2 text-sm font-medium transition-all ${
+            className={`group flex-shrink-0 rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.02] ${
               activeCategory === category
                 ? 'bg-accent-primary text-background-primary shadow-lg shadow-accent-primary/20'
-                : 'bg-surface-card text-text-secondary border border-border-soft hover:bg-surface-card/80 hover:text-text-primary'
+                : 'bg-surface-card text-text-secondary border border-border-soft hover:bg-surface-card/80 hover:text-text-primary hover:border-pink-300/50 hover:shadow-[0_8px_22px_rgba(244,175,196,0.18)]'
             }`}
           >
             {category}

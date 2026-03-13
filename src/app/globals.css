@@ -83,6 +83,66 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@keyframes fade-in-soft {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cta-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 1px rgba(247, 200, 216, 0.12), 0 0 0 rgba(244, 175, 196, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 1px rgba(247, 200, 216, 0.3), 0 0 26px rgba(244, 175, 196, 0.24);
+  }
+}
+
+@keyframes float-gentle {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes float-gentle-delay {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float-gentle-reverse {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+@keyframes hero-preview-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* Apply animations */
 .animate-pulse-slow {
   animation: pulse-slow 8s ease-in-out infinite;
@@ -112,6 +172,30 @@ h1, h2, h3, h4, h5, h6 {
   animation: fade-in-up 0.8s ease-out;
 }
 
+.animate-fade-in-soft {
+  animation: fade-in-soft 0.6s ease-out both;
+}
+
+.animate-cta-glow {
+  animation: cta-glow 3.2s ease-in-out infinite;
+}
+
+.animate-float-gentle {
+  animation: float-gentle 7s ease-in-out infinite;
+}
+
+.animate-float-gentle-delay {
+  animation: float-gentle-delay 8s ease-in-out infinite 1s;
+}
+
+.animate-float-gentle-reverse {
+  animation: float-gentle-reverse 7.5s ease-in-out infinite;
+}
+
+.hero-preview-marquee {
+  animation: hero-preview-scroll 34s linear infinite;
+}
+
 /* Background size utilities for button gradients */
 .bg-size-200 {
   background-size: 200% 200%;
@@ -139,7 +223,13 @@ h1, h2, h3, h4, h5, h6 {
   
   .animate-pulse-slow,
   .animate-float-subtle,
-  .animate-fade-in-up {
+  .animate-fade-in-up,
+  .animate-fade-in-soft,
+  .animate-cta-glow,
+  .animate-float-gentle,
+  .animate-float-gentle-delay,
+  .animate-float-gentle-reverse,
+  .hero-preview-marquee {
     animation: none !important;
   }
 }

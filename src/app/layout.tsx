@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Fredoka, Quicksand } from "next/font/google";
+import { WhatsAppFloat } from "@/components/ui/whatsapp-float";
 
 const fredoka = Fredoka({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-background-primary">
         {children}
+        <WhatsAppFloat />
       </body>
     </html>
   );
