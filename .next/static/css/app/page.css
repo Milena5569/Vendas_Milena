@@ -1,0 +1,182 @@
+/*!************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/FeminineCommerceBackground.module.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************/
+.FeminineCommerceBackground_feminineCommerceBg__HXNF1 {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Premium layered gradient background */
+.FeminineCommerceBackground_bgGradientLayer__rdBrC {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(1200px 600px at 20% 0%, #F7C8D8 0%, transparent 40%),
+              radial-gradient(1000px 500px at 80% 100%, #F4AFC4 0%, transparent 40%),
+              radial-gradient(800px 400px at 50% 50%, #FFD6E4 0%, transparent 60%);
+  opacity: 0.15;
+  animation: FeminineCommerceBackground_slowGradientShift__ONC48 30s ease-in-out infinite;
+}
+
+/* Premium soft glow orbs */
+.FeminineCommerceBackground_softBlob__xNfX1 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.12;
+  animation: FeminineCommerceBackground_float__TYhp5 25s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+
+.FeminineCommerceBackground_blob1__q_unk {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #F7C8D8 0%, #FFD6E4 100%);
+  top: -150px;
+  right: 10%;
+  animation-delay: 0s;
+}
+
+.FeminineCommerceBackground_blob2__fwbhO {
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(135deg, #F4AFC4 0%, #F7C8D8 100%);
+  bottom: -80px;
+  left: 10%;
+  animation-delay: 8s;
+}
+
+.FeminineCommerceBackground_blob3__ONm0l {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #FFD6E4 0%, #F7C8D8 100%);
+  top: 50%;
+  right: 5%;
+  animation-delay: 16s;
+}
+
+/* Abstract commerce-inspired silhouettes */
+.FeminineCommerceBackground_commerceSilhouettes__pGwJ9 {
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+}
+
+.FeminineCommerceBackground_silhouette__d7y5E {
+  position: absolute;
+  animation: FeminineCommerceBackground_gentleFloat__bABwh 18s ease-in-out infinite;
+}
+
+.FeminineCommerceBackground_priceTag__WXb7l {
+  width: 60px;
+  height: 40px;
+  background: linear-gradient(135deg, #F7C8D8 0%, #F4AFC4 100%);
+  border-radius: 8px 8px 8px 20px;
+  transform: rotate(-5deg);
+  animation-delay: 0s;
+}
+
+.FeminineCommerceBackground_productCard__D9DHZ {
+  width: 80px;
+  height: 60px;
+  background: linear-gradient(135deg, #F4AFC4 0%, #FFD6E4 100%);
+  border-radius: 12px;
+  transform: rotate(3deg);
+  animation-delay: 6s;
+}
+
+.FeminineCommerceBackground_shoppingBag__cur5z {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #FFD6E4 0%, #F7C8D8 100%);
+  border-radius: 10px 10px 16px 16px;
+  transform: rotate(-2deg);
+  animation-delay: 12s;
+}
+
+/* Subtle floating sparkles */
+.FeminineCommerceBackground_sparklesLayer__LDajk {
+  position: absolute;
+  inset: 0;
+}
+
+.FeminineCommerceBackground_sparkle__pSsX2 {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  opacity: 0.15;
+  animation: FeminineCommerceBackground_twinkle__N9_fT 8s ease-in-out infinite;
+  box-shadow: 0 0 8px #FFFFFF;
+}
+
+/* Premium micro-pattern */
+.FeminineCommerceBackground_patternLayer__3F0s_ {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(247, 200, 216, 0.12) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(244, 175, 196, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(255, 214, 228, 0.1) 1px, transparent 1px),
+    linear-gradient(45deg, transparent 49%, rgba(247, 200, 216, 0.05) 50%, transparent 51%);
+  background-size: 120px 120px, 160px 160px, 200px 200px, 40px 40px;
+  opacity: 0.15;
+}
+
+/* Premium animated gradients */
+.FeminineCommerceBackground_gradientOverlay__HTZrL {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 40%, rgba(247, 200, 216, 0.05) 50%, transparent 60%);
+  animation: FeminineCommerceBackground_gradientFlow__TBQLf 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes FeminineCommerceBackground_float__TYhp5 {
+  0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+  50% { transform: translateY(-25px) rotate(180deg) scale(1.05); }
+}
+
+@keyframes FeminineCommerceBackground_gentleFloat__bABwh {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-12px) scale(1.03); }
+}
+
+@keyframes FeminineCommerceBackground_twinkle__N9_fT {
+  0%, 100% { opacity: 0.1; transform: scale(0.8); box-shadow: 0 0 4px rgba(255, 255, 255, 0.3); }
+  50% { opacity: 0.6; transform: scale(1.2); box-shadow: 0 0 16px rgba(255, 255, 255, 0.8); }
+}
+
+@keyframes FeminineCommerceBackground_slowGradientShift__ONC48 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -10px); }
+}
+
+@keyframes FeminineCommerceBackground_gradientFlow__TBQLf {
+  0%, 100% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .FeminineCommerceBackground_blob1__q_unk, .FeminineCommerceBackground_blob2__fwbhO, .FeminineCommerceBackground_blob3__ONm0l {
+    filter: blur(40px);
+    opacity: 0.1;
+  }
+  
+  .FeminineCommerceBackground_silhouette__d7y5E {
+    opacity: 0.04;
+  }
+  
+  .FeminineCommerceBackground_sparkle__pSsX2 {
+    opacity: 0.12;
+  }
+  
+  .FeminineCommerceBackground_patternLayer__3F0s_ {
+    opacity: 0.1;
+  }
+}
+
