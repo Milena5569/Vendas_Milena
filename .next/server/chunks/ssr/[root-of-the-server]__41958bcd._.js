@@ -1,0 +1,36 @@
+module.exports=[93695,(a,b,c)=>{b.exports=a.x("next/dist/shared/lib/no-fallback-error.external.js",()=>require("next/dist/shared/lib/no-fallback-error.external.js"))},50645,a=>{a.n(a.i(27572))},43619,a=>{a.n(a.i(79962))},13718,a=>{a.n(a.i(85523))},18198,a=>{a.n(a.i(45518))},62212,a=>{a.n(a.i(66114))},65577,a=>{"use strict";var b=a.i(80494);function c(a,b,c){}let d=`
+  *,
+  collection_products(
+    *,
+    products(
+      *,
+      categories (
+        id,
+        name,
+        slug
+      ),
+      stores (
+        id,
+        name,
+        slug
+      )
+    )
+  )
+`;function e(a){let b,c,d=(b=(a.stores?.name||a.source_platform||"").toLowerCase()).includes("shopee")?"Shopee":b.includes("shein")?"Shein":b.includes("tiktok")?"TikTok Shop":"Outros",e=Number(a.price??0),f=Number(a.compare_at_price??a.price??0),g=a.product_url||a.original_url,h=g?[{id:`${a.id}-primary-link`,url:g,store:d,isActive:!0,createdAt:new Date(a.created_at)}]:[],i=a.image_url?[{id:`${a.id}-primary-image`,url:a.image_url,isPrimary:!0}]:[];return{id:a.id,name:a.name,slug:a.slug,description:a.description||void 0,shortDescription:a.short_description||void 0,price:Number.isFinite(f)?f:0,discountPrice:Number.isFinite(e)?e:0,category:{id:a.categories?.id||a.category_id||"sem-categoria",name:a.categories?.name||"Categoria",slug:a.categories?.slug||"categoria",isActive:!0,createdAt:new Date(a.created_at),updatedAt:new Date(a.updated_at)},gender:(c=(a.gender||"").toLowerCase()).includes("masc")?"Masc":c.includes("fem")?"Fem":c.includes("inf")||c.includes("kid")?"Kids":"Uni",type:"Individual",images:i,links:h,isFeatured:!!a.is_featured,isHot:!1,viewCount:0,isActive:!!a.is_active,createdAt:new Date(a.created_at),updatedAt:new Date(a.updated_at)}}function f(a){let b=(a.collection_products??[]).filter(a=>a.products&&a.products.is_active).map(a=>({id:a.id,product:e(a.products),order:0,isFeatured:!1,createdAt:new Date(a.created_at)}));return{id:a.id,name:a.name,slug:a.slug,description:a.description||void 0,image:a.cover_image_url||void 0,products:b,isFeatured:!!a.is_featured,isActive:!!a.is_active,createdAt:new Date(a.created_at),updatedAt:new Date(a.updated_at)}}a.s(["collectionsService",0,{async getAllCollections(a){if(!(0,b.isSupabaseConfigured)())return[];let e=(0,b.getSupabaseClient)();if(!e)return[];let g=e.from("collections").select(d).eq("is_active",!0).order("created_at",{ascending:!1});"number"==typeof a&&(g=g.limit(a));let{data:h,error:i}=await g;return i?(c("Error fetching all collections",i,{limit:a}),[]):(h??[]).map(f).filter(a=>a.products.length>0)},async getFeaturedCollections(a=6){if(!(0,b.isSupabaseConfigured)())return[];let e=(0,b.getSupabaseClient)();if(!e)return[];let{data:g,error:h}=await e.from("collections").select(d).eq("is_active",!0).eq("is_featured",!0).order("created_at",{ascending:!1}).limit(a);return h?(c("Error fetching featured collections",h),[]):(g??[]).map(f).filter(a=>a.products.length>0)},async getCollectionBySlug(a){if(!(0,b.isSupabaseConfigured)())return null;let e=(0,b.getSupabaseClient)();if(!e)return null;let{data:g,error:h}=await e.from("collections").select(d).eq("slug",a).eq("is_active",!0).maybeSingle();return h?(c("Error fetching collection by slug",h,{slug:a}),null):g?f(g):null},async getCollectionProducts(a){if(!(0,b.isSupabaseConfigured)())return[];let d=(0,b.getSupabaseClient)();if(!d)return[];let{data:f,error:g}=await d.from("collection_products").select(`
+        *,
+        products(
+          *,
+          categories (
+            id,
+            name,
+            slug
+          ),
+          stores (
+            id,
+            name,
+            slug
+          )
+        )
+      `).eq("collection_id",a);return g?(c("Error fetching collection products",g,{collectionId:a}),[]):(f??[]).map(a=>a.products).filter(a=>!!(a&&a.is_active)).map(e)}}])},23465,a=>{"use strict";a.s(["EmptyState",()=>b]);let b=(0,a.i(11857).registerClientReference)(function(){throw Error("Attempted to call EmptyState() from the server but EmptyState is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.")},"[project]/src/components/ui/empty-state.tsx <module evaluation>","EmptyState")},54846,a=>{"use strict";a.s(["EmptyState",()=>b]);let b=(0,a.i(11857).registerClientReference)(function(){throw Error("Attempted to call EmptyState() from the server but EmptyState is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.")},"[project]/src/components/ui/empty-state.tsx","EmptyState")},93911,a=>{"use strict";a.i(23465);var b=a.i(54846);a.n(b)},14837,a=>{"use strict";var b=a.i(7997);a.i(70396);var c=a.i(73727),d=a.i(65577),e=a.i(96130),f=a.i(93911),g=a.i(33952),h=a.i(82630),i=a.i(3236);async function j({params:a}){let{slug:j}=await a,k=await d.collectionsService.getCollectionBySlug(j);k||(0,c.notFound)();let l=k.products.map(a=>a.product);return(0,b.jsxs)("div",{className:"min-h-screen bg-background-primary",children:[(0,b.jsx)(g.StoreHeader,{}),(0,b.jsxs)("main",{className:"container mx-auto px-4 py-8",children:[(0,b.jsxs)("div",{className:"max-w-4xl mx-auto",children:[k.image&&(0,b.jsxs)("div",{className:"relative aspect-[2/1] rounded-2xl border border-border-soft bg-surface-card overflow-hidden mb-8 shadow-lg shadow-black/10",children:[(0,b.jsx)(i.default,{src:k.image,alt:k.name,fill:!0,className:"object-cover",sizes:"(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",priority:!1}),(0,b.jsx)("div",{className:"absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"}),k.isFeatured&&(0,b.jsx)("div",{className:"absolute top-4 left-4 rounded-full border border-accent-primary/30 bg-accent-primary/15 px-3 py-1.5 text-xs font-bold text-accent-primary shadow-lg shadow-accent-primary/20",children:"Coleção em Destaque"})]}),(0,b.jsxs)("div",{className:"space-y-4",children:[(0,b.jsxs)("div",{children:[(0,b.jsx)("h1",{className:"text-3xl md:text-4xl font-bold text-text-primary leading-tight",children:k.name}),k.description&&(0,b.jsx)("p",{className:"text-text-secondary text-lg md:text-xl leading-relaxed mt-2 max-w-3xl",children:k.description})]}),(0,b.jsxs)("div",{className:"flex items-center gap-6 text-sm text-text-secondary",children:[(0,b.jsxs)("span",{className:"inline-flex items-center gap-2 bg-surface-card border border-border-soft px-3 py-1.5 rounded-full",children:["📦 ",l.length," produtos"]}),k.isFeatured&&(0,b.jsx)("span",{className:"inline-flex items-center gap-2 bg-accent-primary/15 border border-accent-primary/30 px-3 py-1.5 rounded-full text-accent-primary",children:"⭐ Curadoria especial"})]})]})]}),(0,b.jsx)("div",{className:"mt-12",children:l.length>0?(0,b.jsx)(e.ProductGrid,{products:l,columns:{sm:1,md:2,lg:3,xl:4}}):(0,b.jsx)("div",{className:"text-center py-16",children:(0,b.jsx)(f.EmptyState,{title:"Coleção sem produtos",description:"Esta coleção ainda não possui produtos cadastrados. Volte em breve para conferir os lançamentos!",icon:"package",action:{label:"Explorar coleções",onClick:()=>window.location.href="/"}})})})]}),(0,b.jsx)(h.StoreFooter,{})]})}a.s(["default",()=>j])}];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__41958bcd._.js.map

@@ -88,3 +88,3975 @@
 [01:36:36.554] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
 [01:38:12.520] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
 [01:51:03.459] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:54:09.689] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.692] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.694] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.697] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.702] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/app/categorias/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.705] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/app/categorias/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.708] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/app/categorias/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.711] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/app/categorias/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.713] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.719] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.721] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.726] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.731] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/lojas/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.734] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/lojas/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.735] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/lojas/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.736] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/lojas/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.737] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/lojas/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.739] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/lojas/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.741] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/lojas/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.743] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/lojas/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.744] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/lojas/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.745] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/lojas/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.747] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/lojas/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.748] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/lojas/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.751] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/lojas/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.753] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/lojas/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.754] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/app/lojas/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.756] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/app/lojas/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.757] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/app/lojas/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.758] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/app/lojas/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.759] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.760] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.760] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.761] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.763] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/sobre/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.764] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/sobre/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.765] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/sobre/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.768] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/sobre/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.771] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/sobre/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.772] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/sobre/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.775] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/sobre/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.778] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/sobre/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.780] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/sobre/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.781] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/sobre/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.785] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/sobre/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.786] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/sobre/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.789] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/sobre/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.793] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/sobre/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.793] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.794] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.794] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.795] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.798] Server  ERROR   ⨯ ./src/app/buscar/page.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Link from "next/link";
+> 2 | import { ArrowUpRight, Search, Sparkles, Store, Layers3, PackageSearch } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { StoreFooter } from "@/components/layout/footer";
+  4 | import { StoreHeader } from "@/components/layout/header";
+  5 | import { productsService } from "@/services/products";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.804] Server  ERROR   ⨯ ./src/app/buscar/page.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Link from "next/link";
+> 2 | import { ArrowUpRight, Search, Sparkles, Store, Layers3, PackageSearch } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { StoreFooter } from "@/components/layout/footer";
+  4 | import { StoreHeader } from "@/components/layout/header";
+  5 | import { productsService } from "@/services/products";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.805] Server  ERROR   ⨯ ./src/app/buscar/page.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Link from "next/link";
+> 2 | import { ArrowUpRight, Search, Sparkles, Store, Layers3, PackageSearch } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { StoreFooter } from "@/components/layout/footer";
+  4 | import { StoreHeader } from "@/components/layout/header";
+  5 | import { productsService } from "@/services/products";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.807] Server  ERROR   ⨯ ./src/app/buscar/page.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Link from "next/link";
+> 2 | import { ArrowUpRight, Search, Sparkles, Store, Layers3, PackageSearch } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { StoreFooter } from "@/components/layout/footer";
+  4 | import { StoreHeader } from "@/components/layout/header";
+  5 | import { productsService } from "@/services/products";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.811] Server  ERROR   ⨯ ./src/app/buscar/page.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Link from "next/link";
+> 2 | import { ArrowUpRight, Search, Sparkles, Store, Layers3, PackageSearch } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { StoreFooter } from "@/components/layout/footer";
+  4 | import { StoreHeader } from "@/components/layout/header";
+  5 | import { productsService } from "@/services/products";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.812] Server  ERROR   ⨯ ./src/app/buscar/page.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Link from "next/link";
+> 2 | import { ArrowUpRight, Search, Sparkles, Store, Layers3, PackageSearch } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { StoreFooter } from "@/components/layout/footer";
+  4 | import { StoreHeader } from "@/components/layout/header";
+  5 | import { productsService } from "@/services/products";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.815] Server  ERROR   ⨯ ./src/app/buscar/page.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Link from "next/link";
+> 2 | import { ArrowUpRight, Search, Sparkles, Store, Layers3, PackageSearch } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { StoreFooter } from "@/components/layout/footer";
+  4 | import { StoreHeader } from "@/components/layout/header";
+  5 | import { productsService } from "@/services/products";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.816] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/buscar/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.817] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/buscar/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.818] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/buscar/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.819] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/buscar/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.820] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/buscar/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.821] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/buscar/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.824] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/buscar/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.825] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/buscar/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.827] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/buscar/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.829] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/buscar/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.831] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/buscar/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.835] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/buscar/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.836] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/buscar/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.838] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/buscar/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.839] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/app/buscar/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.840] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/app/buscar/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.842] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/app/buscar/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.843] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/app/buscar/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.844] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.845] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.845] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.846] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.848] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/lojas/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.850] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/lojas/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.851] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/lojas/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.853] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/lojas/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.854] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/lojas/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.855] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/lojas/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.856] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/lojas/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.859] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/lojas/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.860] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/lojas/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.862] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/lojas/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.864] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/lojas/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.867] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/lojas/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.869] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/lojas/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.872] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/lojas/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.873] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/app/lojas/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.874] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/app/lojas/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.875] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/app/lojas/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.876] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/app/lojas/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.876] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.877] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.878] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.879] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.880] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.880] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.881] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.882] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.884] Server  ERROR   ⨯ ./src/components/collection/collection-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import Link from "next/link";
+  4 | import { Collection } from "@/types/collection";
+  5 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/collection/collection-card.tsx
+    ./src/components/collection/collection-grid.tsx
+    ./src/app/colecoes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.885] Server  ERROR   ⨯ ./src/components/collection/collection-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import Link from "next/link";
+  4 | import { Collection } from "@/types/collection";
+  5 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/collection/collection-card.tsx
+    ./src/components/collection/collection-grid.tsx
+    ./src/app/colecoes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.886] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/colecoes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.887] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/colecoes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.887] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/colecoes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.889] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/colecoes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.890] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/colecoes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.891] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/colecoes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.892] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/colecoes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.895] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/colecoes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.897] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/colecoes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.898] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/colecoes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.901] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/colecoes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.903] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/colecoes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.905] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/colecoes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.907] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/colecoes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.908] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.908] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.909] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.909] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.911] Server  ERROR   ⨯ ./src/components/collection/collection-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import Link from "next/link";
+  4 | import { Collection } from "@/types/collection";
+  5 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/collection/collection-card.tsx
+    ./src/components/collection/collection-grid.tsx
+    ./src/components/home/featured-collections.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.912] Server  ERROR   ⨯ ./src/components/collection/collection-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import Link from "next/link";
+  4 | import { Collection } from "@/types/collection";
+  5 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/collection/collection-card.tsx
+    ./src/components/collection/collection-grid.tsx
+    ./src/components/home/featured-collections.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.913] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.914] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.915] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.918] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.920] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.921] Server  ERROR   ⨯ ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.924] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.927] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.929] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.956] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.959] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.964] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.976] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.979] Server  ERROR   ⨯ ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.980] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/components/home/featured-products.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.981] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/components/home/featured-products.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.982] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/components/home/featured-products.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.984] Server  ERROR   ⨯ ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/components/home/featured-products.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.985] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.985] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.986] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.987] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.989] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.990] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.990] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.991] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.993] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.994] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.995] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.996] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:09.998] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.002] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.003] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.004] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.005] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.005] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.006] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.007] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.010] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.011] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.012] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.013] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.015] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.015] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.016] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.017] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.019] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.020] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.021] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.022] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.023] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.023] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.024] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.025] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.026] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.026] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.027] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.027] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.028] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.029] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.029] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.030] Server  ERROR   ⨯ ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:54:10.038] Server  LOG     ✓ Compiled in 409ms
+[02:54:10.356] Browser ERROR   ./src/components/collection/collection-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import Link from "next/link";
+  4 | import { Collection } from "@/types/collection";
+  5 |
+
+Import trace:
+  Server Component:
+    ./src/components/collection/collection-card.tsx
+    ./src/components/collection/collection-grid.tsx
+    ./src/components/home/featured-collections.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[02:54:10.356] Browser ERROR   ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[02:54:10.356] Browser ERROR   ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[02:54:10.356] Browser ERROR   ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/components/home/featured-products.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[02:54:10.356] Browser ERROR   ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[02:54:10.356] Browser ERROR   ./src/app/buscar/page.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Link from "next/link";
+> 2 | import { ArrowUpRight, Search, Sparkles, Store, Layers3, PackageSearch } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { StoreFooter } from "@/components/layout/footer";
+  4 | import { StoreHeader } from "@/components/layout/header";
+  5 | import { productsService } from "@/services/products";
+
+https://nextjs.org/docs/messages/module-not-found
+[02:54:10.356] Browser ERROR   ./src/components/collection/collection-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import Link from "next/link";
+  4 | import { Collection } from "@/types/collection";
+  5 |
+
+Import trace:
+  Server Component:
+    ./src/components/collection/collection-card.tsx
+    ./src/components/collection/collection-grid.tsx
+    ./src/components/home/featured-collections.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[02:54:10.356] Browser ERROR   ./src/components/layout/footer.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Instagram, MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { BrandAvatar } from "@/components/ui/brand-avatar";
+  6 |
+
+Import trace:
+  Server Component:
+    ./src/components/layout/footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[02:54:10.356] Browser ERROR   ./src/components/layout/header.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { Search, ChevronDown, Heart } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import Link from "next/link";
+  5 | import { usePathname } from "next/navigation";
+  6 | import { useEffect, useState } from "react";
+
+Import trace:
+  Server Component:
+    ./src/components/layout/header.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[02:54:10.356] Browser ERROR   ./src/components/product/product-card.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Image from "next/image";
+> 2 | import { ArrowUpRight, Tag, Flame } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { Product } from "@/types/product";
+  4 | import { formatCurrency, calculateDiscountPercentage } from "@/lib/utils";
+  5 | import { BadgeOrigin } from "../ui/badge-origin";
+
+Import trace:
+  Server Component:
+    ./src/components/product/product-card.tsx
+    ./src/components/product/product-grid.tsx
+    ./src/components/home/featured-products.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[02:54:10.356] Browser ERROR   ./src/components/ui/whatsapp-float.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  1 | "use client";
+  2 |
+> 3 | import { MessageCircle } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const CLICKVENDAS_WHATSAPP_GROUP_URL =
+  6 |   "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+Import trace:
+  Server Component:
+    ./src/components/ui/whatsapp-float.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[02:54:10.356] Browser ERROR   ./src/app/buscar/page.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  1 | import Link from "next/link";
+> 2 | import { ArrowUpRight, Search, Sparkles, Store, Layers3, PackageSearch } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { StoreFooter } from "@/components/layout/footer";
+  4 | import { StoreHeader } from "@/components/layout/header";
+  5 | import { productsService } from "@/services/products";
+
+https://nextjs.org/docs/messages/module-not-found
+[02:54:39.480] Server  LOG     ✓ Compiled in 6.9s
+[02:54:40.731] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:54:41.772] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

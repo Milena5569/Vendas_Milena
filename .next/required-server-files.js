@@ -63,7 +63,24 @@ self.__SERVER_FILES_MANIFEST={
           "search": ""
         }
       ],
-      "remotePatterns": [],
+      "remotePatterns": [
+        {
+          "protocol": "https",
+          "hostname": "down-br.img.susercontent.com"
+        },
+        {
+          "protocol": "https",
+          "hostname": "cf.shopee.com.br"
+        },
+        {
+          "protocol": "https",
+          "hostname": "img.ltwebstatic.com"
+        },
+        {
+          "protocol": "https",
+          "hostname": "p16-oec-va.ibyteimg.com"
+        }
+      ],
       "qualities": [
         75
       ],
