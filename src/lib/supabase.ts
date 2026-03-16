@@ -1,21 +1,55 @@
-import { createClient } from '@supabase/supabase-js';
+import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 
-// Check if Supabase is configured
-export const isSupabaseConfigured = () => {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  return !!(supabaseUrl && supabaseAnonKey);
+const publicUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const publicAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const adminUrl = process.env.SUPABASE_URL;
+const adminServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+let hasWarnedPublicConfig = false;
+let hasWarnedAdminConfig = false;
+
+function warnMissingSupabaseConfig(kind: 'public' | 'admin') {
+  if (process.env.NODE_ENV === 'production') return;
+
+  if (kind === 'public' && !hasWarnedPublicConfig) {
+    hasWarnedPublicConfig = true;
+    console.warn(
+      '[supabase] NEXT_PUBLIC_SUPABASE_URL/NEXT_PUBLIC_SUPABASE_ANON_KEY ausentes. A aplicação exibirá estados vazios sem dados mock.'
+    );
+  }
+
+  if (kind === 'admin' && !hasWarnedAdminConfig) {
+    hasWarnedAdminConfig = true;
+    console.warn(
+      '[supabase] SUPABASE_URL/SUPABASE_SERVICE_ROLE_KEY ausentes. Recursos administrativos de importação ficarão indisponíveis.'
+    );
+  }
+}
+
+export const isSupabaseConfigured = (): boolean => {
+  const configured = Boolean(publicUrl && publicAnonKey);
+  if (!configured) {
+    warnMissingSupabaseConfig('public');
+  }
+  return configured;
 };
 
-// Lazy Supabase client creation - only create when configured
-let supabaseClient: ReturnType<typeof createClient> | null = null;
+export const isSupabaseAdminConfigured = (): boolean => {
+  const configured = Boolean(adminUrl && adminServiceRoleKey);
+  if (!configured) {
+    warnMissingSupabaseConfig('admin');
+  }
+  return configured;
+};
 
-export const getSupabaseClient = () => {
-  if (!supabaseClient && isSupabaseConfigured()) {
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-    
-    supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {
+let browserClient: SupabaseClient | null = null;
+let adminClient: SupabaseClient | null = null;
+
+export function getSupabaseClient(): SupabaseClient | null {
+  if (!isSupabaseConfigured()) return null;
+
+  if (!browserClient) {
+    browserClient = createClient(publicUrl as string, publicAnonKey as string, {
       auth: {
         persistSession: true,
         autoRefreshToken: true,
@@ -23,8 +57,22 @@ export const getSupabaseClient = () => {
       },
     });
   }
-  return supabaseClient;
-};
 
-// Re-export types for convenience
-export type { SupabaseClient } from '@supabase/supabase-js';
+  return browserClient;
+}
+
+export function getSupabaseAdmin(): SupabaseClient | null {
+  if (typeof window !== 'undefined') return null;
+  if (!isSupabaseAdminConfigured()) return null;
+
+  if (!adminClient) {
+    adminClient = createClient(adminUrl as string, adminServiceRoleKey as string, {
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
+      },
+    });
+  }
+
+  return adminClient;
+}

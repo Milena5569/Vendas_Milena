@@ -1,7 +1,11 @@
-import { recentOffers } from "@/constants/store-promotions";
-import { CuratedOfferCard } from "@/components/home/curated-offer-card";
+import { ProductGrid } from "@/components/product/product-grid";
+import { Product } from "@/types/product";
 
-export function RecentOffersSection() {
+interface RecentOffersSectionProps {
+  products: Product[];
+}
+
+export function RecentOffersSection({ products }: RecentOffersSectionProps) {
   return (
     <section id="ofertas-recentes" className="py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -21,11 +25,14 @@ export function RecentOffersSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-          {recentOffers.map((offer) => (
-            <CuratedOfferCard key={offer.id} offer={offer} />
-          ))}
-        </div>
+        {products.length > 0 ? (
+          <ProductGrid products={products} columns={{ sm: 1, md: 2, lg: 3, xl: 3 }} />
+        ) : (
+          <div className="rounded-2xl border border-border-soft bg-surface-card/70 p-10 text-center">
+            <p className="text-lg font-semibold text-text-primary">Nenhum achadinho disponível no momento</p>
+            <p className="mt-2 text-text-secondary">Adicione produtos no Supabase para exibir aqui.</p>
+          </div>
+        )}
       </div>
     </section>
   );

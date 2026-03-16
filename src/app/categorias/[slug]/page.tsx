@@ -3,8 +3,9 @@ import { categoriesService } from "@/services/categories";
 import { productsService } from "@/services/products";
 import { ProductGrid } from "@/components/product/product-grid";
 
-export default async function CategoryPage({ params }: { params: { slug: string } }) {
-  const category = await categoriesService.getCategoryBySlug(params.slug);
+export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const category = await categoriesService.getCategoryBySlug(slug);
   
   if (!category) {
     notFound();

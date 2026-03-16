@@ -1,41 +1,19 @@
 import Link from "next/link";
+import { StoreItem } from "@/services/stores";
 
-export function StoresInformationSection() {
-  const stores = [
-    {
-      name: "Shopee",
-      icon: "🛍️",
-      subtitle: "Ofertas populares",
-      description:
-        "Descubra eletrônicos, utilidades, acessórios e achadinhos com preços competitivos e promoções que aparecem todos os dias.",
-      ctaLabel: "Ver ofertas da Shopee",
-      badges: ["⭐ Mais vendidos", "💸 Promoções do dia"],
-      color: "from-blue-400 to-cyan-400",
-      href: "/lojas#shopee",
-    },
-    {
-      name: "Shein",
-      icon: "👗",
-      subtitle: "Moda em alta",
-      description:
-        "Explore roupas, beleza e lifestyle com produtos virais, tendências populares e achadinhos que fazem sucesso online.",
-      ctaLabel: "Ver ofertas da Shein",
-      badges: ["🔥 Produtos virais", "⭐ Mais vendidos"],
-      color: "from-pink-400 to-purple-400",
-      href: "/lojas#shein",
-    },
-    {
-      name: "TikTok Shop",
-      icon: "📱",
-      subtitle: "Produtos virais",
-      description:
-        "Encontre itens que estão bombando nas redes sociais, descobertos por criadores e tendências que viralizaram.",
-      ctaLabel: "Ver ofertas do TikTok",
-      badges: ["🔥 Produtos virais", "💸 Promoções do dia"],
-      color: "from-black to-gray-600",
-      href: "/lojas#tiktok",
-    }
-  ];
+interface StoresInformationSectionProps {
+  stores: StoreItem[];
+}
+
+export function StoresInformationSection({ stores }: StoresInformationSectionProps) {
+  const storesWithMeta = stores.map((store, index) => ({
+    ...store,
+    icon: ["🛍️", "👗", "📱", "🏬"][index % 4],
+    subtitle: ["Ofertas populares", "Moda em alta", "Produtos virais", "Parceiro em destaque"][index % 4],
+    ctaLabel: `Ver ofertas da ${store.name}`,
+    color: ["from-blue-400 to-cyan-400", "from-pink-400 to-purple-400", "from-black to-gray-600", "from-rose-400 to-pink-400"][index % 4],
+    href: `/lojas/${store.slug}`,
+  }));
 
   return (
     <section className="py-20 bg-gradient-to-b from-[#0D0D10] to-[#111114]">
@@ -52,8 +30,14 @@ export function StoresInformationSection() {
           </p>
         </div>
 
+        {storesWithMeta.length === 0 ? (
+          <div className="mt-16 rounded-2xl border border-border-soft bg-surface-card/60 p-10 text-center">
+            <p className="text-lg font-semibold text-text-primary">Nenhuma loja encontrada</p>
+            <p className="mt-2 text-text-secondary">Adicione lojas no Supabase para exibir aqui.</p>
+          </div>
+        ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-          {stores.map((store, index) => (
+          {storesWithMeta.map((store) => (
             <div
               key={store.name}
               className="group rounded-xl p-8 border border-pink-300/20 bg-[#111114] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-pink-300/50 hover:shadow-[0_0_0_1px_rgba(244,175,196,0.16),0_14px_34px_rgba(244,175,196,0.16)]"
@@ -71,18 +55,18 @@ export function StoresInformationSection() {
               </div>
 
               <div className="mb-4 flex flex-wrap gap-2">
-                {store.badges.map((badge) => (
-                  <span
-                    key={`${store.name}-${badge}`}
-                    className="rounded-full border border-pink-200/25 bg-pink-200/10 px-2.5 py-1 text-[11px] text-pink-100/85"
-                  >
-                    {badge}
+                <span className="rounded-full border border-pink-200/25 bg-pink-200/10 px-2.5 py-1 text-[11px] text-pink-100/85">
+                  Loja ativa
+                </span>
+                {store.is_featured ? (
+                  <span className="rounded-full border border-pink-200/25 bg-pink-200/10 px-2.5 py-1 text-[11px] text-pink-100/85">
+                    Em destaque
                   </span>
-                ))}
+                ) : null}
               </div>
               
               <p className="text-white/80 leading-relaxed mb-6">
-                {store.description}
+                {store.description || "Conheça os produtos disponíveis desta loja no catálogo."}
               </p>
               
               <Link
@@ -97,6 +81,7 @@ export function StoresInformationSection() {
             </div>
           ))}
         </div>
+        )}
       </div>
     </section>
   );

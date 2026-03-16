@@ -1,9 +1,8 @@
-import { Collection, CuratedCollectionPreview } from "@/types/collection";
+import { Collection } from "@/types/collection";
 import { CollectionCard } from "./collection-card";
 
 interface CollectionGridProps {
-  collections: Array<Collection | CuratedCollectionPreview>;
-  mode?: "default" | "curated";
+  collections: Collection[];
   columns?: {
     sm?: number;
     md?: number;
@@ -42,9 +41,14 @@ const xlGridColumns = {
 
 export function CollectionGrid({ 
   collections, 
-  mode = "default",
   columns = { sm: 1, md: 2, lg: 3, xl: 4 } 
 }: CollectionGridProps) {
+  const nonEmptyCollections = collections.filter((collection) => collection.products.length > 0);
+
+  if (nonEmptyCollections.length === 0) {
+    return null;
+  }
+
   const gridClasses = [
     baseGridColumns[columns.sm ?? 1],
     mdGridColumns[columns.md ?? 2],
@@ -54,8 +58,8 @@ export function CollectionGrid({
 
   return (
     <div className={`grid ${gridClasses} gap-6`}>
-      {collections.map((collection) => (
-        <CollectionCard key={collection.id} collection={collection} mode={mode} />
+      {nonEmptyCollections.map((collection) => (
+        <CollectionCard key={collection.id} collection={collection} />
       ))}
     </div>
   );

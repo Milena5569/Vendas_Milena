@@ -1,25 +1,13 @@
-"use client";
-
-import { products } from "@/constants/database";
 import { StoreHeader } from "@/components/layout/header";
 import { HeroSection } from "@/components/home/hero-section";
 import { CategoryNavigation } from "@/components/home/category-navigation";
-import { FilterBar } from "@/components/product/filter-bar";
-import { ProductCard } from "@/components/product/product-card";
+import { ProductGrid } from "@/components/product/product-grid";
 import { CTASection } from "@/components/home/cta-section";
 import { StoreFooter } from "@/components/layout/footer";
-import { useProductFilters } from "@/hooks/use-product-filters";
+import { productsService } from "@/services/products";
 
-export function StorePage() {
-  const {
-    category,
-    gender,
-    store,
-    setCategory,
-    setGender,
-    setStore,
-    filteredProducts,
-  } = useProductFilters(products);
+export async function StorePage() {
+  const products = await productsService.getAllProducts(48);
 
   return (
     <div className="min-h-screen bg-black">
@@ -38,18 +26,6 @@ export function StorePage() {
           <CategoryNavigation />
         </section>
 
-        {/* Filter Bar */}
-        <section className="px-4 md:px-6 py-4">
-          <FilterBar
-            category={category}
-            gender={gender}
-            store={store}
-            onCategoryChange={setCategory}
-            onGenderChange={setGender}
-            onStoreChange={setStore}
-          />
-        </section>
-
         {/* Products Grid */}
         <section id="produtos" className="px-4 md:px-6 py-8">
           <div className="mx-auto max-w-7xl">
@@ -58,25 +34,18 @@ export function StorePage() {
                 <h2 className="text-2xl font-bold text-text-primary mb-2">
                   Produtos em Destaque
                 </h2>
-                <p className="text-text-secondary">
-                  {filteredProducts.length} produto(s) encontrado(s)
-                </p>
+                <p className="text-text-secondary">{products.length} produto(s) encontrado(s)</p>
               </div>
             </div>
 
-            {filteredProducts.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {filteredProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
-                ))}
-              </div>
-            ) : (
-              <div className="rounded-2xl border border-dashed border-border-soft bg-surface-card/80 p-12 text-center">
-                <p className="text-text-secondary text-lg">
-                  Nenhum produto encontrado com esses filtros.
-                </p>
-              </div>
-            )}
+            <ProductGrid
+              products={products}
+              columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
+              emptyState={{
+                title: "Nenhum produto encontrado",
+                description: "Adicione produtos no Supabase para exibir aqui.",
+              }}
+            />
           </div>
         </section>
 

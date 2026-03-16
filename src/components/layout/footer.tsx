@@ -62,13 +62,13 @@ export function StoreFooter() {
           <div className="space-y-4">
             <h4 className="text-sm font-semibold text-white/80 uppercase tracking-[0.12em]">Explorar</h4>
             <div className="space-y-2">
-              <Link href="/lojas#shopee" className="block text-sm text-white/65 hover:text-pink-200 transition-colors duration-200">
+              <Link href="/lojas/shopee" className="block text-sm text-white/65 hover:text-pink-200 transition-colors duration-200">
                 Shopee
               </Link>
-              <Link href="/lojas#shein" className="block text-sm text-white/65 hover:text-pink-200 transition-colors duration-200">
+              <Link href="/lojas/shein" className="block text-sm text-white/65 hover:text-pink-200 transition-colors duration-200">
                 Shein
               </Link>
-              <Link href="/lojas#tiktok" className="block text-sm text-white/65 hover:text-pink-200 transition-colors duration-200">
+              <Link href="/lojas/tiktok-shop" className="block text-sm text-white/65 hover:text-pink-200 transition-colors duration-200">
                 TikTok Shop
               </Link>
             </div>

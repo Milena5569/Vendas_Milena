@@ -56,8 +56,6 @@ export function FilterBar({
     { value: "Shopee", label: "Shopee" },
     { value: "Shein", label: "Shein" },
     { value: "TikTok Shop", label: "TikTok Shop" },
-    { value: "Amazon", label: "Amazon" },
-    { value: "Magalu", label: "Magalu" },
   ];
 
   return (

@@ -8,13 +8,14 @@ import { StoreFooter } from "@/components/layout/footer";
 import Image from "next/image";
 
 interface CollectionPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export default async function CollectionPage({ params }: CollectionPageProps) {
-  const collection = await collectionsService.getCollectionBySlug(params.slug);
+  const { slug } = await params;
+  const collection = await collectionsService.getCollectionBySlug(slug);
 
   if (!collection) {
     notFound();

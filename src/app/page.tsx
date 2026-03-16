@@ -8,12 +8,15 @@ import { CTASection } from "@/components/home/cta-section";
 import { StoreFooter } from "@/components/layout/footer";
 import { collectionsService } from "@/services/collections";
 import { productsService } from "@/services/products";
+import { storesService } from "@/services/stores";
 
 export default async function HomePage() {
   // Load dynamic data from services
-  const [featuredCollections, featuredProducts] = await Promise.all([
+  const [featuredCollections, featuredProducts, recentProducts, featuredStores] = await Promise.all([
     collectionsService.getFeaturedCollections(6),
-    productsService.getFeaturedProducts(12)
+    productsService.getFeaturedProducts(12),
+    productsService.getAllProducts(6),
+    storesService.getFeaturedStores(3),
   ]);
 
   return (
@@ -27,10 +30,10 @@ export default async function HomePage() {
         <FeminineCommerceHeroSection />
 
         {/* Stores Information Section */}
-        <StoresInformationSection />
+        <StoresInformationSection stores={featuredStores} />
 
         {/* Recent Offers Section */}
-        <RecentOffersSection />
+        <RecentOffersSection products={recentProducts} />
 
         {/* Featured Products Section */}
         <FeaturedProducts products={featuredProducts} />

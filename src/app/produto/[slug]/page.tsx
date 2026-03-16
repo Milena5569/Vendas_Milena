@@ -8,13 +8,14 @@ import { StoreHeader } from "@/components/layout/header";
 import { StoreFooter } from "@/components/layout/footer";
 
 interface ProductPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
-  const product = await productsService.getProductBySlug(params.slug);
+  const { slug } = await params;
+  const product = await productsService.getProductBySlug(slug);
 
   if (!product) {
     notFound();

@@ -100,7 +100,7 @@ export default function AboutPage() {
                 Ver coleções
               </Link>
               <Link
-                href="/lojas#shopee"
+                href="/lojas/shopee"
                 className="inline-flex items-center justify-center rounded-full border border-border-soft bg-surface-card/70 px-6 py-3 text-sm font-semibold text-text-secondary transition-colors hover:border-pink-300/40 hover:bg-surface-pink hover:text-text-primary"
               >
                 Começar a descobrir ofertas

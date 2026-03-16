@@ -1,1 +1,17 @@
-{}
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admin/importar/page": "app/admin/importar/page.js",
+  "/api/admin/import-products/route": "app/api/admin/import-products/route.js",
+  "/buscar/page": "app/buscar/page.js",
+  "/categorias/[slug]/page": "app/categorias/[slug]/page.js",
+  "/categorias/page": "app/categorias/page.js",
+  "/colecao/[slug]/page": "app/colecao/[slug]/page.js",
+  "/colecoes/page": "app/colecoes/page.js",
+  "/favoritos/page": "app/favoritos/page.js",
+  "/lojas/[slug]/page": "app/lojas/[slug]/page.js",
+  "/lojas/page": "app/lojas/page.js",
+  "/page": "app/page.js",
+  "/produto/[slug]/page": "app/produto/[slug]/page.js",
+  "/sobre/page": "app/sobre/page.js"
+}

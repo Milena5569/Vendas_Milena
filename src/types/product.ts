@@ -17,7 +17,7 @@ export interface ProductLink {
   createdAt: Date;
 }
 
-export type StoreOrigin = "Shopee" | "Shein" | "TikTok Shop" | "Amazon" | "Magalu";
+export type StoreOrigin = "Shopee" | "Shein" | "TikTok Shop" | "Outros";
 export type ProductCategory = 
   | "Eletronicos"
   | "Casa"

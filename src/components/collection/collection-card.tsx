@@ -1,49 +1,23 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { Collection, CuratedCollectionPreview } from "@/types/collection";
+import { Collection } from "@/types/collection";
 
 interface CollectionCardProps {
-  collection: Collection | CuratedCollectionPreview;
-  mode?: "default" | "curated";
+  collection: Collection;
 }
-
-function isCuratedCollectionPreview(
-  collection: Collection | CuratedCollectionPreview
-): collection is CuratedCollectionPreview {
-  return "title" in collection;
-}
-
-export function CollectionCard({ collection, mode = "default" }: CollectionCardProps) {
-  const isCurated = mode === "curated" && isCuratedCollectionPreview(collection);
-
-  const normalized = isCurated
-    ? {
-        featuredProduct: null,
-        title: collection.title,
-        description: collection.description,
-        image: collection.image,
-        itemCount: collection.itemCount,
-        tag: collection.tag,
-        ctaHref: `/colecoes#${collection.slug}`,
-        ctaLabel: "Explorar coleção",
-        priceHighlight: collection.priceHighlight,
-      }
-    : (() => {
-        const baseCollection = collection as Collection;
-
-        return {
-          featuredProduct: baseCollection.products.find((product) => product.isFeatured)?.product,
-          title: baseCollection.name,
-          description: baseCollection.description || `${baseCollection.products.length} produto(s) na coleção`,
-          image: baseCollection.image,
-          itemCount: baseCollection.products.length,
-          tag: baseCollection.isFeatured ? "Curadoria especial" : undefined,
-          ctaHref: `/colecao/${baseCollection.slug}`,
-          ctaLabel: "Ver coleção",
-          priceHighlight: undefined,
-        };
-      })();
+export function CollectionCard({ collection }: CollectionCardProps) {
+  const normalized = {
+    featuredProduct: collection.products.find((product) => product.isFeatured)?.product,
+    title: collection.name,
+    description: collection.description || `${collection.products.length} produto(s) na coleção`,
+    image: collection.image,
+    itemCount: collection.products.length,
+    tag: collection.isFeatured ? "Curadoria especial" : undefined,
+    ctaHref: `/colecao/${collection.slug}`,
+    ctaLabel: "Ver coleção",
+    priceHighlight: undefined,
+  };
 
   return (
     <article className="group relative overflow-hidden rounded-3xl border border-pink-300/20 bg-[#111114] shadow-[0_16px_40px_rgba(0,0,0,0.32)] transition-all duration-300 hover:-translate-y-1 hover:border-pink-300/40 hover:shadow-[0_20px_46px_rgba(244,175,196,0.16)]">

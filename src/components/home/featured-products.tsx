@@ -1,5 +1,4 @@
 import { ProductGrid } from "@/components/product/product-grid";
-import { BadgeOrigin } from "@/components/ui/badge-origin";
 import { Product } from "@/types/product";
 
 interface FeaturedProductsProps {
@@ -7,21 +6,16 @@ interface FeaturedProductsProps {
 }
 
 export function FeaturedProducts({ products }: FeaturedProductsProps) {
-  // Always show products if they exist, or show a minimal empty state
   if (!products || products.length === 0) {
     return (
       <section id="produtos" className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-3 rounded-full border border-pink-300/25 bg-pink-200/10 px-5 py-2.5 mx-auto mb-6 shadow-[0_8px_24px_rgba(244,175,196,0.12)] backdrop-blur-sm transition-all duration-300 hover:border-pink-300/35 hover:bg-pink-200/15">
-              <BadgeOrigin origin="Shopee" />
-              <span className="text-xs font-medium tracking-wide text-pink-100/90">Coming Soon</span>
-            </div>
             <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-4 tracking-tight">
               Produtos em Destaque
             </h2>
             <p className="text-text-secondary/90 text-lg max-w-2xl mx-auto leading-relaxed">
-              Os produtos mais recentes adicionados à curadoria ClickVendas
+              Nenhum produto encontrado
             </p>
           </div>
           
@@ -39,11 +33,10 @@ export function FeaturedProducts({ products }: FeaturedProductsProps) {
               
               <div className="space-y-3.5">
                 <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-white">
-                  Em breve
+                  Nenhum achadinho disponível no momento
                 </h3>
                 <p className="text-text-secondary/90 text-base md:text-lg leading-relaxed max-w-md mx-auto">
-                  Estamos preparando os melhores produtos para você. 
-                  Volte em breve para conferir as novidades!
+                  Adicione produtos no Supabase para exibir aqui.
                 </p>
               </div>
 
@@ -62,10 +55,6 @@ export function FeaturedProducts({ products }: FeaturedProductsProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between mb-12">
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-3 rounded-full border border-pink-300/25 bg-white/[0.03] px-4 py-2 shadow-[0_8px_22px_rgba(244,175,196,0.1)]">
-              <BadgeOrigin origin="Shopee" />
-              <span className="text-xs text-white/80">Latest Products</span>
-            </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-text-primary">
                 Produtos em Destaque

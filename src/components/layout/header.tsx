@@ -2,45 +2,83 @@
 
 import { Search, ChevronDown, Heart } from "lucide-react";
 import Link from "next/link";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BrandAvatar } from "@/components/ui/brand-avatar";
+import { getSupabaseClient, isSupabaseConfigured } from "@/lib/supabase";
+
+interface HeaderCategoryItem {
+  name: string;
+  slug?: string;
+  href: string;
+}
 
 export function StoreHeader() {
   const [categoriasOpen, setCategoriasOpen] = useState(false);
   const [lojasOpen, setLojasOpen] = useState(false);
-  const [activeStoreHash, setActiveStoreHash] = useState("");
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const activeCategory = searchParams.get("categoria")?.toLowerCase() ?? "";
-
-  const categorias = [
+  const [categorias, setCategorias] = useState<HeaderCategoryItem[]>([
     { name: "Feminino", href: "/lojas?categoria=feminino" },
     { name: "Masculino", href: "/lojas?categoria=masculino" },
     { name: "Casa", href: "/lojas?categoria=casa" },
     { name: "Skin Care", href: "/lojas?categoria=skincare" },
-    { name: "Infantil", href: "/lojas?categoria=infantil" }
-  ];
+    { name: "Infantil", href: "/lojas?categoria=infantil" },
+  ]);
+  const pathname = usePathname();
+  const [activeCategory, setActiveCategory] = useState("");
+  const activeCategorySlug = pathname.startsWith("/categorias/") ? pathname.split("/")[2] : "";
 
   const lojas = [
-    { name: "Shopee", href: "/lojas#shopee", hash: "shopee" },
-    { name: "Shein", href: "/lojas#shein", hash: "shein" },
-    { name: "TikTok Shop", href: "/lojas#tiktok", hash: "tiktok" }
+    { name: "Shopee", href: "/lojas/shopee" },
+    { name: "Shein", href: "/lojas/shein" },
+    { name: "TikTok Shop", href: "/lojas/tiktok-shop" }
   ];
 
   useEffect(() => {
-    const updateHash = () => {
-      setActiveStoreHash(window.location.hash.replace("#", "").toLowerCase());
+    const loadCategories = async () => {
+      if (!isSupabaseConfigured()) return;
+
+      const supabase = getSupabaseClient();
+      if (!supabase) return;
+
+      const { data, error } = await supabase
+        .from("categories")
+        .select("name,slug")
+        .eq("is_active", true)
+        .order("sort_order", { ascending: true })
+        .limit(20);
+
+      if (error || !data?.length) return;
+
+      const mapped = data
+        .map((item: any) => ({
+          name: String(item?.name || "").trim(),
+          slug: String(item?.slug || "").trim(),
+          href: `/categorias/${String(item?.slug || "").trim()}`,
+        }))
+        .filter((item) => item.name && item.slug);
+
+      if (mapped.length > 0) {
+        setCategorias(mapped);
+      }
     };
 
-    updateHash();
-    window.addEventListener("hashchange", updateHash);
+    loadCategories();
 
-    return () => window.removeEventListener("hashchange", updateHash);
+    const updateCategoryQuery = () => {
+      const params = new URLSearchParams(window.location.search);
+      setActiveCategory((params.get("categoria") || "").toLowerCase());
+    };
+
+    updateCategoryQuery();
+    window.addEventListener("popstate", updateCategoryQuery);
+
+    return () => {
+      window.removeEventListener("popstate", updateCategoryQuery);
+    };
   }, [pathname]);
 
   const isHomeActive = pathname === "/";
-  const isCategoriasActive = pathname === "/lojas" && Boolean(activeCategory);
+  const isCategoriasActive = pathname === "/categorias" || pathname.startsWith("/categorias/") || (pathname === "/lojas" && Boolean(activeCategory));
   const isLojasActive = pathname === "/lojas" || pathname.startsWith("/lojas/");
   const isColecoesActive = pathname === "/colecoes" || pathname.startsWith("/colecao/");
   const isSobreActive = pathname === "/sobre";
@@ -135,7 +173,7 @@ export function StoreHeader() {
                     <Link
                       key={categoria.name}
                       href={categoria.href}
-                      className={`${dropdownItemBase} ${activeCategory === categoria.name.toLowerCase() ? dropdownItemActive : dropdownItemInactive}`}
+                      className={`${dropdownItemBase} ${activeCategorySlug === categoria.slug || activeCategory === categoria.name.toLowerCase() ? dropdownItemActive : dropdownItemInactive}`}
                       onClick={() => setCategoriasOpen(false)}
                     >
                       {categoria.name}
@@ -169,7 +207,7 @@ export function StoreHeader() {
                     <Link
                       key={loja.name}
                       href={loja.href}
-                      className={`${dropdownItemBase} ${pathname === "/lojas" && activeStoreHash === loja.hash ? dropdownItemActive : dropdownItemInactive}`}
+                      className={`${dropdownItemBase} ${pathname === loja.href ? dropdownItemActive : dropdownItemInactive}`}
                       onClick={() => setLojasOpen(false)}
                     >
                       {loja.name}
@@ -291,7 +329,7 @@ export function StoreHeader() {
                 <Link
                   key={categoria.name}
                   href={categoria.href}
-                  className={`${dropdownItemBase} ${activeCategory === categoria.name.toLowerCase() ? dropdownItemActive : dropdownItemInactive}`}
+                  className={`${dropdownItemBase} ${activeCategorySlug === categoria.slug || activeCategory === categoria.name.toLowerCase() ? dropdownItemActive : dropdownItemInactive}`}
                   onClick={() => setCategoriasOpen(false)}
                 >
                   {categoria.name}
@@ -306,7 +344,7 @@ export function StoreHeader() {
                 <Link
                   key={loja.name}
                   href={loja.href}
-                  className={`${dropdownItemBase} ${pathname === "/lojas" && activeStoreHash === loja.hash ? dropdownItemActive : dropdownItemInactive}`}
+                  className={`${dropdownItemBase} ${pathname === loja.href ? dropdownItemActive : dropdownItemInactive}`}
                   onClick={() => setLojasOpen(false)}
                 >
                   {loja.name}

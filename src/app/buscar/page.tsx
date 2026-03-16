@@ -1,13 +1,11 @@
-"use client";
-
-import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useState } from "react";
 import { ArrowUpRight, Search, Sparkles, Store, Layers3, PackageSearch } from "lucide-react";
 import { StoreFooter } from "@/components/layout/footer";
 import { StoreHeader } from "@/components/layout/header";
-import { searchCatalogItems, searchQuickSuggestions } from "@/constants/search-catalog";
-import { SearchCollectionItem, SearchProductItem, SearchStoreItem } from "@/types/search";
+import { productsService } from "@/services/products";
+import { storesService } from "@/services/stores";
+import { collectionsService } from "@/services/collections";
+import { ProductGrid } from "@/components/product/product-grid";
 
 function normalize(value: string) {
   return value
@@ -43,49 +41,7 @@ function CtaLink({ href, label }: { href: string; label: string }) {
   );
 }
 
-function ProductResultCard({ item }: { item: SearchProductItem }) {
-  return (
-    <article className="group overflow-hidden rounded-3xl border border-pink-300/25 bg-gradient-to-b from-white/[0.05] to-white/[0.02] shadow-[0_14px_36px_rgba(0,0,0,0.25)] transition-all duration-300 hover:-translate-y-1 hover:border-pink-300/45 hover:shadow-[0_20px_42px_rgba(244,175,196,0.18)]">
-      <div className="relative aspect-[16/10] overflow-hidden">
-        {item.image ? (
-          <Image
-            src={item.image}
-            alt={item.title}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-        ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-pink-300/20 via-pink-200/10 to-transparent" />
-        )}
-
-        <div className="absolute left-3 top-3 rounded-full border border-pink-300/35 bg-pink-300/15 px-3 py-1 text-xs font-semibold text-pink-100 backdrop-blur-sm">
-          {item.store}
-        </div>
-        {item.highlight ? (
-          <div className="absolute right-3 top-3 rounded-full border border-white/20 bg-black/30 px-3 py-1 text-xs font-medium text-white/85 backdrop-blur-sm">
-            {item.highlight}
-          </div>
-        ) : null}
-      </div>
-
-      <div className="space-y-4 p-5">
-        <div className="space-y-2">
-          <p className="text-xs uppercase tracking-[0.12em] text-pink-100/80">{item.category}</p>
-          <h3 className="text-lg font-semibold leading-tight text-white">{item.title}</h3>
-          <p className="line-clamp-2 text-sm text-text-secondary/90">{item.description}</p>
-        </div>
-
-        <div className="flex items-center justify-between gap-3">
-          <p className="text-xl font-bold tracking-tight text-pink-100">{item.price}</p>
-          <CtaLink href={item.link} label={item.ctaLabel ?? "Ver produto"} />
-        </div>
-      </div>
-    </article>
-  );
-}
-
-function StoreResultCard({ item }: { item: SearchStoreItem }) {
+function StoreResultCard({ item }: { item: { id: string; title: string; description?: string; category: string; link: string; ctaLabel?: string } }) {
   return (
     <article className="group rounded-3xl border border-pink-300/25 bg-white/[0.03] p-6 shadow-[0_14px_32px_rgba(0,0,0,0.24)] transition-all duration-300 hover:-translate-y-1 hover:border-pink-300/45 hover:shadow-[0_18px_38px_rgba(244,175,196,0.16)]">
       <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-pink-300/30 bg-pink-300/15 text-pink-100">
@@ -105,32 +61,15 @@ function StoreResultCard({ item }: { item: SearchStoreItem }) {
   );
 }
 
-function CollectionResultCard({ item }: { item: SearchCollectionItem }) {
+function CollectionResultCard({ item }: { item: { id: string; title: string; description?: string; itemCount: number; link: string; ctaLabel?: string } }) {
   return (
     <article className="group overflow-hidden rounded-3xl border border-pink-300/25 bg-white/[0.03] shadow-[0_14px_36px_rgba(0,0,0,0.25)] transition-all duration-300 hover:-translate-y-1 hover:border-pink-300/45 hover:shadow-[0_18px_42px_rgba(244,175,196,0.18)]">
-      <div className="relative aspect-[16/9] overflow-hidden">
-        {item.image ? (
-          <Image
-            src={item.image}
-            alt={item.title}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-        ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-pink-300/20 via-pink-200/10 to-transparent" />
-        )}
-        {item.badge ? (
-          <div className="absolute left-3 top-3 rounded-full border border-pink-300/35 bg-pink-200/20 px-3 py-1 text-xs font-semibold text-pink-100 backdrop-blur-sm">
-            {item.badge}
-          </div>
-        ) : null}
-      </div>
+      <div className="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-pink-300/20 via-pink-200/10 to-transparent" />
 
       <div className="space-y-4 p-5">
         <div className="space-y-2">
           <h3 className="text-lg font-semibold leading-tight text-white">{item.title}</h3>
-          <p className="line-clamp-2 text-sm text-text-secondary/90">{item.description}</p>
+          <p className="line-clamp-2 text-sm text-text-secondary/90">{item.description || "Coleção cadastrada no Supabase."}</p>
         </div>
 
         <div className="flex items-center justify-between gap-3">
@@ -144,37 +83,42 @@ function CollectionResultCard({ item }: { item: SearchCollectionItem }) {
   );
 }
 
-export default function SearchPage() {
-  const [query, setQuery] = useState("");
+interface SearchPageProps {
+  searchParams?: Promise<{
+    q?: string | string[];
+  }>;
+}
 
-  const filteredResults = useMemo(() => {
-    if (!query.trim()) {
-      return searchCatalogItems;
-    }
+export default async function SearchPage({ searchParams }: SearchPageProps) {
+  const resolvedSearchParams = searchParams ? await searchParams : undefined;
+  const queryParam = Array.isArray(resolvedSearchParams?.q)
+    ? resolvedSearchParams?.q[0]
+    : resolvedSearchParams?.q;
+  const query = String(queryParam || "").trim();
 
-    return searchCatalogItems.filter((item) => {
-      const searchableFields = [
-        item.title,
-        item.description,
-        item.category ?? "",
-        ...item.tags,
-        item.type === "product" ? item.store : "",
-      ];
+  const [products, stores, collections] = await Promise.all([
+    productsService.getAllProducts(120),
+    storesService.getAllStores(),
+    collectionsService.getAllCollections(60),
+  ]);
 
-      return searchableFields.some((field) => matchesQuery(field, query));
-    });
-  }, [query]);
+  const filteredProducts = !query
+    ? products
+    : products.filter((item) =>
+        [item.name, item.shortDescription || "", item.category.name, item.links[0]?.store || ""].some((field) =>
+          matchesQuery(field, query)
+        )
+      );
 
-  const groupedResults = useMemo(
-    () => ({
-      products: filteredResults.filter((item) => item.type === "product") as SearchProductItem[],
-      stores: filteredResults.filter((item) => item.type === "store") as SearchStoreItem[],
-      collections: filteredResults.filter((item) => item.type === "collection") as SearchCollectionItem[],
-    }),
-    [filteredResults],
-  );
+  const filteredStores = !query
+    ? stores
+    : stores.filter((item) => matchesQuery(item.name, query) || matchesQuery(item.description || "", query));
 
-  const totalResults = filteredResults.length;
+  const filteredCollections = !query
+    ? collections
+    : collections.filter((item) => matchesQuery(item.name, query) || matchesQuery(item.description || "", query));
+
+  const totalResults = filteredProducts.length + filteredStores.length + filteredCollections.length;
 
   return (
     <div className="min-h-screen bg-background-primary">
@@ -201,7 +145,7 @@ export default function SearchPage() {
               </p>
             </div>
 
-            <div className="mx-auto mt-10 max-w-4xl rounded-[28px] border border-pink-300/25 bg-white/[0.03] p-4 shadow-[0_18px_40px_rgba(0,0,0,0.3)] backdrop-blur-sm md:p-5">
+            <form className="mx-auto mt-10 max-w-4xl rounded-[28px] border border-pink-300/25 bg-white/[0.03] p-4 shadow-[0_18px_40px_rgba(0,0,0,0.3)] backdrop-blur-sm md:p-5">
               <label htmlFor="search-input" className="sr-only">
                 Buscar por produto, loja, categoria ou coleção
               </label>
@@ -214,32 +158,26 @@ export default function SearchPage() {
                   />
                   <input
                     id="search-input"
-                    value={query}
-                    onChange={(event) => setQuery(event.target.value)}
+                    name="q"
+                    defaultValue={query}
                     placeholder="Busque por produto, loja, categoria ou coleção"
                     className="h-14 w-full rounded-full border border-pink-300/30 bg-background-secondary/70 pl-12 pr-5 text-sm text-white placeholder:text-text-secondary/60 transition-all duration-300 outline-none focus:border-pink-300/70 focus:ring-4 focus:ring-pink-300/20"
                   />
                 </div>
+                <button
+                  type="submit"
+                  className="inline-flex items-center gap-2 rounded-full border border-pink-300/30 bg-pink-300/10 px-4 py-3 text-sm font-medium text-pink-100"
+                >
+                  <Search size={17} />
+                  Buscar
+                </button>
 
                 <div className="inline-flex items-center gap-2 rounded-full border border-pink-300/30 bg-pink-300/10 px-4 py-3 text-sm font-medium text-pink-100">
                   <PackageSearch size={17} />
                   {totalResults} resultados
                 </div>
               </div>
-
-              <div className="mt-4 flex flex-wrap gap-2">
-                {searchQuickSuggestions.map((suggestion) => (
-                  <button
-                    key={suggestion}
-                    type="button"
-                    onClick={() => setQuery(suggestion)}
-                    className="rounded-full border border-pink-300/25 bg-white/[0.02] px-3 py-1.5 text-xs font-medium text-pink-100/90 transition-all duration-300 hover:-translate-y-0.5 hover:border-pink-300/45 hover:bg-pink-300/15 hover:text-white"
-                  >
-                    {suggestion}
-                  </button>
-                ))}
-              </div>
-            </div>
+            </form>
           </div>
         </section>
 
@@ -256,55 +194,69 @@ export default function SearchPage() {
               </div>
             ) : null}
 
-            {groupedResults.products.length > 0 ? (
+            {filteredProducts.length > 0 ? (
               <div className="space-y-5">
                 <div className="flex items-center justify-between gap-4">
                   <h2 className="flex items-center gap-2 text-2xl font-semibold text-white">
                     <PackageSearch size={20} className="text-pink-100" />
                     Produtos
                   </h2>
-                  <span className="text-sm text-pink-100/80">{groupedResults.products.length} encontrados</span>
+                  <span className="text-sm text-pink-100/80">{filteredProducts.length} encontrados</span>
                 </div>
 
-                <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-                  {groupedResults.products.map((item) => (
-                    <ProductResultCard key={item.id} item={item} />
-                  ))}
-                </div>
+                <ProductGrid products={filteredProducts} columns={{ sm: 1, md: 2, lg: 3, xl: 3 }} />
               </div>
             ) : null}
 
-            {groupedResults.stores.length > 0 ? (
+            {filteredStores.length > 0 ? (
               <div className="space-y-5">
                 <div className="flex items-center justify-between gap-4">
                   <h2 className="flex items-center gap-2 text-2xl font-semibold text-white">
                     <Store size={20} className="text-pink-100" />
                     Lojas
                   </h2>
-                  <span className="text-sm text-pink-100/80">{groupedResults.stores.length} encontradas</span>
+                  <span className="text-sm text-pink-100/80">{filteredStores.length} encontradas</span>
                 </div>
 
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-                  {groupedResults.stores.map((item) => (
-                    <StoreResultCard key={item.id} item={item} />
+                  {filteredStores.map((item) => (
+                    <StoreResultCard
+                      key={item.id}
+                      item={{
+                        id: item.id,
+                        title: item.name,
+                        description: item.description || undefined,
+                        category: "Loja parceira",
+                        link: `/lojas/${item.slug}`,
+                      }}
+                    />
                   ))}
                 </div>
               </div>
             ) : null}
 
-            {groupedResults.collections.length > 0 ? (
+            {filteredCollections.length > 0 ? (
               <div className="space-y-5">
                 <div className="flex items-center justify-between gap-4">
                   <h2 className="flex items-center gap-2 text-2xl font-semibold text-white">
                     <Layers3 size={20} className="text-pink-100" />
                     Coleções
                   </h2>
-                  <span className="text-sm text-pink-100/80">{groupedResults.collections.length} encontradas</span>
+                  <span className="text-sm text-pink-100/80">{filteredCollections.length} encontradas</span>
                 </div>
 
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-                  {groupedResults.collections.map((item) => (
-                    <CollectionResultCard key={item.id} item={item} />
+                  {filteredCollections.map((item) => (
+                    <CollectionResultCard
+                      key={item.id}
+                      item={{
+                        id: item.id,
+                        title: item.name,
+                        description: item.description,
+                        itemCount: item.products.length,
+                        link: `/colecao/${item.slug}`,
+                      }}
+                    />
                   ))}
                 </div>
               </div>

@@ -1,6 +1,40 @@
 import { getSupabaseClient, isSupabaseConfigured } from '@/lib/supabase';
 import { Category } from '@/types/category';
 
+const shouldLog = process.env.NODE_ENV !== 'production';
+
+function logServiceError(message: string, error: unknown, context?: Record<string, unknown>) {
+  if (!shouldLog) return;
+  console.error(message, {
+    ...(context ?? {}),
+    error: error instanceof Error ? error.message : String(error ?? 'unknown_error'),
+  });
+}
+
+interface CategoryRow {
+  id: string;
+  name: string;
+  slug: string;
+  description?: string | null;
+  is_active: boolean;
+  sort_order?: number | null;
+  created_at: string;
+  updated_at: string;
+}
+
+function mapCategory(row: CategoryRow): Category {
+  return {
+    id: row.id,
+    name: row.name,
+    slug: row.slug,
+    description: row.description ?? undefined,
+    order: row.sort_order ?? undefined,
+    isActive: row.is_active,
+    createdAt: new Date(row.created_at),
+    updatedAt: new Date(row.updated_at),
+  };
+}
+
 export const categoriesService = {
   /**
    * Get all active categories ordered by display order
@@ -14,14 +48,14 @@ export const categoriesService = {
       .from('categories')
       .select('*')
       .eq('is_active', true)
-      .order('order', { ascending: true });
+      .order('sort_order', { ascending: true });
 
     if (error) {
-      console.error('Error fetching categories:', error);
+      logServiceError('Error fetching categories', error);
       return [];
     }
 
-    return data || [];
+    return ((data ?? []) as CategoryRow[]).map(mapCategory);
   },
 
   /**
@@ -40,10 +74,10 @@ export const categoriesService = {
       .single();
 
     if (error) {
-      console.error('Error fetching category by slug:', slug, error);
+      logServiceError('Error fetching category by slug', error, { slug });
       return null;
     }
 
-    return data || null;
+    return data ? mapCategory(data as CategoryRow) : null;
   }
 };

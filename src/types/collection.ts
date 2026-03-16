@@ -20,14 +20,3 @@ export interface Collection {
   createdAt: Date;
   updatedAt: Date;
 }
-
-export interface CuratedCollectionPreview {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  tag: string;
-  itemCount: number;
-  priceHighlight?: string;
-  slug: string;
-}

@@ -2,7 +2,6 @@
 
 import { FeminineCommerceBackground } from "@/components/FeminineCommerceBackground";
 import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { RECENT_OFFERS_HASH, STORES_PAGE_PATH } from "@/constants/navigation";
 import { BrandAvatar } from "@/components/ui/brand-avatar";
@@ -15,32 +14,6 @@ export function FeminineCommerceHeroSection() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const achadinhosPreview = [
-    {
-      image: "/images/products/fone-bluetooth.jpg",
-      discount: "-35%",
-      name: "Fone Bluetooth",
-      price: "R$ 89,90",
-      label: "🔥 Viral",
-    },
-    {
-      image: "/images/products/kit-skincare.jpg",
-      discount: "-28%",
-      name: "Kit Skincare",
-      price: "R$ 69,90",
-      label: "💸 Oferta",
-    },
-    {
-      image: "/images/products/luminaria-led.jpg",
-      discount: "-42%",
-      name: "Luminária LED",
-      price: "R$ 54,90",
-      label: "⭐ Mais vendido",
-    },
-  ];
-
-  const previewLoop = [...achadinhosPreview, ...achadinhosPreview];
   const parallaxOffset = Math.min(scrollY * 0.08, 28);
 
   return (
@@ -102,75 +75,6 @@ export function FeminineCommerceHeroSection() {
               </Link>
             </div>
 
-            {/* Achadinhos Preview Strip */}
-            <div className="space-y-3 animate-fade-in-soft">
-              <p className="text-xs md:text-sm uppercase tracking-wide text-pink-100/75 font-semibold">
-                Achadinhos Preview
-              </p>
-              <div className="relative overflow-hidden rounded-2xl border border-pink-200/20 bg-white/[0.02] p-2">
-                <div className="hero-preview-marquee flex w-max gap-3">
-                  {previewLoop.map((item, index) => (
-                    <article
-                      key={`${item.name}-${index}`}
-                      className="group min-w-[210px] max-w-[210px] rounded-xl border border-white/10 bg-[#111114]/85 p-2.5 transition-all duration-300 hover:-translate-y-1.5 hover:border-pink-300/70 hover:shadow-[0_0_0_1px_rgba(244,175,196,0.3),0_12px_28px_rgba(244,175,196,0.24)]"
-                    >
-                      <div className="relative mb-2 overflow-hidden rounded-lg">
-                        <Image
-                          src={item.image}
-                          alt={item.name}
-                          width={194}
-                          height={112}
-                          className="h-24 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                        <span className="absolute left-2 top-2 rounded-md bg-gradient-to-r from-[#F7C8D8] to-[#F4AFC4] px-2 py-1 text-[10px] font-bold text-[#32131F] shadow-[0_6px_14px_rgba(244,175,196,0.25)]">
-                          {item.discount}
-                        </span>
-                      </div>
-                      <p className="mb-1 text-[11px] text-pink-100/80">{item.label}</p>
-                      <h3 className="line-clamp-1 text-sm font-semibold text-white/95">{item.name}</h3>
-                      <p className="text-base font-bold text-[#F4AFC4]">{item.price}</p>
-                    </article>
-                  ))}
-                </div>
-                <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-[#111114] to-transparent" />
-                <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#111114] to-transparent" />
-              </div>
-            </div>
-
-            {/* Achado do dia highlight */}
-            <article className="animate-fade-in-soft relative max-w-xl rounded-2xl border border-pink-300/30 bg-gradient-to-r from-white/[0.06] via-pink-200/[0.08] to-white/[0.04] p-4 md:p-5 shadow-[0_14px_34px_rgba(244,175,196,0.14)]">
-              <div className="mb-3 flex items-center justify-between gap-3">
-                <p className="text-xs md:text-sm font-semibold uppercase tracking-wide text-pink-100/85">
-                  Achado do dia
-                </p>
-                <span className="animate-float-gentle rounded-full border border-pink-200/40 bg-pink-200/15 px-3 py-1 text-[11px] text-pink-100/90">
-                  🔥 Tendência agora
-                </span>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <div className="relative overflow-hidden rounded-lg border border-pink-200/30">
-                  <Image
-                    src="/images/products/fone-bluetooth.jpg"
-                    alt="Achado do dia"
-                    width={84}
-                    height={84}
-                    className="h-16 w-16 md:h-[72px] md:w-[72px] object-cover"
-                  />
-                </div>
-                <div className="space-y-1">
-                  <p className="text-sm md:text-base font-semibold text-white/95">Fone Bluetooth com cancelamento</p>
-                  <p className="text-xs text-pink-100/80">Produto viral encontrado</p>
-                  <p className="text-sm font-bold text-[#F4AFC4]">R$ 89,90</p>
-                </div>
-              </div>
-
-              <p className="mt-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs text-white/75">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#F4AFC4] animate-pulse" />
-                +500 ofertas encontradas
-              </p>
-            </article>
-            
             {/* FOMO Micro Indicator */}
             <p className="text-sm text-white/65 px-5 py-2.5 rounded-full inline-flex items-center gap-2 border border-white/10 bg-white/[0.02]">
               <span className="h-2 w-2 rounded-full bg-[#F4AFC4] animate-pulse"></span>

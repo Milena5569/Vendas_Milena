@@ -14,35 +14,46 @@ export function ProductCard({ product }: ProductCardProps) {
     product.discountPrice || product.price
   );
 
+  const primaryLink = product.links[0];
+  const primaryImage = product.images[0]?.url;
+
   return (
     <article className="group relative overflow-hidden rounded-2xl border border-border-soft bg-surface-card shadow-lg shadow-black/10 transition-all duration-300 hover:scale-102 hover:border-accent-primary/30">
       {/* Hot badge */}
-      <div className="absolute top-3 left-3 z-10">
-        <span className="inline-flex items-center gap-1 rounded-full bg-accent-primary/15 border border-accent-primary/30 px-2 py-1 text-xs font-semibold text-accent-primary">
-          <Flame size={12} />
-          Mais vendido
-        </span>
-      </div>
+      {product.isHot ? (
+        <div className="absolute top-3 left-3 z-10">
+          <span className="inline-flex items-center gap-1 rounded-full bg-accent-primary/15 border border-accent-primary/30 px-2 py-1 text-xs font-semibold text-accent-primary">
+            <Flame size={12} />
+            Mais vendido
+          </span>
+        </div>
+      ) : null}
 
       {/* View count badge */}
-      <div className="absolute top-3 right-3 z-10">
-        <span className="inline-flex items-center gap-1 rounded-full bg-surface-card border border-border-soft px-2 py-1 text-xs font-medium text-text-secondary">
-          👁 37
-        </span>
-      </div>
+      {product.viewCount > 0 ? (
+        <div className="absolute top-3 right-3 z-10">
+          <span className="inline-flex items-center gap-1 rounded-full bg-surface-card border border-border-soft px-2 py-1 text-xs font-medium text-text-secondary">
+            👁 {product.viewCount}
+          </span>
+        </div>
+      ) : null}
 
       <div className="relative aspect-[4/5] overflow-hidden">
-        <Image
-          src={product.images[0]?.url || ""}
-          alt={product.name}
-          fill
-          className="object-cover transition duration-300 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-          priority={false}
-        />
+        {primaryImage ? (
+          <Image
+            src={primaryImage}
+            alt={product.name}
+            fill
+            className="object-cover transition duration-300 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+            priority={false}
+          />
+        ) : (
+          <div className="absolute inset-0 bg-gradient-to-br from-pink-300/20 via-pink-200/10 to-transparent" />
+        )}
 
         <div className="absolute left-3 top-3">
-          <BadgeOrigin origin={product.links[0]?.store || "Shopee"} />
+          <BadgeOrigin origin={primaryLink?.store || "Outros"} />
         </div>
 
         {discountPercentage > 0 && (
@@ -81,12 +92,16 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
 
         <a
-          href={product.links[0]?.url || "#"}
+          href={primaryLink?.url || "#"}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-pink-200/35 bg-gradient-to-r from-[#F7C8D8] via-[#F4AFC4] to-[#EFA9C5] px-4 py-3 text-sm font-semibold text-[#08080A] transition-all duration-300 hover:scale-102 hover:shadow-lg hover:shadow-accent-primary/25"
+          className={`inline-flex w-full items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold transition-all duration-300 ${
+            primaryLink
+              ? "border border-pink-200/35 bg-gradient-to-r from-[#F7C8D8] via-[#F4AFC4] to-[#EFA9C5] text-[#08080A] hover:scale-102 hover:shadow-lg hover:shadow-accent-primary/25"
+              : "border border-border-soft bg-background-primary text-text-secondary cursor-not-allowed pointer-events-none"
+          }`}
         >
-          Ver Oferta
+          {primaryLink ? "Ver Oferta" : "Produto indisponível"}
           <ArrowUpRight size={16} />
         </a>
       </div>

@@ -1,9 +1,11 @@
 import { CollectionGrid } from "@/components/collection/collection-grid";
 import { StoreFooter } from "@/components/layout/footer";
 import { StoreHeader } from "@/components/layout/header";
-import { collectionsHighlights, curatedCollections } from "@/constants/collections-showcase";
+import { collectionsService } from "@/services/collections";
 
-export default function CollectionsPage() {
+export default async function CollectionsPage() {
+  const collections = await collectionsService.getAllCollections(24);
+
   return (
     <div className="min-h-screen bg-background-primary">
       <StoreHeader />
@@ -19,15 +21,15 @@ export default function CollectionsPage() {
             </div>
 
             <h1 className="mt-6 text-4xl md:text-6xl font-bold tracking-tight text-text-primary">
-              Coleções em destaque
+              Curadorias editoriais
             </h1>
             <p className="mt-5 max-w-3xl mx-auto text-lg text-text-secondary/90 leading-relaxed">
-              Descubra seleções agrupadas por estilo de vida, momento e necessidade. Aqui você encontra combos,
-              kits e curadorias temáticas para explorar compras com mais praticidade e personalidade.
+              As coleções funcionam como grupos promocionais opcionais para campanhas estratégicas como Reels,
+              carrosséis e ações sazonais. Para navegação permanente, continue explorando pelas categorias.
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-3">
-              {collectionsHighlights.map((highlight) => (
+              {["Reels de campanha", "Carrosséis curados", "Sazonais", "Campanhas de produto"].map((highlight) => (
                 <span
                   key={highlight}
                   className="rounded-full border border-pink-300/25 bg-white/5 px-4 py-2 text-xs font-medium tracking-wide text-pink-100/90"
@@ -41,11 +43,14 @@ export default function CollectionsPage() {
 
         <section className="pb-16 md:pb-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <CollectionGrid
-              collections={curatedCollections}
-              mode="curated"
-              columns={{ sm: 1, md: 2, lg: 3, xl: 3 }}
-            />
+            {collections.length > 0 ? (
+              <CollectionGrid collections={collections} columns={{ sm: 1, md: 2, lg: 3, xl: 3 }} />
+            ) : (
+              <div className="rounded-2xl border border-border-soft bg-surface-card/70 p-10 text-center">
+                <p className="text-lg font-semibold text-text-primary">Sem campanhas editoriais ativas</p>
+                <p className="mt-2 text-text-secondary">As coleções aparecem aqui quando houver produtos vinculados.</p>
+              </div>
+            )}
           </div>
         </section>
       </main>

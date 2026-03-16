@@ -30,20 +30,6 @@ export function BadgeOrigin({ origin }: BadgeOriginProps) {
           text: "text-blue-300",
           icon: "🎵"
         };
-      case "Amazon":
-        return {
-          bg: "bg-orange-500/15",
-          border: "border-orange-400/30",
-          text: "text-orange-300",
-          icon: "📦"
-        };
-      case "Magalu":
-        return {
-          bg: "bg-green-500/15",
-          border: "border-green-400/30",
-          text: "text-green-300",
-          icon: "🛍️"
-        };
       default:
         return {
           bg: "bg-gray-500/15",
