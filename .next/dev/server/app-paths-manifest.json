@@ -1,9 +1,0 @@
-{
-  "/_not-found/page": "app/_not-found/page.js",
-  "/admin/importar/page": "app/admin/importar/page.js",
-  "/api/admin/import-products/route": "app/api/admin/import-products/route.js",
-  "/categorias/[slug]/page": "app/categorias/[slug]/page.js",
-  "/colecoes/[slug]/page": "app/colecoes/[slug]/page.js",
-  "/colecoes/page": "app/colecoes/page.js",
-  "/page": "app/page.js"
-}
