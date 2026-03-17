@@ -228,7 +228,7 @@ function StoreHeader() {
     const isHomeActive = pathname === "/";
     const isCategoriasActive = pathname === "/categorias" || pathname.startsWith("/categorias/") || pathname === "/lojas" && Boolean(activeCategory);
     const isLojasActive = pathname === "/lojas" || pathname.startsWith("/lojas/");
-    const isColecoesActive = pathname === "/colecoes" || pathname.startsWith("/colecao/");
+    const isColecoesActive = pathname === "/colecoes" || pathname.startsWith("/colecoes/") || pathname.startsWith("/colecao/");
     const isSobreActive = pathname === "/sobre";
     const isBuscarActive = pathname === "/buscar";
     const isFavoritosActive = pathname === "/favoritos";

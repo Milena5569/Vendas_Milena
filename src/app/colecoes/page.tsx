@@ -5,6 +5,7 @@ import { collectionsService } from "@/services/collections";
 
 export default async function CollectionsPage() {
   const collections = await collectionsService.getAllCollections(24);
+  const collectionsWithProducts = collections.filter((collection) => collection.products.length > 0);
 
   return (
     <div className="min-h-screen bg-background-primary">
@@ -43,8 +44,8 @@ export default async function CollectionsPage() {
 
         <section className="pb-16 md:pb-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            {collections.length > 0 ? (
-              <CollectionGrid collections={collections} columns={{ sm: 1, md: 2, lg: 3, xl: 3 }} />
+            {collectionsWithProducts.length > 0 ? (
+              <CollectionGrid collections={collectionsWithProducts} columns={{ sm: 1, md: 2, lg: 3, xl: 3 }} />
             ) : (
               <div className="rounded-2xl border border-border-soft bg-surface-card/70 p-10 text-center">
                 <p className="text-lg font-semibold text-text-primary">Sem campanhas editoriais ativas</p>

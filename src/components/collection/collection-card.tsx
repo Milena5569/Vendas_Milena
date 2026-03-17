@@ -7,14 +7,16 @@ interface CollectionCardProps {
   collection: Collection;
 }
 export function CollectionCard({ collection }: CollectionCardProps) {
+  const fallbackImage = collection.products.find((item) => item.product.images[0]?.url)?.product.images[0]?.url;
+
   const normalized = {
     featuredProduct: collection.products.find((product) => product.isFeatured)?.product,
     title: collection.name,
     description: collection.description || `${collection.products.length} produto(s) na coleção`,
-    image: collection.image,
+    image: collection.image || fallbackImage,
     itemCount: collection.products.length,
     tag: collection.isFeatured ? "Curadoria especial" : undefined,
-    ctaHref: `/colecao/${collection.slug}`,
+    ctaHref: `/colecoes/${collection.slug}`,
     ctaLabel: "Ver coleção",
     priceHighlight: undefined,
   };

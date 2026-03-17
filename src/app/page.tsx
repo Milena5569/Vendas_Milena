@@ -19,6 +19,9 @@ export default async function HomePage() {
     storesService.getFeaturedStores(3),
   ]);
 
+  const homepageCollections =
+    featuredCollections.length > 0 ? featuredCollections : await collectionsService.getAllCollections(6);
+
   return (
     <div className="min-h-screen bg-background-primary">
       {/* Header */}
@@ -39,7 +42,7 @@ export default async function HomePage() {
         <FeaturedProducts products={featuredProducts} />
 
         {/* Collections Section */}
-        <FeaturedCollections collections={featuredCollections} isHomepage />
+        <FeaturedCollections collections={homepageCollections} isHomepage />
 
         {/* CTA Section */}
         <CTASection />

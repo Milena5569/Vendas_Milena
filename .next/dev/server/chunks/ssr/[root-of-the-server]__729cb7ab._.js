@@ -1090,14 +1090,15 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 function CollectionCard({ collection }) {
+    const fallbackImage = collection.products.find((item)=>item.product.images[0]?.url)?.product.images[0]?.url;
     const normalized = {
         featuredProduct: collection.products.find((product)=>product.isFeatured)?.product,
         title: collection.name,
         description: collection.description || `${collection.products.length} produto(s) na coleção`,
-        image: collection.image,
+        image: collection.image || fallbackImage,
         itemCount: collection.products.length,
         tag: collection.isFeatured ? "Curadoria especial" : undefined,
-        ctaHref: `/colecao/${collection.slug}`,
+        ctaHref: `/colecoes/${collection.slug}`,
         ctaLabel: "Ver coleção",
         priceHighlight: undefined
     };
@@ -1116,7 +1117,7 @@ function CollectionCard({ collection }) {
                         priority: false
                     }, void 0, false, {
                         fileName: "[project]/src/components/collection/collection-card.tsx",
-                        lineNumber: 26,
+                        lineNumber: 28,
                         columnNumber: 11
                     }, this) : normalized.featuredProduct ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                         src: normalized.featuredProduct.images[0]?.url || "",
@@ -1127,13 +1128,13 @@ function CollectionCard({ collection }) {
                         priority: false
                     }, void 0, false, {
                         fileName: "[project]/src/components/collection/collection-card.tsx",
-                        lineNumber: 35,
+                        lineNumber: 37,
                         columnNumber: 11
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 bg-gradient-to-br from-pink-300/12 to-transparent"
                     }, void 0, false, {
                         fileName: "[project]/src/components/collection/collection-card.tsx",
-                        lineNumber: 44,
+                        lineNumber: 46,
                         columnNumber: 11
                     }, this),
                     normalized.tag && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1141,27 +1142,27 @@ function CollectionCard({ collection }) {
                         children: normalized.tag
                     }, void 0, false, {
                         fileName: "[project]/src/components/collection/collection-card.tsx",
-                        lineNumber: 48,
+                        lineNumber: 50,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-80"
                     }, void 0, false, {
                         fileName: "[project]/src/components/collection/collection-card.tsx",
-                        lineNumber: 53,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 bg-gradient-to-t from-pink-300/20 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                     }, void 0, false, {
                         fileName: "[project]/src/components/collection/collection-card.tsx",
-                        lineNumber: 54,
+                        lineNumber: 56,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/collection/collection-card.tsx",
-                lineNumber: 24,
+                lineNumber: 26,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1175,7 +1176,7 @@ function CollectionCard({ collection }) {
                                 children: normalized.title
                             }, void 0, false, {
                                 fileName: "[project]/src/components/collection/collection-card.tsx",
-                                lineNumber: 59,
+                                lineNumber: 61,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1183,13 +1184,13 @@ function CollectionCard({ collection }) {
                                 children: normalized.description
                             }, void 0, false, {
                                 fileName: "[project]/src/components/collection/collection-card.tsx",
-                                lineNumber: 62,
+                                lineNumber: 64,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/collection/collection-card.tsx",
-                        lineNumber: 58,
+                        lineNumber: 60,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1207,7 +1208,7 @@ function CollectionCard({ collection }) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/collection/collection-card.tsx",
-                                        lineNumber: 69,
+                                        lineNumber: 71,
                                         columnNumber: 13
                                     }, this),
                                     normalized.priceHighlight ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1215,13 +1216,13 @@ function CollectionCard({ collection }) {
                                         children: normalized.priceHighlight
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/collection/collection-card.tsx",
-                                        lineNumber: 73,
+                                        lineNumber: 75,
                                         columnNumber: 15
                                     }, this) : null
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/collection/collection-card.tsx",
-                                lineNumber: 68,
+                                lineNumber: 70,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -1233,31 +1234,31 @@ function CollectionCard({ collection }) {
                                         size: 16
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/collection/collection-card.tsx",
-                                        lineNumber: 84,
+                                        lineNumber: 86,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/collection/collection-card.tsx",
-                                lineNumber: 79,
+                                lineNumber: 81,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/collection/collection-card.tsx",
-                        lineNumber: 67,
+                        lineNumber: 69,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/collection/collection-card.tsx",
-                lineNumber: 57,
+                lineNumber: 59,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/collection/collection-card.tsx",
-        lineNumber: 23,
+        lineNumber: 25,
         columnNumber: 5
     }, this);
 }
@@ -1780,13 +1781,38 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$supabase$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/supabase.ts [app-rsc] (ecmascript)");
 ;
 const shouldLog = ("TURBOPACK compile-time value", "development") !== 'production';
+function getSupabaseErrorDetails(error) {
+    if (!error || typeof error !== 'object') {
+        return {
+            message: String(error ?? 'unknown_error')
+        };
+    }
+    const value = error;
+    return {
+        message: value.message ?? 'unknown_error',
+        code: value.code,
+        details: value.details ?? null,
+        hint: value.hint ?? null
+    };
+}
 function logServiceError(message, error, context) {
     if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
     ;
+    const parsedError = getSupabaseErrorDetails(error);
     console.error(message, {
         ...context ?? {},
-        error: error instanceof Error ? error.message : String(error ?? 'unknown_error')
+        error: parsedError
     });
+}
+function logCollectionDebug(stage, payload) {
+    if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
+    ;
+    console.info(`[collectionsService] ${stage}`, payload);
+}
+function isMissingColumnError(error, columnName) {
+    const parsed = getSupabaseErrorDetails(error);
+    if (parsed.code !== '42703') return false;
+    return (parsed.message ?? '').toLowerCase().includes(columnName.toLowerCase());
 }
 const COLLECTION_PRODUCTS_SELECT = `
   *,
@@ -1807,6 +1833,98 @@ const COLLECTION_PRODUCTS_SELECT = `
     )
   )
 `;
+const COLLECTION_PRODUCTS_BY_COLLECTION_SELECT = `
+  id,
+  collection_id,
+  product_id,
+  created_at,
+  products(
+    *,
+    categories (
+      id,
+      name,
+      slug
+    ),
+    stores (
+      id,
+      name,
+      slug
+    )
+  )
+`;
+function normalizeCollectionRow(row) {
+    return {
+        id: String(row.id ?? ''),
+        name: String(row.name ?? ''),
+        slug: String(row.slug ?? ''),
+        description: typeof row.description === 'string' ? row.description : null,
+        cover_image: typeof row.cover_image === 'string' ? row.cover_image : null,
+        cover_image_url: typeof row.cover_image_url === 'string' ? row.cover_image_url : null,
+        is_featured: typeof row.is_featured === 'boolean' ? row.is_featured : false,
+        is_active: typeof row.is_active === 'boolean' ? row.is_active : true,
+        created_at: String(row.created_at ?? new Date().toISOString()),
+        updated_at: typeof row.updated_at === 'string' ? row.updated_at : undefined
+    };
+}
+async function getCollectionProductsMap(collectionIds) {
+    const mapped = new Map();
+    if (!collectionIds.length) return mapped;
+    if (!(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$supabase$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["isSupabaseConfigured"])()) return mapped;
+    const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$supabase$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getSupabaseClient"])();
+    if (!supabase) return mapped;
+    const { data, error } = await supabase.from('collection_products').select(COLLECTION_PRODUCTS_BY_COLLECTION_SELECT).in('collection_id', collectionIds);
+    if (error) {
+        logServiceError('Error fetching collection_products for collections', error, {
+            collectionIdsCount: collectionIds.length,
+            stage: 'collection_products_join'
+        });
+        return mapped;
+    }
+    logCollectionDebug('collection_products_fetched', {
+        fetchedRows: (data ?? []).length,
+        requestedCollectionIds: collectionIds
+    });
+    for (const item of data ?? []){
+        const existing = mapped.get(item.collection_id) ?? [];
+        existing.push(item);
+        mapped.set(item.collection_id, existing);
+    }
+    return mapped;
+}
+function sanitizeSlug(value) {
+    return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '').slice(0, 120);
+}
+function buildUniqueSlugCandidate(baseSlug, suffix) {
+    if (suffix <= 0) return baseSlug;
+    const maxBaseLength = 120 - `-${suffix}`.length;
+    return `${baseSlug.slice(0, maxBaseLength)}-${suffix}`;
+}
+async function ensureUniqueCollectionSlug(name) {
+    if (!(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$supabase$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["isSupabaseConfigured"])()) {
+        return sanitizeSlug(name) || `colecao-${Date.now()}`;
+    }
+    const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$supabase$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getSupabaseClient"])();
+    if (!supabase) {
+        return sanitizeSlug(name) || `colecao-${Date.now()}`;
+    }
+    const baseSlug = sanitizeSlug(name) || `colecao-${Date.now()}`;
+    const { data, error } = await supabase.from('collections').select('slug').ilike('slug', `${baseSlug}%`);
+    if (error) {
+        logServiceError('Error checking slug uniqueness', error, {
+            baseSlug
+        });
+        return baseSlug;
+    }
+    const existingSlugs = new Set((data ?? []).map((item)=>item.slug));
+    if (!existingSlugs.has(baseSlug)) {
+        return baseSlug;
+    }
+    let suffix = 1;
+    while(existingSlugs.has(buildUniqueSlugCandidate(baseSlug, suffix))){
+        suffix += 1;
+    }
+    return buildUniqueSlugCandidate(baseSlug, suffix);
+}
 function mapGender(value) {
     const normalized = (value || '').toLowerCase();
     if (normalized.includes('masc')) return 'Masc';
@@ -1822,13 +1940,15 @@ function mapStoreOrigin(value) {
     return 'Outros';
 }
 function mapCategory(row) {
+    const createdAt = row.created_at || new Date().toISOString();
+    const updatedAt = row.updated_at || createdAt;
     return {
         id: row.categories?.id || row.category_id || 'sem-categoria',
         name: row.categories?.name || 'Categoria',
         slug: row.categories?.slug || 'categoria',
         isActive: true,
-        createdAt: new Date(row.created_at),
-        updatedAt: new Date(row.updated_at)
+        createdAt: new Date(createdAt),
+        updatedAt: new Date(updatedAt)
     };
 }
 function mapProduct(row) {
@@ -1854,8 +1974,8 @@ function mapProduct(row) {
     ] : [];
     return {
         id: row.id,
-        name: row.name,
-        slug: row.slug,
+        name: row.name || row.title || 'Produto',
+        slug: row.slug || row.id,
         description: row.description || undefined,
         shortDescription: row.short_description || undefined,
         price: Number.isFinite(compare) ? compare : 0,
@@ -1874,73 +1994,207 @@ function mapProduct(row) {
     };
 }
 function mapCollection(row) {
-    const collectionProducts = (row.collection_products ?? []).filter((item)=>item.products && item.products.is_active).map((item)=>({
+    const collectionProducts = (row.collection_products ?? []).map((item)=>{
+        const productRow = Array.isArray(item.products) ? item.products[0] : item.products;
+        if (!productRow || !productRow.is_active) return null;
+        return {
             id: item.id,
-            product: mapProduct(item.products),
+            product: mapProduct(productRow),
             order: 0,
             isFeatured: false,
             createdAt: new Date(item.created_at)
-        }));
+        };
+    }).filter((item)=>Boolean(item));
     return {
         id: row.id,
         name: row.name,
         slug: row.slug,
         description: row.description || undefined,
-        image: row.cover_image_url || undefined,
+        image: row.cover_image || row.cover_image_url || undefined,
         products: collectionProducts,
         isFeatured: Boolean(row.is_featured),
-        isActive: Boolean(row.is_active),
+        isActive: row.is_active ?? true,
         createdAt: new Date(row.created_at),
-        updatedAt: new Date(row.updated_at)
+        updatedAt: new Date(row.updated_at || row.created_at)
     };
 }
 const collectionsService = {
+    async createCollection (input) {
+        if (!(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$supabase$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["isSupabaseConfigured"])()) return null;
+        const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$supabase$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getSupabaseClient"])();
+        if (!supabase) return null;
+        const trimmedName = input.name.trim();
+        if (!trimmedName) return null;
+        const slug = await ensureUniqueCollectionSlug(trimmedName);
+        let { data, error } = await supabase.from('collections').insert({
+            name: trimmedName,
+            slug,
+            description: input.description?.trim() || null,
+            cover_image: input.coverImage || null,
+            is_featured: Boolean(input.isFeatured)
+        }).select(COLLECTION_PRODUCTS_SELECT).single();
+        if (error && isMissingColumnError(error, 'cover_image')) {
+            const fallbackInsert = await supabase.from('collections').insert({
+                name: trimmedName,
+                slug,
+                description: input.description?.trim() || null,
+                cover_image_url: input.coverImage || null,
+                is_featured: Boolean(input.isFeatured)
+            }).select(COLLECTION_PRODUCTS_SELECT).single();
+            data = fallbackInsert.data;
+            error = fallbackInsert.error;
+        }
+        if (error) {
+            logServiceError('Error creating collection', error, {
+                name: trimmedName,
+                slug
+            });
+            return null;
+        }
+        return mapCollection(data);
+    },
+    async addProductToCollection (collectionId, productId) {
+        if (!(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$supabase$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["isSupabaseConfigured"])()) return false;
+        const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$supabase$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getSupabaseClient"])();
+        if (!supabase) return false;
+        const { error } = await supabase.from('collection_products').upsert({
+            collection_id: collectionId,
+            product_id: productId
+        }, {
+            onConflict: 'collection_id,product_id'
+        });
+        if (error) {
+            logServiceError('Error adding product to collection', error, {
+                collectionId,
+                productId
+            });
+            return false;
+        }
+        return true;
+    },
+    async removeProductFromCollection (collectionId, productId) {
+        if (!(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$supabase$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["isSupabaseConfigured"])()) return false;
+        const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$supabase$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getSupabaseClient"])();
+        if (!supabase) return false;
+        const { error } = await supabase.from('collection_products').delete().eq('collection_id', collectionId).eq('product_id', productId);
+        if (error) {
+            logServiceError('Error removing product from collection', error, {
+                collectionId,
+                productId
+            });
+            return false;
+        }
+        return true;
+    },
     async getAllCollections (limit) {
         if (!(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$supabase$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["isSupabaseConfigured"])()) return [];
         const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$supabase$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getSupabaseClient"])();
         if (!supabase) return [];
-        let query = supabase.from('collections').select(COLLECTION_PRODUCTS_SELECT).eq('is_active', true).order('created_at', {
+        let queryWithFilters = supabase.from('collections').select('*').eq('is_active', true).order('created_at', {
             ascending: false
         });
-        if (typeof limit === 'number') {
-            query = query.limit(limit);
+        if (typeof limit === 'number') queryWithFilters = queryWithFilters.limit(limit);
+        let { data, error } = await queryWithFilters;
+        if (error && isMissingColumnError(error, 'is_active')) {
+            let baselineQuery = supabase.from('collections').select('*').order('created_at', {
+                ascending: false
+            });
+            if (typeof limit === 'number') baselineQuery = baselineQuery.limit(limit);
+            const fallbackResult = await baselineQuery;
+            data = fallbackResult.data;
+            error = fallbackResult.error;
         }
-        const { data, error } = await query;
         if (error) {
             logServiceError('Error fetching all collections', error, {
-                limit
+                limit,
+                stage: 'collections_baseline_select'
             });
             return [];
         }
-        return (data ?? []).map(mapCollection).filter((collection)=>collection.products.length > 0);
+        const baseRows = (data ?? []).map(normalizeCollectionRow);
+        logCollectionDebug('collections_fetched', {
+            totalCollections: baseRows.length,
+            collectionIds: baseRows.map((row)=>row.id),
+            collectionNames: baseRows.map((row)=>row.name)
+        });
+        const productsByCollection = await getCollectionProductsMap(baseRows.map((row)=>row.id));
+        const mappedCollections = baseRows.map((row)=>mapCollection({
+                ...row,
+                collection_products: productsByCollection.get(row.id) ?? []
+            }));
+        logCollectionDebug('collections_mapped', {
+            productCountsByCollection: mappedCollections.map((collection)=>({
+                    id: collection.id,
+                    name: collection.name,
+                    productCount: collection.products.length
+                })),
+            nonEmptyCollections: mappedCollections.filter((collection)=>collection.products.length > 0).map((collection)=>({
+                    id: collection.id,
+                    name: collection.name
+                }))
+        });
+        return mappedCollections;
     },
     async getFeaturedCollections (limit = 6) {
         if (!(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$supabase$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["isSupabaseConfigured"])()) return [];
         const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$supabase$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getSupabaseClient"])();
         if (!supabase) return [];
-        const { data, error } = await supabase.from('collections').select(COLLECTION_PRODUCTS_SELECT).eq('is_active', true).eq('is_featured', true).order('created_at', {
+        let featuredQuery = supabase.from('collections').select('*').eq('is_active', true).eq('is_featured', true).order('created_at', {
             ascending: false
         }).limit(limit);
-        if (error) {
-            logServiceError('Error fetching featured collections', error);
+        let { data, error } = await featuredQuery;
+        if (error && isMissingColumnError(error, 'is_active')) {
+            const retryWithoutIsActive = await supabase.from('collections').select('*').eq('is_featured', true).order('created_at', {
+                ascending: false
+            }).limit(limit);
+            data = retryWithoutIsActive.data;
+            error = retryWithoutIsActive.error;
+        }
+        if (error && isMissingColumnError(error, 'is_featured')) {
             return [];
         }
-        return (data ?? []).map(mapCollection).filter((collection)=>collection.products.length > 0);
+        if (error) {
+            logServiceError('Error fetching featured collections', error, {
+                limit,
+                stage: 'featured_collections_baseline_select'
+            });
+            return [];
+        }
+        const baseRows = (data ?? []).map(normalizeCollectionRow);
+        const productsByCollection = await getCollectionProductsMap(baseRows.map((row)=>row.id));
+        return baseRows.map((row)=>mapCollection({
+                ...row,
+                collection_products: productsByCollection.get(row.id) ?? []
+            }));
     },
     async getCollectionBySlug (slug) {
         if (!(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$supabase$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["isSupabaseConfigured"])()) return null;
         const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$supabase$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getSupabaseClient"])();
         if (!supabase) return null;
-        const { data, error } = await supabase.from('collections').select(COLLECTION_PRODUCTS_SELECT).eq('slug', slug).eq('is_active', true).maybeSingle();
+        let query = supabase.from('collections').select(COLLECTION_PRODUCTS_SELECT).eq('slug', slug).eq('is_active', true).maybeSingle();
+        let { data, error } = await query;
+        if (error && isMissingColumnError(error, 'is_active')) {
+            const fallback = await supabase.from('collections').select(COLLECTION_PRODUCTS_SELECT).eq('slug', slug).maybeSingle();
+            data = fallback.data;
+            error = fallback.error;
+        }
         if (error) {
             logServiceError('Error fetching collection by slug', error, {
                 slug
             });
             return null;
         }
-        return data ? mapCollection(data) : null;
+        if (!data) return null;
+        const mapped = mapCollection(data);
+        logCollectionDebug('collection_by_slug_mapped', {
+            slug,
+            collectionId: mapped.id,
+            productCount: mapped.products.length,
+            productIds: mapped.products.map((item)=>item.product.id)
+        });
+        return mapped.products.length > 0 ? mapped : null;
     },
-    async getCollectionProducts (collectionId) {
+    async getProductsByCollection (collectionId) {
         if (!(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$supabase$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["isSupabaseConfigured"])()) return [];
         const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$supabase$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getSupabaseClient"])();
         if (!supabase) return [];
@@ -1966,7 +2220,16 @@ const collectionsService = {
             });
             return [];
         }
-        return (data ?? []).map((item)=>item.products).filter((item)=>Boolean(item && item.is_active)).map(mapProduct);
+        return (data ?? []).map((item)=>Array.isArray(item.products) ? item.products[0] : item.products).filter((item)=>Boolean(item && item.is_active)).map(mapProduct);
+    },
+    async getCollectionProducts (collectionId) {
+        return this.getProductsByCollection(collectionId);
+    },
+    sanitizeCollectionSlug (name) {
+        return sanitizeSlug(name);
+    },
+    async generateUniqueCollectionSlug (name) {
+        return ensureUniqueCollectionSlug(name);
     }
 };
 }),
@@ -2316,70 +2579,71 @@ async function HomePage() {
         __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$services$2f$products$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["productsService"].getAllProducts(6),
         __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$services$2f$stores$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["storesService"].getFeaturedStores(3)
     ]);
+    const homepageCollections = featuredCollections.length > 0 ? featuredCollections : await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$services$2f$collections$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["collectionsService"].getAllCollections(6);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "min-h-screen bg-background-primary",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$layout$2f$header$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["StoreHeader"], {}, void 0, false, {
                 fileName: "[project]/src/app/page.tsx",
-                lineNumber: 25,
+                lineNumber: 28,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$home$2f$feminine$2d$commerce$2d$hero$2d$section$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FeminineCommerceHeroSection"], {}, void 0, false, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 30,
+                        lineNumber: 33,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$home$2f$stores$2d$information$2d$section$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["StoresInformationSection"], {
                         stores: featuredStores
                     }, void 0, false, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 33,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$home$2f$recent$2d$offers$2d$section$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["RecentOffersSection"], {
                         products: recentProducts
                     }, void 0, false, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 36,
+                        lineNumber: 39,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$home$2f$featured$2d$products$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FeaturedProducts"], {
                         products: featuredProducts
                     }, void 0, false, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 39,
+                        lineNumber: 42,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$home$2f$featured$2d$collections$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FeaturedCollections"], {
-                        collections: featuredCollections,
+                        collections: homepageCollections,
                         isHomepage: true
                     }, void 0, false, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 42,
+                        lineNumber: 45,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$home$2f$cta$2d$section$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CTASection"], {}, void 0, false, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 45,
+                        lineNumber: 48,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/page.tsx",
-                lineNumber: 28,
+                lineNumber: 31,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$layout$2f$footer$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["StoreFooter"], {}, void 0, false, {
                 fileName: "[project]/src/app/page.tsx",
-                lineNumber: 49,
+                lineNumber: 52,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/page.tsx",
-        lineNumber: 23,
+        lineNumber: 26,
         columnNumber: 5
     }, this);
 }

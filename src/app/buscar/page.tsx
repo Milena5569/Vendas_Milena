@@ -254,7 +254,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
                         title: item.name,
                         description: item.description,
                         itemCount: item.products.length,
-                        link: `/colecao/${item.slug}`,
+                        link: `/colecoes/${item.slug}`,
                       }}
                     />
                   ))}
