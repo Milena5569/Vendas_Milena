@@ -91,19 +91,19 @@ export default function AboutPage() {
                 href="/lojas"
                 className="inline-flex items-center justify-center rounded-full border border-pink-300/50 bg-pink-300/20 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-pink-300/30 hover:shadow-[0_0_26px_rgba(244,175,196,0.28)]"
               >
-                Explorar lojas
+                Explorar
               </Link>
               <Link
                 href="/colecoes"
                 className="inline-flex items-center justify-center rounded-full border border-border-soft bg-surface-card/70 px-6 py-3 text-sm font-semibold text-text-secondary transition-colors hover:border-pink-300/40 hover:bg-surface-pink hover:text-text-primary"
               >
-                Ver coleções
+                Explorar
               </Link>
               <Link
                 href="/lojas/shopee"
                 className="inline-flex items-center justify-center rounded-full border border-border-soft bg-surface-card/70 px-6 py-3 text-sm font-semibold text-text-secondary transition-colors hover:border-pink-300/40 hover:bg-surface-pink hover:text-text-primary"
               >
-                Começar a descobrir ofertas
+                Explorar
               </Link>
             </div>
           </div>

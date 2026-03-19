@@ -7,6 +7,21 @@ import { ProductGallery } from "@/components/product/product-gallery";
 import { StoreHeader } from "@/components/layout/header";
 import { StoreFooter } from "@/components/layout/footer";
 
+const DEFAULT_WHATSAPP_GROUP_URL =
+  "https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla";
+
+function getWhatsAppContactUrl(productName?: string) {
+  const configuredPhone = process.env.NEXT_PUBLIC_WHATSAPP_PHONE?.replace(/\D/g, "");
+
+  if (configuredPhone && configuredPhone.length >= 10) {
+    const safeProductName = (productName || "este produto").trim().slice(0, 120);
+    const message = encodeURIComponent(`Olá! Tenho interesse no produto "${safeProductName}". Pode me passar mais detalhes, por favor?`);
+    return `https://wa.me/${configuredPhone}?text=${message}`;
+  }
+
+  return process.env.NEXT_PUBLIC_WHATSAPP_GROUP_URL || DEFAULT_WHATSAPP_GROUP_URL;
+}
+
 interface ProductPageProps {
   params: Promise<{
     slug: string;
@@ -20,6 +35,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
   if (!product) {
     notFound();
   }
+
+  const whatsappContactUrl = getWhatsAppContactUrl(product.name);
 
   const discountPercentage = calculateDiscountPercentage(
     product.price,
@@ -93,7 +110,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <div className="space-y-4">
                 <div className="bg-surface-card border border-border-soft rounded-2xl p-4">
                   <h3 className="text-sm font-semibold text-text-primary mb-2">
-                    Disponível em:
+                    Disponível em
                   </h3>
                   <div className="flex items-center gap-2 text-text-secondary text-sm">
                     <span>•</span>
@@ -109,7 +126,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                       rel="noopener noreferrer"
                       className="flex-1 bg-accent-primary text-background-primary px-6 py-4 rounded-full font-semibold text-center hover:opacity-90 transition-all duration-300 shadow-lg shadow-accent-primary/20"
                     >
-                      Ver Oferta
+                      Ver oferta
                     </a>
                   ) : (
                     <button
@@ -121,7 +138,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   )}
                   
                   <a
-                    href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20este%20produto."
+                    href={whatsappContactUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-surface-card border border-border-soft text-text-primary px-6 py-4 rounded-full font-semibold hover:bg-background-primary transition-all duration-300"

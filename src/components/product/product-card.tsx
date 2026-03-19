@@ -18,7 +18,7 @@ export function ProductCard({ product }: ProductCardProps) {
   const primaryImage = product.images[0]?.url;
 
   return (
-    <article className="group relative overflow-hidden rounded-2xl border border-border-soft bg-surface-card shadow-lg shadow-black/10 transition-all duration-300 hover:scale-102 hover:border-accent-primary/30">
+    <article className="group relative overflow-hidden rounded-2xl border border-border-soft bg-surface-card shadow-lg shadow-black/12 transition-all duration-300 hover:border-accent-primary/35">
       {/* Hot badge */}
       {product.isHot ? (
         <div className="absolute top-3 left-3 z-10">
@@ -31,21 +31,21 @@ export function ProductCard({ product }: ProductCardProps) {
 
       {/* View count badge */}
       {product.viewCount > 0 ? (
-        <div className="absolute top-3 right-3 z-10">
+        <div className="absolute top-3 right-3 z-10 hidden min-[360px]:block">
           <span className="inline-flex items-center gap-1 rounded-full bg-surface-card border border-border-soft px-2 py-1 text-xs font-medium text-text-secondary">
             👁 {product.viewCount}
           </span>
         </div>
       ) : null}
 
-      <div className="relative aspect-[4/5] overflow-hidden">
+      <div className="relative aspect-square overflow-hidden">
         {primaryImage ? (
           <Image
             src={primaryImage}
             alt={product.name}
             fill
-            className="object-cover transition duration-300 group-hover:scale-105"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+            className="object-cover transition duration-300"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, (max-width: 1536px) 25vw, 20vw"
             priority={false}
           />
         ) : (
@@ -66,24 +66,24 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-accent-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
-      <div className="space-y-4 p-4">
+      <div className="space-y-3 p-4 sm:space-y-3.5">
         <div className="space-y-2">
-          <div className="flex items-center gap-2 text-xs text-text-secondary">
+          <div className="flex items-center gap-2 text-[11px] text-text-secondary sm:text-xs">
             <Tag size={14} />
             <span className="capitalize">{product.category.name}</span>
-            <span>•</span>
-            <span className="capitalize">{product.gender}</span>
-            <span>•</span>
-            <span className="capitalize">{product.type}</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="hidden sm:inline capitalize">{product.gender}</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="hidden sm:inline capitalize">{product.type}</span>
           </div>
 
-          <h3 className="line-clamp-2 text-sm font-semibold leading-5 text-text-primary md:text-base group-hover:text-text-primary transition-colors">
+          <h3 className="line-clamp-2 text-sm font-semibold leading-5 text-text-primary md:text-base group-hover:text-white transition-colors">
             {product.name}
           </h3>
         </div>
 
         <div className="space-y-1">
-          <p className="text-sm text-text-secondary line-through">
+          <p className="text-sm text-text-secondary/85 line-through">
             {formatCurrency(product.price)}
           </p>
           <p className="text-2xl font-bold tracking-tight text-accent-primary group-hover:text-accent-primary transition-colors">
@@ -91,19 +91,27 @@ export function ProductCard({ product }: ProductCardProps) {
           </p>
         </div>
 
-        <a
-          href={primaryLink?.url || "#"}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`inline-flex w-full items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold transition-all duration-300 ${
-            primaryLink
-              ? "border border-pink-200/35 bg-gradient-to-r from-[#F7C8D8] via-[#F4AFC4] to-[#EFA9C5] text-[#08080A] hover:scale-102 hover:shadow-lg hover:shadow-accent-primary/25"
-              : "border border-border-soft bg-background-primary text-text-secondary cursor-not-allowed pointer-events-none"
-          }`}
-        >
-          {primaryLink ? "Ver Oferta" : "Produto indisponível"}
-          <ArrowUpRight size={16} />
-        </a>
+        {primaryLink ? (
+          <a
+            href={primaryLink.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full border border-pink-200/35 bg-gradient-to-r from-[#F7C8D8] via-[#F4AFC4] to-[#EFA9C5] px-4 py-3 text-sm font-semibold text-[#08080A] transition-all duration-300 hover:shadow-lg hover:shadow-accent-primary/25"
+          >
+            Ver oferta
+            <ArrowUpRight size={16} />
+          </a>
+        ) : (
+          <button
+            type="button"
+            disabled
+            aria-disabled="true"
+            className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full border border-border-soft bg-background-primary px-4 py-3 text-sm font-semibold text-text-secondary opacity-80 cursor-not-allowed"
+          >
+            Produto indisponível
+            <ArrowUpRight size={16} aria-hidden="true" />
+          </button>
+        )}
       </div>
     </article>
   );

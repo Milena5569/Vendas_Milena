@@ -24,7 +24,7 @@ export function HeroSection() {
             <div className="space-y-4">
               <div className="inline-flex items-center gap-3 bg-surface-card border border-border-soft rounded-full px-4 py-2 mx-auto">
                 <BadgeOrigin origin="Shopee" />
-                <span className="text-xs text-text-secondary">Curated Selection</span>
+                <span className="text-xs text-text-secondary">Curadoria selecionada</span>
               </div>
               
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary leading-tight">

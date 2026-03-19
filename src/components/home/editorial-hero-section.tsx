@@ -27,14 +27,14 @@ export function EditorialHeroSection() {
                 size="lg" 
                 className="bg-accent-primary hover:bg-accent-primary/95 text-background-primary font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-accent-primary/30 border border-accent-primary/20 transform hover:scale-105"
               >
-                Ver ofertas
+                Ver oferta
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
                 className="border-accent-primary/40 hover:border-accent-primary text-text-primary hover:text-text-primary font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-accent-primary/20 transform hover:scale-105"
               >
-                Explorar lojas
+                Explorar
               </Button>
             </div>
             

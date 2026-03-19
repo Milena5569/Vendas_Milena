@@ -86,7 +86,7 @@ export default async function StoresPage({ searchParams }: StoresPageProps) {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
                 href="/lojas"
-                className={`inline-flex items-center rounded-full border px-4 py-2 text-sm font-medium transition-all duration-300 ${
+                className={`inline-flex min-h-11 items-center rounded-full border px-4 py-2 text-sm font-medium transition-all duration-300 ${
                   !activeCategory
                     ? "border-pink-300/60 bg-pink-300/20 text-white shadow-[0_0_20px_rgba(244,175,196,0.2)]"
                     : "border-border-soft bg-surface-card/50 text-text-secondary hover:border-pink-300/40 hover:bg-surface-pink hover:text-text-primary"
@@ -101,7 +101,7 @@ export default async function StoresPage({ searchParams }: StoresPageProps) {
                   <Link
                     key={category.id}
                     href={`/lojas?categoria=${category.slug}`}
-                    className={`inline-flex items-center rounded-full border px-4 py-2 text-sm font-medium transition-all duration-300 ${
+                    className={`inline-flex min-h-11 items-center rounded-full border px-4 py-2 text-sm font-medium transition-all duration-300 ${
                       isActive
                         ? "border-pink-300/60 bg-pink-300/20 text-white shadow-[0_0_20px_rgba(244,175,196,0.2)]"
                         : "border-border-soft bg-surface-card/50 text-text-secondary hover:border-pink-300/40 hover:bg-surface-pink hover:text-text-primary"
@@ -120,8 +120,25 @@ export default async function StoresPage({ searchParams }: StoresPageProps) {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
             {storesWithPromotions.length === 0 ? (
               <div className="rounded-2xl border border-border-soft bg-surface-card/70 p-10 text-center">
-                <p className="text-lg font-semibold text-text-primary">Nenhum produto encontrado</p>
-                <p className="mt-2 text-text-secondary">Adicione produtos no Supabase para exibir aqui.</p>
+                <p className="text-lg font-semibold text-text-primary">Nenhuma oferta para os filtros selecionados</p>
+                <p className="mt-2 text-text-secondary">
+                  Não encontramos produtos nesta categoria agora. Limpe os filtros para ver todas as ofertas ou
+                  continue explorando outras páginas.
+                </p>
+                <div className="mt-5 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                  <Link
+                    href="/lojas"
+                    className="inline-flex min-h-11 items-center rounded-full border border-pink-300/40 bg-pink-300/15 px-5 py-2.5 text-sm font-semibold text-pink-100 transition-all duration-300 hover:border-pink-300/60 hover:bg-pink-300/25 hover:text-white"
+                  >
+                    Limpar filtros
+                  </Link>
+                  <Link
+                    href="/buscar"
+                    className="inline-flex min-h-11 items-center rounded-full border border-border-soft bg-surface-card px-5 py-2.5 text-sm font-semibold text-text-primary transition-colors hover:bg-surface-pink"
+                  >
+                    Explorar
+                  </Link>
+                </div>
               </div>
             ) : null}
 
@@ -151,7 +168,7 @@ export default async function StoresPage({ searchParams }: StoresPageProps) {
                       href={`/lojas/${store.slug}`}
                       className="inline-flex items-center justify-center rounded-full border border-pink-300/30 bg-pink-200/10 px-5 py-2.5 text-sm font-semibold text-pink-100 transition-all duration-300 hover:-translate-y-0.5 hover:border-pink-300/50 hover:bg-pink-300/20 hover:text-white hover:shadow-[0_0_20px_rgba(244,175,196,0.18)]"
                     >
-                      Ver página da loja
+                      Explorar
                     </Link>
                   </div>
 

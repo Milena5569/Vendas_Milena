@@ -1,8 +1,9 @@
 import { Heart } from "lucide-react";
+import { PublicShell } from "@/components/layout/public-shell";
 
 export default function FavoritesPage() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <PublicShell>
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-8">
           <div className="flex items-center justify-center w-16 h-16 bg-surface-card/50 border border-border-soft rounded-full mx-auto mb-4">
@@ -19,6 +20,6 @@ export default function FavoritesPage() {
           </div>
         </div>
       </div>
-    </div>
+    </PublicShell>
   );
 }

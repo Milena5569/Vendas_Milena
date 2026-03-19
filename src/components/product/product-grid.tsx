@@ -17,7 +17,7 @@ interface ProductGridProps {
 
 export function ProductGrid({ 
   products, 
-  columns = { sm: 1, md: 2, lg: 3, xl: 4 },
+  columns: _columns = { sm: 1, md: 2, lg: 3, xl: 4 },
   emptyState,
 }: ProductGridProps) {
   if (!products.length) {
@@ -33,15 +33,8 @@ export function ProductGrid({
     );
   }
 
-  const gridClasses = [
-    columns.sm ? `grid-cols-${columns.sm}` : 'grid-cols-1',
-    columns.md ? `md:grid-cols-${columns.md}` : 'md:grid-cols-2',
-    columns.lg ? `lg:grid-cols-${columns.lg}` : 'lg:grid-cols-3',
-    columns.xl ? `xl:grid-cols-${columns.xl}` : 'xl:grid-cols-4'
-  ].join(' ');
-
   return (
-    <div className={`grid ${gridClasses} gap-6`}>
+    <div className="grid grid-cols-1 min-[360px]:grid-cols-2 gap-[clamp(0.55rem,1.4vw,0.8rem)] overflow-x-hidden md:[grid-template-columns:repeat(auto-fit,minmax(clamp(12.5rem,28vw,14rem),1fr))] lg:[grid-template-columns:repeat(auto-fit,minmax(clamp(11.5rem,20vw,13rem),1fr))] xl:[grid-template-columns:repeat(auto-fit,minmax(clamp(11rem,17vw,12.5rem),1fr))] 2xl:[grid-template-columns:repeat(auto-fit,minmax(clamp(10.75rem,12vw,12rem),1fr))]">
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}

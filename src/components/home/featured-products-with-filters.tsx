@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ProductGrid } from "@/components/product/product-grid";
 import { FilterBar } from "@/components/ui/filter-bar";
 import { Button } from "@/components/ui/button";
@@ -32,6 +33,15 @@ export function FeaturedProductsWithFilters({
   showFilters = true,
   showSearch = true,
 }: FeaturedProductsWithFiltersProps) {
+  const handleClearFilters = () => {
+    onSearchChange?.("");
+    onCategoryChange?.("Todos");
+    onGenderChange?.("Todos");
+    onStoreChange?.("Todos");
+  };
+
+  const canClearFilters = Boolean(onSearchChange || onCategoryChange || onGenderChange || onStoreChange);
+
   // Filter products based on criteria
   const filteredProducts = products.filter((product) => {
     const matchSearch = !searchTerm || 
@@ -52,7 +62,7 @@ export function FeaturedProductsWithFilters({
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-3 bg-surface-card border border-border-soft rounded-full px-4 py-2 mx-auto mb-6">
               <BadgeOrigin origin="Shopee" />
-              <span className="text-xs text-text-secondary">Coming Soon</span>
+              <span className="text-xs text-text-secondary">Em breve</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
               Produtos em Destaque
@@ -79,20 +89,24 @@ export function FeaturedProductsWithFilters({
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                <Button 
-                  variant="default"
-                  size="lg"
-                  className="bg-accent-primary hover:bg-accent-primary/90 text-background-primary font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-accent-primary/20"
-                >
-                  Ver coleções
-                </Button>
-                <Button 
-                  variant="outline"
-                  size="lg"
-                  className="border border-border-soft hover:border-accent-primary text-text-secondary hover:text-text-primary font-semibold px-8 py-3 rounded-full transition-all duration-300"
-                >
-                  Explorar lojas
-                </Button>
+                <Link href="/colecoes" className="inline-flex">
+                  <Button 
+                    variant="default"
+                    size="lg"
+                    className="bg-accent-primary hover:bg-accent-primary/90 text-background-primary font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-accent-primary/20"
+                  >
+                    Explorar
+                  </Button>
+                </Link>
+                <Link href="/lojas" className="inline-flex">
+                  <Button 
+                    variant="outline"
+                    size="lg"
+                    className="border border-border-soft hover:border-accent-primary text-text-secondary hover:text-text-primary font-semibold px-8 py-3 rounded-full transition-all duration-300"
+                  >
+                    Explorar
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -163,25 +177,31 @@ export function FeaturedProductsWithFilters({
                   Nenhum produto encontrado
                 </h3>
                 <p className="text-text-secondary text-base leading-relaxed max-w-md mx-auto">
-                  Não encontramos produtos com os filtros aplicados. Tente ajustar sua busca ou explore nossas coleções.
+                  Não encontramos resultados para os filtros selecionados. Limpe os filtros ou explore coleções.
                 </p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                <Button 
+                <Button
+                  type="button"
                   variant="default"
                   size="lg"
-                  className="bg-accent-primary hover:bg-accent-primary/90 text-background-primary font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-accent-primary/20"
+                  onClick={handleClearFilters}
+                  disabled={!canClearFilters}
+                  className="bg-accent-primary hover:bg-accent-primary/90 text-background-primary font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-accent-primary/20 disabled:opacity-70"
                 >
                   Limpar filtros
                 </Button>
-                <Button 
-                  variant="outline"
-                  size="lg"
-                  className="border border-border-soft hover:border-accent-primary text-text-secondary hover:text-text-primary font-semibold px-8 py-3 rounded-full transition-all duration-300"
-                >
-                  Ver coleções
-                </Button>
+                <Link href="/colecoes" className="inline-flex">
+                  <Button 
+                    type="button"
+                    variant="outline"
+                    size="lg"
+                    className="border border-border-soft hover:border-accent-primary text-text-secondary hover:text-text-primary font-semibold px-8 py-3 rounded-full transition-all duration-300"
+                  >
+                    Explorar
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

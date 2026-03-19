@@ -17,7 +17,7 @@ export function CollectionCard({ collection }: CollectionCardProps) {
     itemCount: collection.products.length,
     tag: collection.isFeatured ? "Curadoria especial" : undefined,
     ctaHref: `/colecoes/${collection.slug}`,
-    ctaLabel: "Ver coleção",
+    ctaLabel: "Explorar",
     priceHighlight: undefined,
   };
 

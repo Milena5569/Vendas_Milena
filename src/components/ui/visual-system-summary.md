@@ -1,51 +1,41 @@
 # Visual System Summary
 
-## Design Language
-- **Theme**: Premium Dark E-commerce
-- **Aesthetic**: Modern, clean, with soft shadows and rounded corners
-- **Typography**: System UI fonts with clear hierarchy
-- **Spacing**: Consistent 16px base with 8px increments
+## Visão geral
+- **Tema ativo:** pink-dark premium commerce
+- **Direção visual:** clean, feminino-comercial, contraste controlado
+- **Prioridade:** legibilidade + conversão em mobile-first
 
-## Color Palette
-- **Background Primary**: `#0F1115` (Deep space black)
-- **Surface Card**: `#171A21` (Dark charcoal)
-- **Border Soft**: `#232730` (Subtle gray)
-- **Text Primary**: `#E6EAF2` (Light gray)
-- **Text Secondary**: `#9AA3B2` (Medium gray)
-- **Accent Primary**: `#F2B705` (Gold/yellow)
-- **Accent Success**: `#4CAF6A` (Emerald green)
+## Fonte de verdade dos tokens
+- Tokens ativos: `tailwind.config.ts` (`theme.extend.colors`)
+- Referência legada: `src/constants/ui.ts` (não é source runtime)
+- Utilitários já validados no sistema:
+  - `bg-surface-pink`
+  - `bg-gradient-radial`
 
-## Components Refactored
+## Decisões visuais atuais (Phase 4)
+- **Spacing rhythm:** base de 8px/16px com consistência entre seções principais.
+- **Border radius:** predominância de `rounded-2xl` (cards/painéis) e `rounded-full` (CTAs/chips).
+- **Shadows:** suaves e estáveis (`shadow-black/10~15`), sem exagero.
+- **Contraste:** textos secundários em níveis consistentes (`text-text-secondary/90`, `white/75~80` em fundos escuros).
 
-### UI Components
-- ✅ **BadgeOrigin**: Enhanced with shadow effects
-- ✅ **FilterBar**: Added premium shadow styling
-- ✅ **EmptyState**: Improved visual hierarchy
-- ✅ **WhatsAppFloat**: Preserved floating action design
-- ✅ **HeaderProfile**: Enhanced with premium shadows
+## Componentes-chave e uso
+- **Button (`src/components/ui/button.tsx`)**
+  - Base unificada de altura e peso visual
+  - Variantes `default`, `outline`, `ghost` sem mudança de identidade
+- **FilterBar (`src/components/ui/filter-bar.tsx`)**
+  - campos com foco legível e densidade consistente
+  - versão canônica reutilizada via `src/components/product/filter-bar.tsx`
+- **States (`state-primitives` + wrappers empty-state)**
+  - estrutura consistente para empty/loading/error
+  - CTAs de ação normalizadas
 
-### Product Components
-- ✅ **ProductCard**: Maintained existing premium design
-- ✅ **ProductGrid**: New responsive grid component
-- ✅ **ProductGallery**: New image gallery with fullscreen
+## Microcopy de ação (padrão)
+- `Ver oferta`
+- `Explorar`
+- `Limpar filtros`
 
-### Collection Components
-- ✅ **CollectionCard**: New premium collection cards
-- ✅ **CollectionGrid**: New responsive collection grid
-
-## Design Principles Applied
-1. **Mobile-First**: All components designed for mobile with responsive breakpoints
-2. **Rounded Corners**: Consistent `rounded-2xl` throughout
-3. **Soft Shadows**: Premium shadow effects with `shadow-lg shadow-black/10`
-4. **Clear CTA Hierarchy**: Primary actions use accent colors with hover effects
-5. **Optimized Spacing**: Consistent padding and margins
-6. **No Visual Clutter**: Clean, focused layouts
-7. **Strong Price Readability**: Clear typography hierarchy for pricing
-8. **Collection Identity**: Distinct visual treatment for collections vs products
-
-## Technical Standards
-- **TypeScript**: All components fully typed
-- **Next.js Image**: Proper image optimization
-- **Props-based**: Clean component interfaces
-- **No Business Logic**: Components receive data via props only
-- **Accessibility**: Proper ARIA labels and semantic HTML
+## Boas práticas para evolução
+1. Não criar novo estilo de botão sem necessidade.
+2. Reusar classes base antes de adicionar classes locais.
+3. Preferir ajuste sutil (spacing/contraste/sombra) a mudanças estruturais.
+4. Manter consistência de nomenclatura entre UI e documentação.

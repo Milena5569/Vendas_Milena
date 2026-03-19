@@ -48,8 +48,25 @@ export default async function CollectionsPage() {
               <CollectionGrid collections={collectionsWithProducts} columns={{ sm: 1, md: 2, lg: 3, xl: 3 }} />
             ) : (
               <div className="rounded-2xl border border-border-soft bg-surface-card/70 p-10 text-center">
-                <p className="text-lg font-semibold text-text-primary">Sem campanhas editoriais ativas</p>
-                <p className="mt-2 text-text-secondary">As coleções aparecem aqui quando houver produtos vinculados.</p>
+                <p className="text-lg font-semibold text-text-primary">Nenhuma coleção disponível no momento</p>
+                <p className="mt-2 text-text-secondary">
+                  Ainda não há produtos vinculados às coleções. Explore outras áreas da vitrine enquanto novas
+                  curadorias são preparadas.
+                </p>
+                <div className="mt-5 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                  <a
+                    href="/buscar"
+                    className="inline-flex min-h-11 items-center rounded-full border border-pink-300/40 bg-pink-300/15 px-5 py-2.5 text-sm font-semibold text-pink-100 transition-all duration-300 hover:border-pink-300/60 hover:bg-pink-300/25 hover:text-white"
+                  >
+                    Explorar
+                  </a>
+                  <a
+                    href="/lojas"
+                    className="inline-flex min-h-11 items-center rounded-full border border-border-soft bg-surface-card px-5 py-2.5 text-sm font-semibold text-text-primary transition-colors hover:bg-surface-pink"
+                  >
+                    Explorar
+                  </a>
+                </div>
               </div>
             )}
           </div>

@@ -3,7 +3,7 @@
 import { Search, ChevronDown, Heart } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { BrandAvatar } from "@/components/ui/brand-avatar";
 import { getSupabaseClient, isSupabaseConfigured } from "@/lib/supabase";
 
@@ -14,8 +14,16 @@ interface HeaderCategoryItem {
 }
 
 export function StoreHeader() {
+  const headerRef = useRef<HTMLElement>(null);
+  const categoriasButtonRef = useRef<HTMLButtonElement>(null);
+  const lojasButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileNavRef = useRef<HTMLElement>(null);
+
   const [categoriasOpen, setCategoriasOpen] = useState(false);
   const [lojasOpen, setLojasOpen] = useState(false);
+  const [mobileNavAtStart, setMobileNavAtStart] = useState(true);
+  const [mobileNavAtEnd, setMobileNavAtEnd] = useState(false);
+  const [mobileNavHasOverflow, setMobileNavHasOverflow] = useState(false);
   const [categorias, setCategorias] = useState<HeaderCategoryItem[]>([
     { name: "Feminino", href: "/lojas?categoria=feminino" },
     { name: "Masculino", href: "/lojas?categoria=masculino" },
@@ -100,25 +108,113 @@ export function StoreHeader() {
     setLojasOpen(false);
   }, [pathname, activeCategory]);
 
+  useEffect(() => {
+    function handleOutsideClick(event: MouseEvent) {
+      if (!headerRef.current) return;
+      const target = event.target as Node;
+      if (!headerRef.current.contains(target)) {
+        setCategoriasOpen(false);
+        setLojasOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+  }, []);
+
+  useEffect(() => {
+    function handleEscape(event: globalThis.KeyboardEvent) {
+      if (event.key !== "Escape") return;
+      if (categoriasOpen) {
+        closeCategoriasAndFocusTrigger();
+        return;
+      }
+      if (lojasOpen) {
+        closeLojasAndFocusTrigger();
+      }
+    }
+
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [categoriasOpen, lojasOpen]);
+
+  useEffect(() => {
+    const mobileNav = mobileNavRef.current;
+    if (!mobileNav) return;
+
+    const updateMobileNavState = () => {
+      const maxScrollLeft = mobileNav.scrollWidth - mobileNav.clientWidth;
+      setMobileNavHasOverflow(maxScrollLeft > 8);
+      setMobileNavAtStart(mobileNav.scrollLeft <= 4);
+      setMobileNavAtEnd(mobileNav.scrollLeft >= maxScrollLeft - 4);
+    };
+
+    updateMobileNavState();
+    mobileNav.addEventListener("scroll", updateMobileNavState, { passive: true });
+    window.addEventListener("resize", updateMobileNavState);
+
+    return () => {
+      mobileNav.removeEventListener("scroll", updateMobileNavState);
+      window.removeEventListener("resize", updateMobileNavState);
+    };
+  }, [pathname, categoriasOpen, lojasOpen]);
+
+  function closeCategoriasAndFocusTrigger() {
+    setCategoriasOpen(false);
+    categoriasButtonRef.current?.focus();
+  }
+
+  function closeLojasAndFocusTrigger() {
+    setLojasOpen(false);
+    lojasButtonRef.current?.focus();
+  }
+
+  function handleCategoriasKeyDown(event: KeyboardEvent<HTMLButtonElement>) {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggleCategorias();
+      return;
+    }
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeCategoriasAndFocusTrigger();
+    }
+  }
+
+  function handleLojasKeyDown(event: KeyboardEvent<HTMLButtonElement>) {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggleLojas();
+      return;
+    }
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeLojasAndFocusTrigger();
+    }
+  }
+
   const navItemBase =
-    "px-4 py-2 rounded-full text-sm font-medium transition-colors border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background-primary";
-  const navItemInactive = "border-transparent text-white/70 hover:text-white hover:bg-white/5";
+    "inline-flex min-h-11 items-center px-4 py-2 rounded-full text-sm font-medium transition-colors border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background-primary";
+  const navItemInactive = "border-transparent text-white/80 hover:text-white hover:bg-white/10";
   const navItemActive = "bg-pink-300/15 border-pink-300/40 text-white";
 
   const dropdownItemBase =
-    "mx-2 block whitespace-nowrap rounded-xl px-3 py-3 text-sm leading-none transition-colors border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-300/70";
-  const dropdownItemInactive = "border-transparent text-white/70 hover:text-white hover:bg-white/5";
+    "mx-2 block whitespace-nowrap rounded-xl px-3 py-2.5 text-sm leading-normal transition-colors border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-300/70";
+  const dropdownItemInactive = "border-transparent text-white/80 hover:text-white hover:bg-white/10";
   const dropdownItemActive = "bg-pink-300/15 border-pink-300/40 text-white";
 
   const utilityItemBase =
-    "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-colors border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background-primary";
+    "flex min-h-11 items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-colors border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background-primary";
   const utilityItemInactive =
-    "text-text-secondary hover:text-text-primary bg-surface-card/50 border-border-soft hover:border-accent-primary/30 hover:bg-surface-pink";
+    "text-white/80 hover:text-white bg-white/[0.03] border-white/12 hover:border-pink-300/35 hover:bg-white/[0.06]";
   const utilityItemActive = "bg-pink-300/15 border-pink-300/40 text-white";
 
   return (
     <header
-      className="sticky top-0 z-[60] w-full overflow-visible border-b border-border-soft bg-background-primary/95 shadow-lg shadow-black/5 backdrop-blur-xl"
+      ref={headerRef}
+      className="sticky top-0 z-[60] w-full overflow-visible border-b border-border-soft bg-background-primary/95 shadow-lg shadow-black/15 backdrop-blur-xl"
       style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}
     >
       <div className="mx-auto max-w-7xl overflow-visible px-4 sm:px-6 lg:px-8">
@@ -152,21 +248,31 @@ export function StoreHeader() {
             {/* Categorias with Dropdown */}
             <div className="relative group">
               <button
+                ref={categoriasButtonRef}
                 onMouseEnter={() => setCategoriasOpen(true)}
                 onMouseLeave={() => setCategoriasOpen(false)}
                 onClick={toggleCategorias}
+                onKeyDown={handleCategoriasKeyDown}
                 className={`flex items-center gap-2 ${navItemBase} ${isCategoriasActive ? navItemActive : navItemInactive}`}
                 aria-haspopup="true"
                 aria-expanded={categoriasOpen}
+                aria-controls="desktop-categorias-menu"
               >
                 Categorias
                 <ChevronDown size={16} className={`transition-transform duration-200 ${categoriasOpen ? 'rotate-180' : ''}`} />
               </button>
               
               <div 
+                id="desktop-categorias-menu"
                 className={`absolute left-0 top-full z-[80] mt-2 min-w-[200px] w-max overflow-hidden rounded-2xl border border-border-soft/90 bg-surface-card/95 backdrop-blur-md shadow-xl shadow-black/15 transition-all duration-200 ${categoriasOpen ? 'visible translate-y-0 opacity-100' : 'invisible translate-y-1 opacity-0'}`}
                 onMouseEnter={() => setCategoriasOpen(true)}
                 onMouseLeave={() => setCategoriasOpen(false)}
+                onKeyDown={(event) => {
+                  if (event.key === "Escape") {
+                    event.preventDefault();
+                    closeCategoriasAndFocusTrigger();
+                  }
+                }}
               >
                 <div className="py-2">
                   {categorias.map((categoria) => (
@@ -174,7 +280,7 @@ export function StoreHeader() {
                       key={categoria.name}
                       href={categoria.href}
                       className={`${dropdownItemBase} ${activeCategorySlug === categoria.slug || activeCategory === categoria.name.toLowerCase() ? dropdownItemActive : dropdownItemInactive}`}
-                      onClick={() => setCategoriasOpen(false)}
+                      onClick={() => closeCategoriasAndFocusTrigger()}
                     >
                       {categoria.name}
                     </Link>
@@ -186,21 +292,31 @@ export function StoreHeader() {
             {/* Lojas with Dropdown */}
             <div className="relative group">
               <button
+                ref={lojasButtonRef}
                 onMouseEnter={() => setLojasOpen(true)}
                 onMouseLeave={() => setLojasOpen(false)}
                 onClick={toggleLojas}
+                onKeyDown={handleLojasKeyDown}
                 className={`flex items-center gap-2 ${navItemBase} ${isLojasActive ? navItemActive : navItemInactive}`}
                 aria-haspopup="true"
                 aria-expanded={lojasOpen}
+                aria-controls="desktop-lojas-menu"
               >
                 Lojas
                 <ChevronDown size={16} className={`transition-transform duration-200 ${lojasOpen ? 'rotate-180' : ''}`} />
               </button>
               
               <div 
+                id="desktop-lojas-menu"
                 className={`absolute left-0 top-full z-[80] mt-2 min-w-[200px] w-max overflow-hidden rounded-2xl border border-border-soft/90 bg-surface-card/95 backdrop-blur-md shadow-xl shadow-black/15 transition-all duration-200 ${lojasOpen ? 'visible translate-y-0 opacity-100' : 'invisible translate-y-1 opacity-0'}`}
                 onMouseEnter={() => setLojasOpen(true)}
                 onMouseLeave={() => setLojasOpen(false)}
+                onKeyDown={(event) => {
+                  if (event.key === "Escape") {
+                    event.preventDefault();
+                    closeLojasAndFocusTrigger();
+                  }
+                }}
               >
                 <div className="py-2">
                   {lojas.map((loja) => (
@@ -208,7 +324,7 @@ export function StoreHeader() {
                       key={loja.name}
                       href={loja.href}
                       className={`${dropdownItemBase} ${pathname === loja.href ? dropdownItemActive : dropdownItemInactive}`}
-                      onClick={() => setLojasOpen(false)}
+                      onClick={() => closeLojasAndFocusTrigger()}
                     >
                       {loja.name}
                     </Link>
@@ -247,7 +363,7 @@ export function StoreHeader() {
         </div>
 
         {/* Mobile / Tablet */}
-        <div className="flex flex-col gap-3 py-3 md:hidden">
+        <div className="flex flex-col gap-2.5 py-3 md:hidden">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <Link
               href="/"
@@ -280,7 +396,11 @@ export function StoreHeader() {
             </div>
           </div>
 
-          <nav className="relative z-[65] flex items-center gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="relative">
+          <nav
+            ref={mobileNavRef}
+            className="relative z-[65] flex items-center gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
             <Link
               href="/"
               className={`${navItemBase} min-w-fit whitespace-nowrap ${isHomeActive ? navItemActive : navItemInactive}`}
@@ -290,9 +410,11 @@ export function StoreHeader() {
 
             <button
               onClick={toggleCategorias}
+              onKeyDown={handleCategoriasKeyDown}
               className={`flex min-w-fit items-center gap-2 whitespace-nowrap ${navItemBase} ${isCategoriasActive ? navItemActive : navItemInactive}`}
               aria-haspopup="true"
               aria-expanded={categoriasOpen}
+              aria-controls="mobile-categorias-menu"
             >
               Categorias
               <ChevronDown size={16} className={`transition-transform duration-200 ${categoriasOpen ? "rotate-180" : ""}`} />
@@ -300,9 +422,11 @@ export function StoreHeader() {
 
             <button
               onClick={toggleLojas}
+              onKeyDown={handleLojasKeyDown}
               className={`flex min-w-fit items-center gap-2 whitespace-nowrap ${navItemBase} ${isLojasActive ? navItemActive : navItemInactive}`}
               aria-haspopup="true"
               aria-expanded={lojasOpen}
+              aria-controls="mobile-lojas-menu"
             >
               Lojas
               <ChevronDown size={16} className={`transition-transform duration-200 ${lojasOpen ? "rotate-180" : ""}`} />
@@ -323,14 +447,28 @@ export function StoreHeader() {
             </Link>
           </nav>
 
+          {mobileNavHasOverflow && !mobileNavAtStart && (
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-background-primary via-background-primary/80 to-transparent" />
+          )}
+
+          {mobileNavHasOverflow && !mobileNavAtEnd && (
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex w-10 items-center justify-end bg-gradient-to-l from-background-primary via-background-primary/80 to-transparent pr-1">
+              <ChevronDown size={14} className="rotate-[-90deg] text-pink-100/80" aria-hidden="true" />
+            </div>
+          )}
+          </div>
+
           {categoriasOpen && (
-            <div className="z-[80] rounded-2xl border border-border-soft/90 bg-surface-card/95 py-2 backdrop-blur-md shadow-xl shadow-black/15">
+            <div
+              id="mobile-categorias-menu"
+              className="z-[80] rounded-2xl border border-border-soft/90 bg-surface-card/95 py-2 backdrop-blur-md shadow-xl shadow-black/15"
+            >
               {categorias.map((categoria) => (
                 <Link
                   key={categoria.name}
                   href={categoria.href}
                   className={`${dropdownItemBase} ${activeCategorySlug === categoria.slug || activeCategory === categoria.name.toLowerCase() ? dropdownItemActive : dropdownItemInactive}`}
-                  onClick={() => setCategoriasOpen(false)}
+                  onClick={() => closeCategoriasAndFocusTrigger()}
                 >
                   {categoria.name}
                 </Link>
@@ -339,13 +477,16 @@ export function StoreHeader() {
           )}
 
           {lojasOpen && (
-            <div className="z-[80] rounded-2xl border border-border-soft/90 bg-surface-card/95 py-2 backdrop-blur-md shadow-xl shadow-black/15">
+            <div
+              id="mobile-lojas-menu"
+              className="z-[80] rounded-2xl border border-border-soft/90 bg-surface-card/95 py-2 backdrop-blur-md shadow-xl shadow-black/15"
+            >
               {lojas.map((loja) => (
                 <Link
                   key={loja.name}
                   href={loja.href}
                   className={`${dropdownItemBase} ${pathname === loja.href ? dropdownItemActive : dropdownItemInactive}`}
-                  onClick={() => setLojasOpen(false)}
+                  onClick={() => closeLojasAndFocusTrigger()}
                 >
                   {loja.name}
                 </Link>

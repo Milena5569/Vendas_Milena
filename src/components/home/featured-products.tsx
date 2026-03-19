@@ -10,16 +10,16 @@ export function FeaturedProducts({ products }: FeaturedProductsProps) {
     return (
       <section id="produtos" className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-4 tracking-tight">
+          <div className="mb-10 text-center md:mb-12">
+            <h2 className="mb-4 text-3xl font-bold tracking-tight text-text-primary md:text-5xl">
               Produtos em Destaque
             </h2>
-            <p className="text-text-secondary/90 text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="mx-auto max-w-2xl text-lg leading-relaxed text-text-secondary/90">
               Nenhum produto encontrado
             </p>
           </div>
           
-          <div className="relative overflow-hidden rounded-[28px] border border-pink-300/20 bg-white/[0.03] p-8 md:p-14 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+          <div className="relative overflow-hidden rounded-[28px] border border-pink-300/20 bg-white/[0.03] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.35)] md:p-12">
             <div className="pointer-events-none absolute -top-24 -left-16 h-56 w-56 rounded-full bg-pink-300/12 blur-3xl" />
             <div className="pointer-events-none absolute -bottom-28 -right-20 h-64 w-64 rounded-full bg-pink-200/10 blur-3xl" />
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(244,175,196,0.14),transparent_58%)]" />
@@ -53,19 +53,19 @@ export function FeaturedProducts({ products }: FeaturedProductsProps) {
   return (
     <section id="produtos" className="py-16 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between mb-12">
+        <div className="mb-10 flex items-center justify-between md:mb-12">
           <div className="space-y-3">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-text-primary">
                 Produtos em Destaque
               </h2>
-              <p className="text-white/80 text-lg mt-2">
+              <p className="mt-2 text-lg text-text-secondary/90">
                 Os produtos mais recentes adicionados à curadoria ClickVendas
               </p>
             </div>
           </div>
           <div className="hidden md:block">
-            <span className="inline-flex items-center gap-2 rounded-full border border-pink-300/20 bg-white/[0.02] px-4 py-2 text-sm text-white/70">
+            <span className="inline-flex items-center gap-2 rounded-full border border-pink-300/25 bg-white/[0.03] px-4 py-2 text-sm text-white/75">
               🏆 Mais recentes
             </span>
           </div>

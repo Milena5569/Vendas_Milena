@@ -14,11 +14,11 @@ export function FeaturedCollections({ collections, isHomepage = false }: Feature
   return (
     <section className="py-16 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="mb-10 text-center md:mb-12">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-text-primary mb-4">
             Curadorias editoriais em destaque
           </h2>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-text-secondary/90">
             Reels, carrosséis e campanhas sazonais com produtos selecionados para cada momento
           </p>
         </div>

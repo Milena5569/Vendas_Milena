@@ -43,7 +43,7 @@ export function StoreFooter() {
               <Link href="/" className="block text-sm text-white/65 hover:text-pink-200 transition-colors duration-200">
                 Página Principal
               </Link>
-              <Link href="/lojas" className="block text-sm text-white/65 hover:text-pink-200 transition-colors duration-200">
+              <Link href="/categorias" className="block text-sm text-white/65 hover:text-pink-200 transition-colors duration-200">
                 Categorias
               </Link>
               <Link href="/lojas" className="block text-sm text-white/65 hover:text-pink-200 transition-colors duration-200">

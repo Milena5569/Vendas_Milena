@@ -10,7 +10,7 @@ export function StoresInformationSection({ stores }: StoresInformationSectionPro
     ...store,
     icon: ["🛍️", "👗", "📱", "🏬"][index % 4],
     subtitle: ["Ofertas populares", "Moda em alta", "Produtos virais", "Parceiro em destaque"][index % 4],
-    ctaLabel: `Ver ofertas da ${store.name}`,
+    ctaLabel: "Explorar",
     color: ["from-blue-400 to-cyan-400", "from-pink-400 to-purple-400", "from-black to-gray-600", "from-rose-400 to-pink-400"][index % 4],
     href: `/lojas/${store.slug}`,
   }));

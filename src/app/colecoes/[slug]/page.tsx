@@ -22,10 +22,10 @@ export default async function CollectionDetailPage({ params }: CollectionPagePro
         <main className="container mx-auto px-4 py-14">
           <EmptyStateServer
             title="Coleção não encontrada"
-            description="Essa curadoria não existe ou está sem produtos no momento. Explore outras coleções ativas."
+            description="Essa coleção não está disponível agora ou não tem produtos vinculados. Explore outras opções para continuar comprando."
             icon="search"
             action={{
-              label: "Ver coleções",
+              label: "Explorar",
               href: "/colecoes",
             }}
           />

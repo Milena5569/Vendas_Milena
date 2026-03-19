@@ -61,17 +61,17 @@ export function FeminineCommerceHeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-soft">
               <Link
                 href={RECENT_OFFERS_HASH}
-                aria-label="Ver ofertas recentes"
+                aria-label="Ver oferta"
                 className="animate-cta-glow relative isolate overflow-hidden inline-flex items-center justify-center bg-gradient-to-r from-[#F7C8D8] via-[#F4AFC4] to-[#EFA9C5] text-[#08080A] font-bold px-8 md:px-10 py-3.5 md:py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:shadow-[0_0_0_1px_rgba(247,200,216,0.35),0_0_32px_rgba(244,175,196,0.42)] border border-pink-200/40 bg-size-200 bg-pos-0 hover:bg-pos-100 after:pointer-events-none after:absolute after:inset-0 after:rounded-full after:bg-[radial-gradient(circle,rgba(255,255,255,0.32)_0%,rgba(255,255,255,0.08)_45%,transparent_70%)] after:opacity-0 after:blur-md after:transition-opacity after:duration-500 hover:after:opacity-100 hover:after:animate-pulse"
               >
-                🔥 Ver os melhores achadinhos
+                🔥 Ver oferta
               </Link>
               <Link
                 href={STORES_PAGE_PATH}
-                aria-label="Explorar lojas parceiras"
+                aria-label="Explorar"
                 className="inline-flex items-center justify-center border border-pink-300/40 bg-transparent text-white/90 font-semibold px-8 md:px-10 py-3.5 md:py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:border-pink-300/60 hover:bg-pink-300/10 hover:text-white hover:shadow-[0_0_24px_rgba(244,175,196,0.2)]"
               >
-                🛍 Explorar lojas
+                🛍 Explorar
               </Link>
             </div>
 

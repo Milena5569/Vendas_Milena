@@ -2,22 +2,12 @@
 
 import { useState } from "react";
 import { Filter, ChevronDown, ChevronUp, Search } from "lucide-react";
-import { ProductCategory, ProductGender, StoreOrigin } from "@/types/product";
+import { FilterBarProps } from "@/types/component-props";
 
-interface FilterBarProps {
-  category: string;
-  gender: string;
-  store: string;
-  searchTerm?: string;
-  onCategoryChange: (category: string) => void;
-  onGenderChange: (gender: string) => void;
-  onStoreChange: (store: string) => void;
-  onSearchChange?: (search: string) => void;
-  showSearch?: boolean;
-  showCategory?: boolean;
-  showGender?: boolean;
-  showStore?: boolean;
-}
+// Canonical FilterBar API (Phase 2):
+// - category, gender, store, optional searchTerm
+// - onCategoryChange, onGenderChange, onStoreChange, optional onSearchChange
+// - visibility toggles: showSearch/showCategory/showGender/showStore
 
 export function FilterBar({
   category,
@@ -59,10 +49,10 @@ export function FilterBar({
   ];
 
   return (
-    <div className="bg-surface-card border border-border-soft rounded-2xl p-4 shadow-lg shadow-black/10">
-      <div className="flex items-center justify-between mb-3">
+    <div className="rounded-2xl border border-border-soft bg-surface-card/80 p-4 shadow-lg shadow-black/12">
+      <div className="mb-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Filter size={20} className="text-text-secondary" />
+          <Filter size={18} className="text-text-secondary/90" />
           <span className="text-sm font-semibold text-text-primary">Filtros</span>
         </div>
         <button
@@ -83,19 +73,19 @@ export function FilterBar({
         </button>
       </div>
 
-      <div className={`space-y-3 ${isExpanded ? 'block' : 'hidden md:block'}`}>
+      <div className={`space-y-3.5 ${isExpanded ? 'block' : 'hidden md:block'}`}>
         {/* Search Input */}
         {showSearch && (
           <div>
-            <label className="block text-xs text-text-secondary mb-1">Buscar produtos</label>
+            <label className="mb-1 block text-xs text-text-secondary/90">Buscar produtos</label>
             <div className="relative">
-              <Search size={16} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-text-secondary" />
+              <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary/90" />
               <input
                 type="text"
                 value={searchTerm}
                 onChange={(e) => onSearchChange?.(e.target.value)}
                 placeholder="Digite o nome do produto..."
-                className="w-full bg-background-primary border border-border-soft rounded-xl pl-10 pr-3 py-2 text-sm text-text-primary focus:outline-none focus:ring-2 focus:ring-accent-primary/30 focus:border-transparent transition-all"
+                className="w-full rounded-xl border border-border-soft bg-background-primary/90 py-2.5 pl-10 pr-3 text-sm text-text-primary transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-accent-primary/35"
               />
             </div>
           </div>
@@ -104,11 +94,11 @@ export function FilterBar({
         {/* Category Filter */}
         {showCategory && (
           <div>
-            <label className="block text-xs text-text-secondary mb-1">Categoria</label>
+            <label className="mb-1 block text-xs text-text-secondary/90">Categoria</label>
             <select
               value={category}
               onChange={(e) => onCategoryChange(e.target.value)}
-              className="w-full bg-background-primary border border-border-soft rounded-xl px-3 py-2 text-sm text-text-primary focus:outline-none focus:ring-2 focus:ring-accent-primary/30 focus:border-transparent transition-all"
+              className="w-full rounded-xl border border-border-soft bg-background-primary/90 px-3 py-2.5 text-sm text-text-primary transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-accent-primary/35"
             >
               {categories.map((cat) => (
                 <option key={cat.value} value={cat.value}>
@@ -122,11 +112,11 @@ export function FilterBar({
         {/* Gender Filter */}
         {showGender && (
           <div>
-            <label className="block text-xs text-text-secondary mb-1">Gênero</label>
+            <label className="mb-1 block text-xs text-text-secondary/90">Gênero</label>
             <select
               value={gender}
               onChange={(e) => onGenderChange(e.target.value)}
-              className="w-full bg-background-primary border border-border-soft rounded-xl px-3 py-2 text-sm text-text-primary focus:outline-none focus:ring-2 focus:ring-accent-primary/30 focus:border-transparent transition-all"
+              className="w-full rounded-xl border border-border-soft bg-background-primary/90 px-3 py-2.5 text-sm text-text-primary transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-accent-primary/35"
             >
               {genders.map((gen) => (
                 <option key={gen.value} value={gen.value}>
@@ -140,11 +130,11 @@ export function FilterBar({
         {/* Store Filter */}
         {showStore && (
           <div>
-            <label className="block text-xs text-text-secondary mb-1">Loja</label>
+            <label className="mb-1 block text-xs text-text-secondary/90">Loja</label>
             <select
               value={store}
               onChange={(e) => onStoreChange(e.target.value)}
-              className="w-full bg-background-primary border border-border-soft rounded-xl px-3 py-2 text-sm text-text-primary focus:outline-none focus:ring-2 focus:ring-accent-primary/30 focus:border-transparent transition-all"
+              className="w-full rounded-xl border border-border-soft bg-background-primary/90 px-3 py-2.5 text-sm text-text-primary transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-accent-primary/35"
             >
               {stores.map((s) => (
                 <option key={s.value} value={s.value}>

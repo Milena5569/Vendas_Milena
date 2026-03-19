@@ -1,4 +1,4 @@
-import { EmptyStateServer } from "./empty-state-server";
+import { StatePanel } from "./state-primitives";
 
 interface EmptyStateWrapperProps {
   title: string;
@@ -8,15 +8,43 @@ interface EmptyStateWrapperProps {
     label: string;
     href?: string;
   };
+  secondaryAction?: {
+    label: string;
+    href?: string;
+  };
 }
 
-export function EmptyStateWrapper({ title, description, icon, action }: EmptyStateWrapperProps) {
+function normalizeActionLabel(label: string) {
+  const normalized = label.trim().toLowerCase();
+
+  if (normalized.includes("limpar")) {
+    return "Limpar filtros";
+  }
+
+  if (normalized.includes("oferta")) {
+    return "Ver oferta";
+  }
+
+  if (normalized.includes("explorar") || normalized.includes("ver coleção") || normalized.includes("ver coleções")) {
+    return "Explorar";
+  }
+
+  return label;
+}
+
+export function EmptyStateWrapper({ title, description, icon, action, secondaryAction }: EmptyStateWrapperProps) {
+  const safeDescription =
+    description.trim() || "Não encontramos itens para esta seleção. Limpe os filtros ou explore outras opções.";
+
   return (
-    <EmptyStateServer 
+    <StatePanel 
       title={title}
-      description={description}
+      description={safeDescription}
       icon={icon}
-      action={action}
+      action={action ? { ...action, label: normalizeActionLabel(action.label) } : undefined}
+      secondaryAction={
+        secondaryAction ? { ...secondaryAction, label: normalizeActionLabel(secondaryAction.label) } : undefined
+      }
     />
   );
 }

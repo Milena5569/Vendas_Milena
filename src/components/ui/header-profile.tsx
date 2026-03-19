@@ -38,7 +38,7 @@ export function HeaderProfile() {
             href="https://chat.whatsapp.com/B7RtXNoiRq90LfQnCOPWX0?mode=hqctcla"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-2xl bg-accent-success px-5 py-3 text-sm font-semibold text-background-primary transition hover:scale-102"
+            className="inline-flex items-center justify-center gap-2 rounded-2xl bg-accent-success px-5 py-3 text-sm font-semibold text-background-primary transition hover:scale-[1.02]"
           >
             <MessageCircle size={18} />
             Grupo VIP
@@ -48,7 +48,7 @@ export function HeaderProfile() {
             href="https://www.instagram.com/click_vendasachadinhos?igsh=MTd1enZxdXZsaWxmbA=="
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-2xl border border-border-soft bg-surface-card px-5 py-3 text-sm font-semibold text-text-primary transition hover:scale-102 hover:border-accent-primary/30"
+            className="inline-flex items-center justify-center gap-2 rounded-2xl border border-border-soft bg-surface-card px-5 py-3 text-sm font-semibold text-text-primary transition hover:scale-[1.02] hover:border-accent-primary/30"
           >
             <Instagram size={18} />
             Instagram

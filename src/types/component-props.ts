@@ -4,6 +4,8 @@ import { Product } from "./product";
 import { Collection } from "./collection";
 import { StoreOrigin, ProductCategory, ProductGender } from "./product";
 
+export type FilterValue = "Todos" | ProductCategory | ProductGender | StoreOrigin;
+
 // UI Components Props
 export interface BadgeOriginProps {
   origin: StoreOrigin;
@@ -13,9 +15,15 @@ export interface FilterBarProps {
   category: string;
   gender: string;
   store: string;
+  searchTerm?: string;
   onCategoryChange: (category: string) => void;
   onGenderChange: (gender: string) => void;
   onStoreChange: (store: string) => void;
+  onSearchChange?: (search: string) => void;
+  showSearch?: boolean;
+  showCategory?: boolean;
+  showGender?: boolean;
+  showStore?: boolean;
 }
 
 export interface EmptyStateProps {

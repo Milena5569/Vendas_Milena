@@ -1,21 +1,21 @@
 # Commercial UX Summary
 
 ## Overview
-The catalog UX improvements focus on enhancing browsing and conversion while maintaining premium mobile-first design and avoiding architectural complexity.
+As melhorias de UX priorizam descoberta de ofertas, clareza de estados e consistência visual/comercial sem refatoração estrutural.
 
 ## UX Refinements Applied
 
-### 1. Enhanced Filter Bar (`src/components/ui/filter-bar.tsx`)
-- **Search Integration**: Added search input with magnifying glass icon
-- **Flexible Display**: Optional show/hide for each filter type (search, category, gender, store)
-- **Mobile Optimization**: Collapsible design with expand/collapse functionality
-- **Visual Consistency**: Maintains premium dark theme with proper spacing
+### 1. Filter Bar canônica (`src/components/ui/filter-bar.tsx`)
+- Busca por texto com feedback imediato
+- Exibição flexível por toggle (`showSearch`, `showCategory`, `showGender`, `showStore`)
+- Comportamento colapsável em mobile
+- Campos com contraste/foco consistentes
 
-### 2. Filterable Product Section (`src/components/home/featured-products-with-filters.tsx`)
-- **Client-Side Filtering**: Lightweight filtering without server requests
-- **Smart Empty States**: Different messaging for no products vs. no filtered results
-- **Filter Management**: Clear filters action with proper state reset
-- **Responsive Design**: Maintains mobile-first approach with proper spacing
+### 2. Seção com filtros (`src/components/home/featured-products-with-filters.tsx`)
+- Filtragem client-side leve
+- Empty states contextuais (sem catálogo vs sem resultado para filtro)
+- Reset de filtros claro e previsível
+- Espaçamento responsivo consistente
 
 ## Commercial UX Improvements
 
@@ -26,10 +26,10 @@ The catalog UX improvements focus on enhancing browsing and conversion while mai
 - **Gender Filtering**: Reduces choice overload with targeted options
 
 ### Conversion Optimization
-- **Clear CTAs**: "Ver Oferta" buttons remain prominent in filtered results
+- **CTAs padronizadas**: `Ver oferta`, `Explorar`, `Limpar filtros`
 - **Product Count**: Shows filtered count to provide feedback
 - **Empty State Guidance**: Clear next steps when no results found
-- **Filter Reset**: Easy way to start over with "Limpar filtros"
+- **Filter Reset**: ação explícita para recomeçar
 
 ### Mobile-First Considerations
 - **Touch-Friendly**: Large filter inputs and buttons (44px minimum)
@@ -40,16 +40,23 @@ The catalog UX improvements focus on enhancing browsing and conversion while mai
 ## Premium Design Preservation
 
 ### Visual Hierarchy
-- **Consistent Styling**: Filter bar matches existing premium aesthetic
-- **Proper Spacing**: Maintains 16px base spacing with 8px increments
-- **Shadow Treatment**: Consistent shadow effects across components
-- **Typography**: Proper font hierarchy with clear labels
+- Estilo consistente entre cards, filtros e navegação
+- Ritmo de espaçamento harmonizado nas seções principais
+- Sombras sutis e estáveis (sem ruído visual)
+- Hierarquia tipográfica clara em títulos/subtextos/CTAs
 
 ### Brand Consistency
-- **Color Palette**: Uses existing accent and text colors
+- **Color Palette**: Uses active pink-dark premium tokens from `tailwind.config.ts`
 - **Rounded Corners**: Consistent `rounded-2xl` throughout
 - **Border Treatment**: Proper `border-border-soft` styling
 - **Background Colors**: Maintains `bg-surface-card` consistency
+
+## Token System Alignment
+
+- **Active source of truth**: `tailwind.config.ts`
+- `src/constants/ui.ts` mantido apenas como referência legada
+- Sem narrativa visual antiga; direção única pink-dark premium
+- Utilitários auditados seguem válidos (`bg-surface-pink`, `bg-gradient-radial`)
 
 ## Performance Optimizations
 
@@ -110,10 +117,10 @@ The catalog UX improvements focus on enhancing browsing and conversion while mai
 ## CTA Visibility Maintenance
 
 ### Primary Actions
-- **Product Cards**: "Ver Oferta" buttons remain prominent
-- **Filter Results**: CTAs stay visible in filtered views
-- **Empty States**: Alternative CTAs provide clear next steps
-- **Mobile Optimization**: Large touch targets for all actions
+- Product cards com CTA principal legível
+- CTAs visíveis em resultados filtrados
+- Empty states com próxima ação clara
+- Touch targets adequados para mobile
 
 ### Conversion Flow
 - **Clear Path**: Users can easily navigate to product pages
@@ -122,11 +129,9 @@ The catalog UX improvements focus on enhancing browsing and conversion while mai
 - **Minimal Friction**: Few clicks to complete actions
 
 ## Summary
-The UX refinements successfully enhance catalog browsing and conversion while maintaining:
-- ✅ Premium mobile-first design aesthetic
-- ✅ Fast, responsive interactions
-- ✅ Clear CTA visibility and prominence
-- ✅ Strategic WhatsApp button placement
-- ✅ Excellent empty state handling
-- ✅ Large catalog scalability
-- ✅ Simple, maintainable architecture
+O sistema atual mantém consistência de UX comercial com:
+- ✅ linguagem de ação padronizada
+- ✅ estados de interface acionáveis
+- ✅ leitura/contraste adequados no tema escuro
+- ✅ fluxo de descoberta contínuo em mobile e desktop
+- ✅ base simples de manutenção e evolução incremental

@@ -8,6 +8,7 @@ export default {
   ],
   theme: {
     extend: {
+      // Active token source of truth (Phase 2): pink-dark premium system.
       colors: {
         // Premium Baby Pink Luxury Color System
         "background-primary": "#08080A",
@@ -15,6 +16,7 @@ export default {
         "background-tertiary": "#111114",
         "surface-card": "#111114",
         "surface-soft": "#16161D",
+        "surface-pink": "rgba(247, 200, 216, 0.10)",
         "border-soft": "rgba(247, 200, 216, 0.24)",
         "text-primary": "#FFFFFF",
         "text-secondary": "rgba(255, 255, 255, 0.8)",
@@ -26,6 +28,9 @@ export default {
         "glow-warm": "rgba(244, 175, 196, 0.16)",
         "accent-success": "#4CAF6A",
       },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+      },
       spacing: {
         "8": "8px",
         "16": "16px",
@@ -36,13 +41,13 @@ export default {
       typography: {
         DEFAULT: {
           css: {
-            color: "#E6EAF2",
+            color: "#FFFFFF",
             lineHeight: "1.6",
             maxWidth: "none",
             a: {
-              color: "#F2B705",
+              color: "#F7C8D8",
               "&:hover": {
-                color: "#D9A300",
+                color: "#F4AFC4",
               },
             },
           },

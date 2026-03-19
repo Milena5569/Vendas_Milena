@@ -55,7 +55,7 @@ function StoreResultCard({ item }: { item: { id: string; title: string; descript
         <span className="rounded-full border border-pink-300/25 bg-pink-300/10 px-3 py-1 text-xs font-medium text-pink-100/90">
           {item.category}
         </span>
-        <CtaLink href={item.link} label={item.ctaLabel ?? "Explorar loja"} />
+        <CtaLink href={item.link} label={item.ctaLabel ?? "Explorar"} />
       </div>
     </article>
   );
@@ -76,7 +76,7 @@ function CollectionResultCard({ item }: { item: { id: string; title: string; des
           <span className="rounded-full border border-pink-300/30 bg-pink-300/10 px-3 py-1 text-xs font-medium text-pink-100">
             {item.itemCount} itens
           </span>
-          <CtaLink href={item.link} label={item.ctaLabel ?? "Explorar coleção"} />
+          <CtaLink href={item.link} label={item.ctaLabel ?? "Explorar"} />
         </div>
       </div>
     </article>
@@ -137,7 +137,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
               </div>
 
               <h1 className="mt-6 text-3xl font-bold tracking-tight text-white md:text-5xl">
-                Encontre produtos, lojas e coleções com mais facilidade
+                Encontre produtos, lojas e coleções com facilidade
               </h1>
               <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-text-secondary/90 md:text-lg">
                 Descubra ofertas curadas, lojas parceiras, categorias estratégicas e coleções temáticas em um
@@ -185,12 +185,15 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           <div className="mx-auto max-w-7xl space-y-12 px-4 sm:px-6 lg:px-8">
             {totalResults === 0 ? (
               <div className="rounded-3xl border border-pink-300/25 bg-white/[0.03] p-10 text-center shadow-[0_18px_40px_rgba(0,0,0,0.22)]">
-                <p className="text-lg font-semibold text-white">Nenhum resultado encontrado</p>
+                <p className="text-lg font-semibold text-white">Nenhum resultado para esta busca</p>
                 <p className="mt-3 text-sm text-text-secondary/85">
-                  Tente buscar por termos como <span className="text-pink-100">Feminino</span>,
-                  <span className="text-pink-100"> Skin Care</span>,
-                  <span className="text-pink-100"> Shopee</span> ou <span className="text-pink-100">Combos</span>.
+                  Não encontramos produtos, lojas ou coleções com os termos informados. Limpe os filtros da busca
+                  ou explore outras opções no catálogo.
                 </p>
+                <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                  <CtaLink href="/buscar" label="Limpar filtros" />
+                  <CtaLink href="/colecoes" label="Explorar" />
+                </div>
               </div>
             ) : null}
 
