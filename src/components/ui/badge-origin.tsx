@@ -4,9 +4,10 @@ import { StoreOrigin } from "@/types/product";
 
 interface BadgeOriginProps {
   origin: StoreOrigin;
+  compact?: boolean;
 }
 
-export function BadgeOrigin({ origin }: BadgeOriginProps) {
+export function BadgeOrigin({ origin, compact = false }: BadgeOriginProps) {
   const getBadgeStyle = (store: StoreOrigin) => {
     switch (store) {
       case "Shopee":
@@ -43,9 +44,15 @@ export function BadgeOrigin({ origin }: BadgeOriginProps) {
   const style = getBadgeStyle(origin);
 
   return (
-    <div className={`inline-flex items-center gap-1.5 rounded-full border ${style.border} ${style.bg} px-2.5 py-1 text-xs font-semibold ${style.text} backdrop-blur-sm`}>
-      <span className="text-sm">{style.icon}</span>
-      <span className="capitalize">{origin}</span>
+    <div
+      className={`inline-flex items-center rounded-full border ${style.border} ${style.bg} ${style.text} backdrop-blur-sm ${
+        compact
+          ? "gap-1 px-2 py-0.5 text-[10px] font-semibold sm:gap-1.5 sm:px-2.5 sm:py-1 sm:text-xs"
+          : "gap-1.5 px-2.5 py-1 text-xs font-semibold"
+      }`}
+    >
+      <span className={compact ? "text-[11px] sm:text-sm" : "text-sm"}>{style.icon}</span>
+      <span className="capitalize leading-none">{origin}</span>
     </div>
   );
 }
