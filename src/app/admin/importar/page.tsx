@@ -9,6 +9,12 @@ type CategoryOption = {
   slug: string;
 };
 
+type CollectionOption = {
+  id: string;
+  nome: string;
+  slug: string;
+};
+
 type ProductImportFormData = {
   nome: string;
   slug: string;
@@ -31,6 +37,7 @@ type ProductImportFormData = {
   tags: string[];
   marca: string;
   sku_externo: string;
+  collection_id?: string;
 };
 
 type ProductDraft = {
@@ -53,6 +60,7 @@ type AnalyzeResponse = {
   source: string;
   processed: number;
   categories: CategoryOption[];
+  collections: CollectionOption[];
   drafts: ProductDraft[];
   errors: Array<{
     source_url: string;
@@ -103,6 +111,7 @@ export default function AdminImportPage() {
   const [analyzing, setAnalyzing] = useState(false);
   const [savingAll, setSavingAll] = useState(false);
   const [categories, setCategories] = useState<CategoryOption[]>([]);
+  const [collections, setCollections] = useState<CollectionOption[]>([]);
   const [drafts, setDrafts] = useState<DraftState[]>([]);
   const [summary, setSummary] = useState<AnalyzeResponse | null>(null);
   const [globalMessage, setGlobalMessage] = useState<string | null>(null);
@@ -217,6 +226,7 @@ export default function AdminImportPage() {
 
       setSummary(data);
       setCategories(data.categories || []);
+      setCollections(data.collections || []);
       setDrafts((data.drafts || []).map((draft) => ({ ...draft, reviewConfirmed: false, isSaved: false })));
     } catch (error: any) {
       setGlobalMessage(error?.message || "Erro ao analisar links.");
@@ -421,6 +431,7 @@ export default function AdminImportPage() {
               Fonte: <strong className="text-text-primary">{summary.source || "n/a"}</strong> • Processados: {summary.processed ?? 0} • Rascunhos: {drafts.length}
             </p>
             <p className="mt-1 text-sm text-text-secondary">Categorias ativas carregadas: {categories.length}</p>
+            <p className="mt-1 text-sm text-text-secondary">Coleções ativas carregadas: {collections.length}</p>
 
             {summary.errors?.length > 0 && (
               <div className="mt-3 rounded-xl border border-yellow-300/40 bg-yellow-500/10 p-3 text-xs text-yellow-100">
@@ -532,6 +543,25 @@ export default function AdminImportPage() {
                             </option>
                           ))}
                         </select>
+                      </label>
+
+                      <label className="text-xs text-text-secondary">
+                        Coleção
+                        <select
+                          value={draft.form.collection_id || ""}
+                          onChange={(e) => updateField(index, "collection_id", e.target.value)}
+                          className="mt-1 w-full rounded-lg border border-border-soft bg-surface-card px-3 py-2 text-sm text-text-primary"
+                        >
+                          <option value="">Não associar coleção</option>
+                          {collections.map((collection) => (
+                            <option key={collection.id} value={collection.id}>
+                              {collection.nome} ({collection.slug})
+                            </option>
+                          ))}
+                        </select>
+                        <span className="mt-1 block text-[11px] text-text-secondary">
+                          Associe este produto a uma coleção editorial, como reels ou carrosséis.
+                        </span>
                       </label>
 
                       <label className="text-xs text-text-secondary">

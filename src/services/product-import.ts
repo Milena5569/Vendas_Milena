@@ -11,6 +11,13 @@ interface CategoryRow {
   is_active: boolean;
 }
 
+interface CollectionRow {
+  id: string;
+  name: string;
+  slug: string;
+  is_active?: boolean;
+}
+
 interface StoreRow {
   id: string;
   name: string;
@@ -47,6 +54,7 @@ export interface ProductImportFormData {
   tags: string[];
   marca: string;
   sku_externo: string;
+  collection_id?: string;
 }
 
 export interface ProductDraft {
@@ -69,6 +77,7 @@ export interface AnalyzeImportResponse {
   source: 'supabase';
   processed: number;
   categories: Array<{ id: string; nome: string; slug: string }>;
+  collections: Array<{ id: string; nome: string; slug: string }>;
   drafts: ProductDraft[];
   errors: Array<{ source_url: string; message: string }>;
 }
@@ -91,6 +100,50 @@ export interface SaveDraftResponse {
 
 const FALLBACK_IMAGE = '/images/products/luminaria-led.jpg';
 const ALLOWED_CATEGORY_LABELS = ['Feminino', 'Masculino', 'Casa', 'Skin Care', 'Infantil'];
+const shouldLog = process.env.NODE_ENV !== 'production';
+
+interface SupabaseErrorLike {
+  message?: string;
+  code?: string;
+  details?: string | null;
+  hint?: string | null;
+}
+
+function getSupabaseErrorDetails(error: unknown): SupabaseErrorLike {
+  if (!error || typeof error !== 'object') {
+    return {
+      message: String(error ?? 'unknown_error'),
+    };
+  }
+
+  const value = error as SupabaseErrorLike;
+  return {
+    message: value.message ?? 'unknown_error',
+    code: value.code,
+    details: value.details ?? null,
+    hint: value.hint ?? null,
+  };
+}
+
+function formatSupabaseError(prefix: string, error: unknown): string {
+  const parsed = getSupabaseErrorDetails(error);
+  return `${prefix}: ${parsed.message}${parsed.code ? ` (code: ${parsed.code})` : ''}${
+    parsed.details ? ` | details: ${parsed.details}` : ''
+  }${parsed.hint ? ` | hint: ${parsed.hint}` : ''}`;
+}
+
+function logImportDebug(stage: string, payload: Record<string, unknown>) {
+  if (!shouldLog) return;
+  console.info(`[productImport] ${stage}`, payload);
+}
+
+function logImportError(stage: string, error: unknown, context?: Record<string, unknown>) {
+  if (!shouldLog) return;
+  console.error(`[productImport] ${stage}`, {
+    ...(context ?? {}),
+    error: getSupabaseErrorDetails(error),
+  });
+}
 
 function slugify(value: string): string {
   return String(value || '')
@@ -181,6 +234,7 @@ export async function analyzeImportInput(input: string | string[]): Promise<Anal
       source: 'supabase',
       processed: urls.length,
       categories: [],
+      collections: [],
       drafts: [],
       errors: [{ source_url: '', message: 'Supabase não está configurado.' }],
     };
@@ -193,22 +247,41 @@ export async function analyzeImportInput(input: string | string[]): Promise<Anal
       source: 'supabase',
       processed: urls.length,
       categories: [],
+      collections: [],
       drafts: [],
       errors: [{ source_url: '', message: 'Cliente Supabase indisponível.' }],
     };
   }
 
   const db = supabase as any;
-  const [categoriesResponse, existingProductsResponse] = await Promise.all([
+  const [categoriesResponse, existingProductsResponse, collectionsResponse] = await Promise.all([
     db.from('categories').select('id,name,slug,is_active').eq('is_active', true).order('sort_order', { ascending: true }),
     db.from('products').select('id,slug,product_url,original_url,normalized_url').limit(5000),
+    db.from('collections').select('id,name,slug,is_active').eq('is_active', true).order('created_at', { ascending: false }),
   ]);
 
   const categories = ((categoriesResponse.data || []) as CategoryRow[]).filter((item) =>
     ALLOWED_CATEGORY_LABELS.includes(item.name)
   );
+  const collections = (collectionsResponse.data || []) as CollectionRow[];
   const existingProducts = (existingProductsResponse.data || []) as ExistingProductRow[];
   const errors: Array<{ source_url: string; message: string }> = [];
+
+  if (categoriesResponse.error) {
+    errors.push({ source_url: '', message: formatSupabaseError('Erro ao carregar categorias', categoriesResponse.error) });
+  }
+
+  if (collectionsResponse.error) {
+    errors.push({
+      source_url: '',
+      message: formatSupabaseError('Erro ao carregar coleções (campo opcional)', collectionsResponse.error),
+    });
+    logImportError('analyze_collections_fetch_failed', collectionsResponse.error);
+  }
+
+  if (existingProductsResponse.error) {
+    errors.push({ source_url: '', message: formatSupabaseError('Erro ao carregar produtos existentes', existingProductsResponse.error) });
+  }
 
   if (urls.length === 0) {
     errors.push({ source_url: '', message: 'Nenhuma URL válida encontrada para análise.' });
@@ -273,6 +346,7 @@ export async function analyzeImportInput(input: string | string[]): Promise<Anal
         tags: ['importado', `normalized_url:${normalized}`],
         marca: '',
         sku_externo: '',
+        collection_id: '',
       },
     });
   });
@@ -282,6 +356,7 @@ export async function analyzeImportInput(input: string | string[]): Promise<Anal
     source: 'supabase',
     processed: urls.length,
     categories: categories.map((item) => ({ id: item.id, nome: item.name, slug: item.slug })),
+    collections: collections.map((item) => ({ id: item.id, nome: item.name, slug: item.slug })),
     drafts,
     errors,
   };
@@ -322,10 +397,15 @@ export async function saveReviewedProduct(payload: SaveDraftPayload, dbClient?: 
     .maybeSingle();
 
   if (storeError || !storeData?.id) {
+    if (storeError) {
+      logImportError('save_store_fetch_failed', storeError, { detectedStoreSlug: storeSlug, link_padrao: form.link_padrao });
+    }
     return {
       success: false,
       status: 'failed',
-      message: 'Loja detectada, mas não encontrada no banco. Verifique a tabela stores.',
+      message: storeError
+        ? formatSupabaseError('Loja detectada, mas não encontrada no banco', storeError)
+        : 'Loja detectada, mas não encontrada no banco. Verifique a tabela stores.',
     };
   }
 
@@ -392,11 +472,97 @@ export async function saveReviewedProduct(payload: SaveDraftPayload, dbClient?: 
     updated_at: now,
   };
 
+  const selectedCollectionId = String(form.collection_id || '').trim();
+  logImportDebug('save_start', {
+    draft_id: payload.draft_id,
+    selected_collection_id: selectedCollectionId || null,
+    dedupe_existing_product_id: payload.dedupe?.existing_product_id || null,
+  });
+
+  const linkProductToCollectionIfSelected = async (productId: string): Promise<SaveDraftResponse | null> => {
+    if (!selectedCollectionId) {
+      logImportDebug('save_skip_collection_link', { product_id: productId, reason: 'no_collection_selected' });
+      return null;
+    }
+
+    const { data: collectionData, error: collectionError } = await db
+      .from('collections')
+      .select('id,is_active')
+      .eq('id', selectedCollectionId)
+      .maybeSingle();
+
+    if (collectionError) {
+      logImportError('save_collection_validation_failed', collectionError, {
+        selectedCollectionId,
+        productId,
+      });
+      return {
+        success: false,
+        status: 'failed',
+        message: formatSupabaseError('Falha ao validar coleção selecionada', collectionError),
+      };
+    }
+
+    if (!collectionData?.id || collectionData.is_active === false) {
+      return {
+        success: false,
+        status: 'failed',
+        message: 'Coleção inválida/inativa. Selecione uma coleção existente e ativa ou deixe o campo em branco.',
+      };
+    }
+
+    const { data: relationData, error: relationError } = await db
+      .from('collection_products')
+      .upsert(
+        {
+          collection_id: selectedCollectionId,
+          product_id: productId,
+        },
+        { onConflict: 'collection_id,product_id' }
+      )
+      .select('collection_id,product_id')
+      .maybeSingle();
+
+    if (relationError) {
+      logImportError('save_collection_link_failed', relationError, {
+        selectedCollectionId,
+        productId,
+      });
+      return {
+        success: false,
+        status: 'failed',
+        message: formatSupabaseError('Produto criado, mas falha ao associar na coleção', relationError),
+        product_id: productId,
+      };
+    }
+
+    logImportDebug('save_collection_link_success', {
+      selected_collection_id: selectedCollectionId,
+      product_id: productId,
+      relation: relationData ?? null,
+    });
+
+    return null;
+  };
+
   if (target?.id) {
     const { error } = await db.from('products').update(dbPayload).eq('id', target.id);
     if (error) {
-      return { success: false, status: 'failed', message: `Falha ao atualizar produto: ${error.message}` };
+      logImportError('save_update_product_failed', error, { productId: target.id });
+      return { success: false, status: 'failed', message: formatSupabaseError('Falha ao atualizar produto', error) };
     }
+
+    const linkError = await linkProductToCollectionIfSelected(target.id);
+    if (linkError) {
+      return linkError;
+    }
+
+    logImportDebug('save_update_product_success', {
+      product_id: target.id,
+      selected_collection_id: selectedCollectionId || null,
+      final_status: 'updated',
+    });
+
     return {
       success: true,
       status: 'updated',
@@ -407,8 +573,29 @@ export async function saveReviewedProduct(payload: SaveDraftPayload, dbClient?: 
 
   const { data, error } = await db.from('products').insert({ ...dbPayload, created_at: now }).select('id').single();
   if (error || !data?.id) {
-    return { success: false, status: 'failed', message: `Falha ao criar produto: ${error?.message || 'erro desconhecido'}` };
+    if (error) {
+      logImportError('save_create_product_failed', error, {
+        selected_collection_id: selectedCollectionId || null,
+      });
+    }
+    return { success: false, status: 'failed', message: formatSupabaseError('Falha ao criar produto', error || 'erro desconhecido') };
   }
+
+  logImportDebug('save_create_product_success', {
+    created_product_id: data.id,
+    selected_collection_id: selectedCollectionId || null,
+  });
+
+  const linkError = await linkProductToCollectionIfSelected(data.id);
+  if (linkError) {
+    return linkError;
+  }
+
+  logImportDebug('save_finish_success', {
+    created_product_id: data.id,
+    selected_collection_id: selectedCollectionId || null,
+    final_status: 'created',
+  });
 
   return {
     success: true,
